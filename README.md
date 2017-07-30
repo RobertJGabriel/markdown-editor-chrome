@@ -1,8 +1,16 @@
-# Teamwork.com Updates Chrome Extension
+# Markdown Live Preview
 
 ## About
 
-Made this as I was board. Built a simple chrome extension using es6 and vue.js to load our whats new endpoint. If there's a new post, a user will be a rich notification.
+This plugin allows you to write markdown without leaving your browser. 
+See it live as you type. 
+
+Handy for writing github readme files.
+Testing markdown without leaving the web browser.
+
+Any requests please email at robert_gabriel@outlook.com
+
+Or the GitHub is located here https://github.com/RobertJGabriel/markdown-editor-chrome
 
 ## Setup
 
