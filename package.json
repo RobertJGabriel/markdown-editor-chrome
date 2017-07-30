@@ -1,5 +1,5 @@
 {
-  "name": "chrome-teamwork",
+  "name": "markdown-live-preview",
   "private": true,
   "engines": {
     "node": ">=0.8.0"

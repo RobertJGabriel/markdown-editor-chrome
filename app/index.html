@@ -1,54 +1,39 @@
 <html>
+
 <head>
-    <title>Teamwork.com Notice</title>
-    <link href="./styles/vendor/bootstrap.min.css" rel="stylesheet">
-    <link href="./styles/vendor/material.min.css" rel="stylesheet">
-    <link href="./styles/styles.css" rel="stylesheet">
+  <title>Markdown Live Preview</title>
+  <link href="./styles/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="./styles/vendor/material.min.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="app" class="container">
-        <div class="page-header" id="banner">
-            <div class="row">
-                <div class="col-md-12">
-                  <img src="./images/teamwork-logo.png" width="250" alt="Teamwork.com " class="img-responsive center-block logo" >
-               </div>
-                <div class="col-md-12">
-                  <div class="whatsnew--holder">
-                    <div class="nav-wrapper">
-                      <ul class="base-menu" >
-                        <li v-cloak v-for="item in posts">
-                          <div class="label">
-                            <span  v-bind:class="'product ' + item.product">
-                              <img v-bind:src="'./images/' + item.product + '.svg'" alt="Teamwork Logo" >
-                            </span>
-                            <span :class="'type ' + item.type">
-                              <template v-if="item.type == 'enhancement'"><i class="fa fa-bolt"></i> Enhancement</template>
-                              <template v-if="item.type == 'feature'"><i class="fa fa-lightbulb-o"></i> New Feature</template>
-                              <template v-if="item.type == 'announcement'"><i class="fa fa-bullhorn"></i> Announcement</template>
-                              <template v-if="item.type == 'maintenance'"><i class="fa fa-wrench"></i> Maintenance</template>
-                              <template v-if="item.type == 'bug'"><i class="fa fa-bug"></i> Bug Fix</template>
-                            </span>
-                          </div>
-                          <div class="date">{{item.date}}</div>
-                          <h5>{{item.title}}</h5>
-                          <div class="content-area">
-                            <p><vue-markdown>{{item.text}}</vue-markdown></p>
-                            <template v-if="item.link">
-                              <a class="more blue-outline-btn" target="_blank" rel="noopener" v-bind:href="item.link">{{item.linkText}}</a>
-                            </template>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-            </div>
+  <div id="app" class="container">
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Markdown Live Preview</a>
         </div>
+      </div>
     </div>
-    <script src="./scripts/vendor/jquery.js" type="text/javascript"></script>
-    <script src="./scripts/vendor/vue.js" type="text/javascript"></script>
-    <script src="./scripts/vendor/vue-resouce.js" type="text/javascript"></script>
-    <script src="./scripts/vendor/marked.js" type="text/javascript"></script>
-    <script src="./scripts/app.js" type="text/javascript"></script>
+    <div class="row">
+      <div class="col-sm-6">
+        <textarea class="form-control" rows="5" id="comment" :value="input" @input="update"></textarea>
+      </div>
+      <div class="col-sm-6">
+        <div class="preview previewer" v-html="compiledMarkdown">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./scripts/vendor/jquery.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/vue.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/vue-resouce.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/marked.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/loadish.js" type="text/javascript"></script>
+  <script src="./scripts/app.js" type="text/javascript"></script>
 </body>
+
 </html>
