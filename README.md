@@ -24,4 +24,4 @@ Made this as I was board. Built a simple chrome extension using es6 and vue.js t
 - Make sure to reload the extension and refresh the page you're testing on after any changes to the code
 
 ## Screenshot
-![alt text]( .github/readme.png "Logo Title Text 1")
+![alt text]( https://lh3.googleusercontent.com/w3mIoRilNJFoMcxMiGRCHrNCsxoT41C-wY5x955WKtWOsEi5DmHMmvWp4YL9hs9cY_yj4foz0A=w640-h400-e365 "Logo Title Text 1")
