@@ -14,18 +14,16 @@ new Vue({
   data: {
     input:
 `
+# Markdown Live 
 
-# About
-Hodor, hodor... Hodor hodor hodor.
+### About
+View, Edited and create markdown files.
 
-# Set up
-Hodor, hodor... Hodor hodor hodor.
+### Install
+1. Handy for github readmes
+2. Also remember to review
 
-# Install
-1. Hodor, hodor...
-2. Hodor, hodor...
-
-## Learn more
+### Learn more
 [Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 `
   },
@@ -41,7 +39,7 @@ Hodor, hodor... Hodor hodor hodor.
   },
   methods: {
     update: _.debounce(function (e) {
-      this.input = e.target.value
+      this.input = e.target.value;
     }, 300)
   }
 });
