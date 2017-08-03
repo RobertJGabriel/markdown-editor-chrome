@@ -1,34 +1,23 @@
 'use strict';
 
-function sleep(time) {
-
-  let d1 = new Date().getTime();
-  let d2 = new Date().getTime();
-  while (d2 < d1 + time) {
-    d2 = new Date().getTime();
-  }
-}
-
 new Vue({
   el: '#app',
   data: {
     input:
-`
-# Markdown Live 
-
-### About
-View, Edited and create markdown files.
-
-### Install
-1. Handy for github readmes
-2. Also remember to review
-
-### Learn more
-[Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-`
-  },
-  beforeCompile: function beforeCompile() {
-    sleep(3000);
+        '# Markdown Live \n \n' +
+        '### About \n \n' +
+        'View, Edited and create markdown files. \n \n' +
+        '### Install \n' +
+        '1. Handy for github readmes \n' +
+        '2. Also remember to review \n' +
+        '### Code Highlighting \n \n' +
+        '```javascript \n' +
+        'function example(){ \n' +
+        '  return x; \n'+
+        '} \n' +
+        '``` \n' +
+        '### Learn more \n' +
+        '[Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)' 
   },
   computed: {
     compiledMarkdown: function () {
@@ -45,3 +34,5 @@ View, Edited and create markdown files.
 });
 
 Vue.config.productionTip = false;
+
+hljs.initHighlightingOnLoad();
