@@ -9,8 +9,8 @@ new Vue({
         'View, Edited and create markdown files. \n \n' +
         '### Install \n' +
         '1. Handy for github readmes \n' +
-        '2. Also remember to review \n' +
-        '### Code Highlighting \n \n' +
+        '2. Also remember to review \n \n' +
+        '### Code Highlighting \n' +
         '```javascript \n' +
         'function example(){ \n' +
         '  return x; \n'+
@@ -19,6 +19,10 @@ new Vue({
         '### Learn more \n' +
         '[Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)' 
   },
+    mounted: function() {
+        console.log('j');
+        hljs.initHighlightingOnLoad();
+    },
   computed: {
     compiledMarkdown: function () {
       return marked(this.input, {
@@ -35,4 +39,3 @@ new Vue({
 
 Vue.config.productionTip = false;
 
-hljs.initHighlightingOnLoad();
