@@ -5,11 +5,25 @@
   <link href="./styles/vendor/bootstrap.min.css" rel="stylesheet">
   <link href="./styles/vendor/material.min.css" rel="stylesheet">
   <link href="./styles/styles.css" rel="stylesheet">
-  <link href="./styles/vendor/github.min.css" rel="stylesheet" >
+  <link href="./styles/vendor/github.min.css" rel="stylesheet">
 
   <style>
     .navbar {
       background-color: #000 !important;
+    }
+
+    pre {
+      display: block !important;
+      padding: 9.5px !important;
+      margin: 0 0 10px !important;
+      font-size: 13px !important;
+      line-height: 1.42857143 !important;
+      color: transparent !important;
+      word-break: break-all !important;
+      word-wrap: break-word !important;
+      background-color: transparent !important;
+      border: 0px solid #ccc !important;
+      border-radius: 0px !important;
     }
   </style>
 </head>
@@ -25,10 +39,10 @@
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <textarea class="form-control" rows="5" id="comment" :value="input" @input="update"></textarea>
+        <textarea class="form-control" rows="5" id="comment" @keyup="changeHandler()" :value="input" @input="update"></textarea>
       </div>
       <div class="col-sm-6">
-        <div class="preview previewer" v-html="compiledMarkdown">
+        <div class="preview previewer" id="previewer" v-html="compiledMarkdown">
         </div>
       </div>
     </div>
@@ -37,11 +51,13 @@
 
   <script src="./scripts/vendor/jquery.js" type="text/javascript"></script>
   <script src="./scripts/vendor/highlight.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/go.js" type="text/javascript"></script>
   <script src="./scripts/vendor/vue.js" type="text/javascript"></script>
   <script src="./scripts/vendor/vue-resouce.js" type="text/javascript"></script>
   <script src="./scripts/vendor/marked.js" type="text/javascript"></script>
   <script src="./scripts/vendor/loadish.js" type="text/javascript"></script>
   <script src="./scripts/app.js" type="text/javascript"></script>
+
 </body>
 
 </html>

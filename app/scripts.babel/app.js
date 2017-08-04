@@ -1,38 +1,58 @@
 'use strict';
 
+
+Vue.config.productionTip = false;
+
+var markdownString =
+  '### Version 0.3.2 \n \n' +
+  '#### Notes \n \n' +
+  '1. Support for code highlighting \n \n' +
+  '#### Example \n \n' +
+
+  '```javascript \n\n' +
+  'function javascriptIsWild(){ \n \n' +
+  '   parseInt("Infinity", 10) // -> NaN \n\n' +
+  '   parseInt("Infinity", 18) // -> NaN... \n\n' +
+  '   parseInt("Infinity", 19) // -> 18 \n\n' +
+  '   parseInt("Infinity", 23) // -> 18... \n\n' +
+  '}\n' +
+  '```';
+
+;
+
 new Vue({
   el: '#app',
   data: {
-    input:
-        '# Markdown Live \n \n' +
-        '### About \n \n' +
-        'View, Edited and create markdown files. \n \n' +
-        '### Install \n' +
-        '1. Handy for github readmes \n' +
-        '2. Also remember to review \n' +
-        '### Code Highlighting \n \n' +
-        '```javascript \n' +
-        'function example(){ \n' +
-        '  return x; \n'+
-        '} \n' +
-        '``` \n' +
-        '### Learn more \n' +
-        '[Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)' 
+    input: markdownString
+  },
+
+  mounted: function () {
+    marked.setOptions({
+      gfm: true,
+      tables: true,
+      breaks: true,
+      pedantic: true,
+      sanitize: true,
+      smartLists: true,
+      smartypants: true
+    });
+    hljs.initHighlighting();
   },
   computed: {
     compiledMarkdown: function () {
       return marked(this.input, {
-        sanitize: true
-      })
+        sanitize: true,
+        langPrefix: 'hljs '
+      });
     }
   },
   methods: {
     update: _.debounce(function (e) {
       this.input = e.target.value;
-    }, 300)
+    }, 100),
+    changeHandler: function () {
+      hljs.initHighlighting.called = false;
+      hljs.initHighlighting();
+    }
   }
 });
-
-Vue.config.productionTip = false;
-
-hljs.initHighlightingOnLoad();
