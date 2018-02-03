@@ -17,11 +17,11 @@ var markdownString =
   '}\n' +
   '```';
 
+// Check if local storage is enabled
 if (localStorage.getItem('storedData') !== null) {
+  // Load the data if needed
   markdownString = localStorage.getItem('storedData');
 }
-
-
 
 new Vue({
   el: '#app',
@@ -60,7 +60,7 @@ new Vue({
   methods: {
     update: _.debounce(function (e) {
       this.input = e.target.value;
-    }, 100),
+    }, 200),
     changeHandler: function () {
       hljs.initHighlighting.called = false;
       hljs.initHighlighting();
