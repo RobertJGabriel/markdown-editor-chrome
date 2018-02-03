@@ -4,26 +4,37 @@
 Vue.config.productionTip = false;
 
 var markdownString =
-  '### Version 0.3.2 \n \n' +
-  '#### Notes \n \n' +
-  '1. Support for code highlighting \n \n' +
-  '#### Example \n \n' +
-
+  '### What is Markdown? \n \n' +
+  ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' +
+  '#### Extras \n \n' +
+  '- Fenced code blocks \n' +
+  '- Now auto saves your work!!! \n' +
+  '- Tables \n' +
+  '- Even More \n\n' +
   '```javascript \n\n' +
   'function javascriptIsWild(){ \n \n' +
   '   parseInt("Infinity", 10) // -> NaN \n\n' +
-  '   parseInt("Infinity", 18) // -> NaN... \n\n' +
-  '   parseInt("Infinity", 19) // -> 18 \n\n' +
-  '   parseInt("Infinity", 23) // -> 18... \n\n' +
   '}\n' +
   '```';
 
-;
+if (localStorage.getItem('storedData') !== null) {
+  markdownString = localStorage.getItem('storedData');
+}
+
+
 
 new Vue({
   el: '#app',
   data: {
     input: markdownString
+  },
+  watch: {
+    input: function () {
+      /* function to detect if localstorage is supported*/
+      if (typeof Storage !== 'undefined') {
+        localStorage.setItem('storedData', this.input)
+      }
+    }
   },
 
   mounted: function () {

@@ -1,6 +1,8 @@
 #app
-  min-width: 800px
+  height: 600px
   max-width: 800px
+  min-width: 800px
+  overflow: hidden
   width: 800px
 
 ul
@@ -22,6 +24,9 @@ textarea, .previewer
   font-family: Monaco,courier,monospace
   padding: 20px !important
 
+.previewer
+  overflow: scroll
+
 .container
   padding-right: 0
   padding-left: 0
@@ -29,3 +34,71 @@ textarea, .previewer
 .navbar
   margin-bottom: 0
   background-color: #000
+
+.col-sm-6
+  padding-left: 0px !important
+  padding-right: 0px !important
+
+.right
+  float: right
+
+.stripe
+  height: 50px !important
+  padding: 15px 0px !important
+
+.margin-right
+  margin-right: 30px
+
+.stripe
+  &:hover
+    color: #7897F5
+
+.spacing-right
+  padding-right:0px !important
+
+.navbar-header
+  width: 100%
+
+.form-control:focus, .form-control.focus
+  outline: none
+  background-image: none
+  background-size: 100% 2px, 100% 1px
+  box-shadow: none
+  transition-duration: 0.3s
+
+.editor 
+  padding-top: 50px
+  z-index: 88888
+  position: absolute
+  height: 100%
+  width: 100%
+  margin-left: 0 !important
+  margin-right: 0 !important
+
+
+.text-editor
+  padding-left: 30px
+  padding-bottom: 15px
+
+
+.navbar 
+  background-color: #000 !important
+  margin-bottom: 0
+  background-color: #000
+  position: fixed
+  width: 100%
+  z-index: 999999
+
+
+pre 
+  display: block !important
+  padding: 9.5px !important
+  margin: 0 0 10px !important
+  font-size: 13px !important
+  line-height: 1.42857143 !important
+  color: transparent !important
+  word-break: break-all !important
+  word-wrap: break-word !important
+  background-color: transparent !important
+  border: 0px solid #ccc !important
+  border-radius: 0px !important

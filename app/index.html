@@ -6,26 +6,6 @@
   <link href="./styles/vendor/material.min.css" rel="stylesheet">
   <link href="./styles/styles.css" rel="stylesheet">
   <link href="./styles/vendor/github.min.css" rel="stylesheet">
-
-  <style>
-    .navbar {
-      background-color: #000 !important;
-    }
-
-    pre {
-      display: block !important;
-      padding: 9.5px !important;
-      margin: 0 0 10px !important;
-      font-size: 13px !important;
-      line-height: 1.42857143 !important;
-      color: transparent !important;
-      word-break: break-all !important;
-      word-wrap: break-word !important;
-      background-color: transparent !important;
-      border: 0px solid #ccc !important;
-      border-radius: 0px !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -33,13 +13,20 @@
     <div class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#" tabindex="-1">Markdown Editor</a>
+          <span class="navbar-brand">Markdown Editor</span>
+          <a class="navbar-brand right stripe" target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
+            <i class="fas fa-question-circle"></i>
+          </a>
+          <a class="navbar-brand right stripe margin-right" target="blank" href="https://www.robertgabriel.ninja/donate?from=markdownapp" tabindex="-1">
+            <i class="fab fa-cc-stripe"></i>
+          </a>
+
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <textarea class="form-control" rows="5" id="comment" @keyup="changeHandler()" :value="input" @input="update"></textarea>
+    <div class="row editor">
+      <div class="col-sm-6 spacing-right">
+        <textarea class="form-control text-editor" rows="5" id="comment" @keyup="changeHandler()" :value="input" @input="update"></textarea>
       </div>
       <div class="col-sm-6">
         <div class="preview previewer" id="previewer" v-html="compiledMarkdown">
@@ -56,6 +43,7 @@
   <script src="./scripts/vendor/vue-resouce.js" type="text/javascript"></script>
   <script src="./scripts/vendor/marked.js" type="text/javascript"></script>
   <script src="./scripts/vendor/loadish.js" type="text/javascript"></script>
+  <script src="./scripts/vendor/fontawesome.js" type="text/javascript"></script>
   <script src="./scripts/app.js" type="text/javascript"></script>
 
 </body>
