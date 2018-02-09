@@ -1,6 +1,6 @@
 'use strict';
 
-const paid = false;
+const paid = true;
 Vue.config.productionTip = false;
 
 var markdownString =
@@ -12,11 +12,11 @@ var markdownString =
   '- Even More \n\n' +
   '```javascript \n\n' +
   'function javascriptIsWild(){ \n \n' +
-  '   parseInt("Infinity", 10) // -> NaN \n\n' +
+  'parseInt("Infinity", 10) // -> NaN \n\n' +
   '}\n' +
-  '```' ;
+  '```';
 
-if(!paid){
+if (!paid) {
   markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 99 cent';
 }
 
@@ -55,26 +55,24 @@ new Vue({
       } else {
         return this.input
       }
+
     }
   },
 
   mounted: function () {
+    var code = this.input;
     marked.setOptions({
-      gfm: true,
-      tables: true,
-      breaks: true,
-      pedantic: true,
-      sanitize: true,
-      smartLists: true,
-      smartypants: true
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
     });
     hljs.initHighlighting();
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input, {
-        sanitize: true,
-        langPrefix: 'hljs '
+      return marked(this.input,{
+        langPrefix: 'hljs ',
+        xhtml: true
       });
     }
   },
@@ -83,8 +81,7 @@ new Vue({
       this.input = e.target.value;
     }, 200),
     changeHandler: function () {
-      hljs.initHighlighting.called = false;
-      hljs.initHighlighting();
+      return marked(this.input);
     }
   }
 });
