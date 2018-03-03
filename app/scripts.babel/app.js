@@ -1,6 +1,6 @@
 'use strict';
 
-const paid = true;
+const paid = false;
 Vue.config.productionTip = false;
 
 var markdownString =
@@ -17,7 +17,7 @@ var markdownString =
   '```';
 
 if (!paid) {
-  markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 99 cent';
+  markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 99 cent \n\n 3. Download your work to the desktop';
 }
 
 //If this is the paid version load 
@@ -70,7 +70,7 @@ new Vue({
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input,{
+      return marked(this.input, {
         langPrefix: 'hljs ',
         xhtml: true
       });
@@ -82,6 +82,14 @@ new Vue({
     }, 200),
     changeHandler: function () {
       return marked(this.input);
+    },
+    saveLocally: function () {
+      //  Escape HTML
+      var link = document.createElement('a');
+      link.download = 'README.md';
+      link.href ='data:text/plain,' + this.input;
+
+      link.click(); // trigger click/download
     }
   }
 });
