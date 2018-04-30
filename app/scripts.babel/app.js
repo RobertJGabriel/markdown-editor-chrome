@@ -3,77 +3,43 @@
 const paid = false;
 Vue.config.productionTip = false;
 
-var markdownString =
-  '### What is Markdown? \n \n' +
-  ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' +
-  '#### Features \n \n' +
-  '- Tables \n' +
-  '- Fenced code blocks \n' +
-  '- Even More \n\n' +
-  '```javascript \n\n' +
-  'function javascriptIsWild(){ \n \n' +
-  'parseInt("Infinity", 10) // -> NaN \n\n' +
-  '}\n' +
-  '```';
 
-if (!paid) {
-  markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 99 cent \n\n 3. Download your work to the desktop';
-}
+var getSEOReportURL = 'https://seo-bot-.herokuapp.com/results';
 
-//If this is the paid version load 
-if (paid) {
-  getData();
-}
-
-// Get all saved data
-function getData() {
-  // Check if local storage is enabled
-  if (localStorage.getItem('storedData') !== null) {
-    // Load the data if needed
-    markdownString = localStorage.getItem('storedData');
+function sleep(time) {
+  var d1 = new Date().getTime();
+  var d2 = new Date().getTime();
+  while (d2 < d1 + time) {
+    d2 = new Date().getTime();
   }
+  return;
 }
 
-// Save data to local storage
-function saveData(input) {
-  if (typeof Storage !== 'undefined') {
-    return localStorage.setItem('storedData', input)
-  }
-}
+
 
 new Vue({
   el: '#app',
   data: {
-    paid: paid,
-    input: markdownString
+    features: [],
+    css: [],
+    loading:null,
+    other: [],
+    input: 'https://www.robertgabriel.ninja'
   },
   watch: {
     input: function () {
       /* function to detect if localstorage is supported*/
-      if (paid) {
-        return saveData(this.input);
-      } else {
-        return this.input
-      }
-
+      return this.input;
     }
   },
 
   mounted: function () {
-    var code = this.input;
-    marked.setOptions({
-      highlight: function (code) {
-        return hljs.highlightAuto(code).value;
-      }
-    });
-    hljs.initHighlighting();
+
+
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input, {
-        langPrefix: 'hljs ',
-        xhtml: true
-      });
+
     }
   },
   methods: {
@@ -81,15 +47,18 @@ new Vue({
       this.input = e.target.value;
     }, 200),
     changeHandler: function () {
-      return marked(this.input);
+      return this.input;
     },
-    saveLocally: function () {
-      //  Escape HTML
-      var link = document.createElement('a');
-      link.download = 'README.md';
-      link.href ='data:text/plain,' + this.input;
+    getSEOReport: function() {
+      this.loading = true;
+      this.$http.get(getSEOReportURL + '?name=' + encodeURI(this.input)).then(response => {
 
-      link.click(); // trigger click/download
-    }
+        console.log(response);
+        this.features = JSON.parse(response.bodyText).features; // Parse the coffee lists
+        this.css = this.features.css; // Parse the coffee lists
+        this.loading = false;
+      }, response => {
+      });
+  }
   }
 });

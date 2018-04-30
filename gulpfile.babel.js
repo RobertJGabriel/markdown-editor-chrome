@@ -83,13 +83,7 @@ gulp.task('sass', () => {
 gulp.task('chromeManifest', () => {
   return gulp.src('app/manifest.json')
     .pipe($.chromeManifest({
-      buildnumber: true,
-      background: {
-        target: 'scripts/background.js',
-        exclude: [
-          'scripts/chromereload.js'
-        ]
-      }
+      buildnumber: true
     }))
     .pipe($.if('*.css', $.cleanCss({
       compatibility: '*'
