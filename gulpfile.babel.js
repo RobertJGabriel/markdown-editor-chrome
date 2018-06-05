@@ -1,4 +1,9 @@
 import gulp from 'gulp';
+import glob from 'glob';
+import hash from 'hash-files';
+import jsesc from 'jsesc';
+import rename from 'gulp-rename';
+import replace from 'gulp-replace';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import sass from 'gulp-sass';
@@ -21,7 +26,7 @@ gulp.task('extras', () => {
   ], {
     base: 'app',
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('docs'));
 });
 
 function lint(files, options) {
@@ -53,7 +58,7 @@ gulp.task('images', () => {
         console.log(err);
         this.end();
       })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('html', () => {
@@ -71,25 +76,20 @@ gulp.task('html', () => {
       removeComments: true,
       collapseWhitespace: true
     })))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('sass', () => {
   return gulp.src('app/styles/sass/styles.sass')
     .pipe($.sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/styles/'));
+    .pipe(gulp.dest('docs/styles/'));
 });
 
 gulp.task('chromeManifest', () => {
   return gulp.src('app/manifest.json')
     .pipe($.chromeManifest({
       buildnumber: true,
-      background: {
-        target: 'scripts/background.js',
-        exclude: [
-          'scripts/chromereload.js'
-        ]
-      }
+ 
     }))
     .pipe($.if('*.css', $.cleanCss({
       compatibility: '*'
@@ -97,7 +97,7 @@ gulp.task('chromeManifest', () => {
     .pipe($.if('*.js', $.sourcemaps.init()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.js', $.sourcemaps.write('.')))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('babel', () => {
@@ -115,7 +115,7 @@ gulp.task('thirdparty', () => {
 });
 
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'docs']));
 
 gulp.task('watch', ['lint', 'babel'], () => {
   $.livereload.listen();
@@ -133,7 +133,7 @@ gulp.task('watch', ['lint', 'babel'], () => {
 });
 
 gulp.task('size', () => {
-  return gulp.src('dist/**/*').pipe($.size({
+  return gulp.src('docs/**/*').pipe($.size({
     title: 'build',
     gzip: true
   }));
@@ -147,16 +147,97 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
+
+
+gulp.task('clean', function () {
+  del.sync(['!./docs/CNAME', './docs/*'], {
+    force: true
+  })
+})
+
+var stringify = value => {
+  return jsesc(value, {
+    wrap: true,
+    compact: false,
+    indentLevel: 3
+  })
+}
+
+var shortHash = files => {
+  return hash
+    .sync({
+      files: files
+    })
+    .slice(0, 8)
+}
+
+var assets = ['docs/**/*.*']
+
+gulp.task('cache', () => {
+  var assets = [
+    ...glob.sync('docs/assets/css/**/*.*'),
+    ...glob.sync('docs/*.html'),
+    ...glob.sync('docs/**/*.js'),
+    ...glob.sync('docs/assets/img/**/me.png'),
+    ...glob.sync('docs/assets/img/**/*.svg'),
+    ...glob.sync('docs/assets/js/**/*.*')
+  ]
+  var assetsHash = shortHash(assets)
+  var assetCacheList = [
+    '/',
+    ...assets
+    // Remove all `images/icon-*` files except for the one used in
+    // the HTML.
+    .filter(
+      path =>
+      !path.includes('images/icon-') || path.includes('icon-228x228.png')
+    )
+    .map(path => path.replace(/^docs\//, '/'))
+  ]
+
+  gulp
+    .src('./core/sw.js')
+    .pipe(replace('%HASH%', stringify(assetsHash)))
+    .pipe(replace('%CACHE_LIST%', stringify(assetCacheList)))
+    .pipe(
+      rename(path => {
+        path.basename = assetsHash
+      })
+    )
+    .pipe(gulp.dest('docs/'))
+
+  gulp
+    .src('docs/**/*.html')
+    .pipe(
+      replace(
+        /(<\/body>)/g,
+        `<script>
+				  if ('serviceWorker' in navigator) {
+					  navigator.serviceWorker.register('/${assetsHash}.js');
+				  }
+			  </script>$1`
+      )
+    )
+    .pipe(gulp.dest('docs/'))
+
+  return del(['docs/service-worker.js'])
+})
+
+
+
+
+
+
 gulp.task('package', () => {
-  const manifest = require('./dist/manifest.json');
-  return gulp.src('dist/**')
+  const manifest = require('./docs/manifest.json');
+  return gulp.src('docs/**')
     .pipe($.zip('chrome teamwork-' + manifest.version + '.zip'))
     .pipe(gulp.dest('package'));
 });
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras'],
+    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras','cache'],
     'size', cb);
 });
 
