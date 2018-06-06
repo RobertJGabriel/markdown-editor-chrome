@@ -26,7 +26,7 @@ gulp.task('extras', () => {
   ], {
     base: 'app',
     dot: true
-  }).pipe(gulp.dest('docs'));
+  }).pipe(gulp.dest('dist'));
 });
 
 function lint(files, options) {
@@ -58,7 +58,7 @@ gulp.task('images', () => {
         console.log(err);
         this.end();
       })))
-    .pipe(gulp.dest('docs/images'));
+    .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('html', () => {
@@ -76,13 +76,13 @@ gulp.task('html', () => {
       removeComments: true,
       collapseWhitespace: true
     })))
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('sass', () => {
   return gulp.src('app/styles/sass/styles.sass')
     .pipe($.sass().on('error', sass.logError))
-    .pipe(gulp.dest('docs/styles/'));
+    .pipe(gulp.dest('dist/styles/'));
 });
 
 gulp.task('chromeManifest', () => {
@@ -97,7 +97,7 @@ gulp.task('chromeManifest', () => {
     .pipe($.if('*.js', $.sourcemaps.init()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.js', $.sourcemaps.write('.')))
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('babel', () => {
@@ -115,7 +115,7 @@ gulp.task('thirdparty', () => {
 });
 
 
-gulp.task('clean', del.bind(null, ['.tmp', 'docs']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('watch', ['lint', 'babel'], () => {
   $.livereload.listen();
@@ -133,7 +133,7 @@ gulp.task('watch', ['lint', 'babel'], () => {
 });
 
 gulp.task('size', () => {
-  return gulp.src('docs/**/*').pipe($.size({
+  return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true
   }));
@@ -150,7 +150,7 @@ gulp.task('wiredep', () => {
 
 
 gulp.task('clean', function () {
-  del.sync(['!./docs/CNAME', './docs/*'], {
+  del.sync(['!./dist/CNAME', './dist/*'], {
     force: true
   })
 })
@@ -171,16 +171,16 @@ var shortHash = files => {
     .slice(0, 8)
 }
 
-var assets = ['docs/**/*.*']
+var assets = ['dist/**/*.*']
 
 gulp.task('cache', () => {
   var assets = [
-    ...glob.sync('docs/assets/css/**/*.*'),
-    ...glob.sync('docs/*.html'),
-    ...glob.sync('docs/**/*.js'),
-    ...glob.sync('docs/assets/img/**/me.png'),
-    ...glob.sync('docs/assets/img/**/*.svg'),
-    ...glob.sync('docs/assets/js/**/*.*')
+    ...glob.sync('dist/assets/css/**/*.*'),
+    ...glob.sync('dist/*.html'),
+    ...glob.sync('dist/**/*.js'),
+    ...glob.sync('dist/assets/img/**/me.png'),
+    ...glob.sync('dist/assets/img/**/*.svg'),
+    ...glob.sync('dist/assets/js/**/*.*')
   ]
   var assetsHash = shortHash(assets)
   var assetCacheList = [
@@ -192,7 +192,7 @@ gulp.task('cache', () => {
       path =>
       !path.includes('images/icon-') || path.includes('icon-228x228.png')
     )
-    .map(path => path.replace(/^docs\//, '/'))
+    .map(path => path.replace(/^dist\//, '/'))
   ]
 
   gulp
@@ -204,10 +204,10 @@ gulp.task('cache', () => {
         path.basename = assetsHash
       })
     )
-    .pipe(gulp.dest('docs/'))
+    .pipe(gulp.dest('dist/'))
 
   gulp
-    .src('docs/**/*.html')
+    .src('dist/**/*.html')
     .pipe(
       replace(
         /(<\/body>)/g,
@@ -218,9 +218,9 @@ gulp.task('cache', () => {
 			  </script>$1`
       )
     )
-    .pipe(gulp.dest('docs/'))
+    .pipe(gulp.dest('dist/'))
 
-  return del(['docs/service-worker.js'])
+  return del(['dist/service-worker.js'])
 })
 
 
@@ -229,8 +229,8 @@ gulp.task('cache', () => {
 
 
 gulp.task('package', () => {
-  const manifest = require('./docs/manifest.json');
-  return gulp.src('docs/**')
+  const manifest = require('./dist/manifest.json');
+  return gulp.src('dist/**')
     .pipe($.zip('chrome teamwork-' + manifest.version + '.zip'))
     .pipe(gulp.dest('package'));
 });

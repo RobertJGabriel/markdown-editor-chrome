@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const paid = true;
-Vue.config.productionTip = false;
+const paid = false
+Vue.config.productionTip = false
 
 var markdownString =
   '### What is Markdown? \n \n' +
@@ -14,28 +14,30 @@ var markdownString =
   'function javascriptIsWild(){ \n \n' +
   'parseInt("Infinity", 10) // -> NaN \n\n' +
   '}\n' +
-  '```';
+  '```' +
+  '\n\n ### Support my work? \n\n 1. [My Donate Page](https://www.robertgabriel.ninja/donate) \n\n 2. [Patreon](https://www.patreon.com/robertjgabriel) '
 
 if (!paid) {
-  markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 99 cent \n\n 3. Download your work to the desktop';
+  markdownString +=
+    '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 1.99 cent \n\n 3. Download your work to the desktop'
 }
 
-//If this is the paid version load 
+// If this is the paid version load
 if (paid) {
-  getData();
+  getData()
 }
 
 // Get all saved data
-function getData() {
+function getData () {
   // Check if local storage is enabled
   if (localStorage.getItem('storedData') !== null) {
     // Load the data if needed
-    markdownString = localStorage.getItem('storedData');
+    markdownString = localStorage.getItem('storedData')
   }
 }
 
 // Save data to local storage
-function saveData(input) {
+function saveData (input) {
   if (typeof Storage !== 'undefined') {
     return localStorage.setItem('storedData', input)
   }
@@ -49,47 +51,46 @@ new Vue({
   },
   watch: {
     input: function () {
-      /* function to detect if localstorage is supported*/
+      /* function to detect if localstorage is supported */
       if (paid) {
-        return saveData(this.input);
+        return saveData(this.input)
       } else {
         return this.input
       }
-
     }
   },
 
   mounted: function () {
-    var code = this.input;
+    var code = this.input
     marked.setOptions({
       highlight: function (code) {
-        return hljs.highlightAuto(code).value;
+        return hljs.highlightAuto(code).value
       }
-    });
-    hljs.initHighlighting();
+    })
+    hljs.initHighlighting()
   },
   computed: {
     compiledMarkdown: function () {
       return marked(this.input, {
         langPrefix: 'hljs ',
         xhtml: true
-      });
+      })
     }
   },
   methods: {
     update: _.debounce(function (e) {
-      this.input = e.target.value;
+      this.input = e.target.value
     }, 200),
     changeHandler: function () {
-      return marked(this.input);
+      return marked(this.input)
     },
     saveLocally: function () {
       //  Escape HTML
-      var link = document.createElement('a');
-      link.download = 'README.md';
-      link.href ='data:text/plain,' + this.input;
+      var link = document.createElement('a')
+      link.download = 'README.md'
+      link.href = 'data:text/plain,' + this.input
 
-      link.click(); // trigger click/download
+      link.click() // trigger click/download
     }
   }
-});
+})
