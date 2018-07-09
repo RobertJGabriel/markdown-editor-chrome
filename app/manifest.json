@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "6.0.0",
+  "version": "7.0.6",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -14,10 +14,24 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
       "scripts/background.js"
     ]
   },
-  "permissions": ["tabs", "*://*/*", "http://*/*", "https://*/*", "<all_urls>", "storage"],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "permissions": ["tabs",
+    "*://*/*",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>",
+    "identity",
+    "https://www.googleapis.com/",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "oauth2": {
+    "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  }
 }
