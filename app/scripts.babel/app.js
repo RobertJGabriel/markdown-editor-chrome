@@ -2,7 +2,7 @@
 
 
 var markdownString =
-  '### What is Markdown? \n \n' +
+  '# Markdown Editor \n \n' +
   ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' +
   '#### Features \n \n' +
   '- Tables \n' +
@@ -17,9 +17,7 @@ var markdownString =
   '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 1.99 cent \n\n 3. Download your work to the desktop';
 
 
-
-
-const vm = new Vue({
+var vm = new Vue({
   el: '#app',
   data: {
     paid: true,
@@ -65,8 +63,9 @@ const vm = new Vue({
         this.paid = true;
         this.title = 'Markdown Editor'
       } else {
-        this.paid = false;
-        this.title = 'Your Trial has ended. Please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">Here</a>'
+        this.paid = true;
+        this.title = 'Your Trial has ended. Please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">Here</a>';
+        this.title = 'Markdown Editor';
       }
 
       this.license = license.license;
@@ -75,6 +74,13 @@ const vm = new Vue({
       if (typeof Storage !== 'undefined') {
         return localStorage.setItem('storedData', input)
       }
+    },
+    print: function print() {
+      var printIframe = document.getElementById('printArea');
+      printIframe.contentWindow.document.body.innerHTML = document.getElementById('previewer').innerHTML;
+      printIframe.contentWindow.focus(); // focus on contentWindow is needed on some ie versions
+      printIframe.contentWindow.print();
+      return false;
     },
     loadData: function loadData() {
       // Check if local storage is enabled

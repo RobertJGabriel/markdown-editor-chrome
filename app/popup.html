@@ -13,29 +13,28 @@
 <body>
   <div id="app" class="container">
 
-
-
-
-
-
     <div class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <span class="navbar-brand" v-html="title">
-          </span>
+          <span class="navbar-brand" v-html="title"> </span>
 
-
-          <span class="navbar-brand right" style="padding-top: 11px;"  v-if="paid">
+          <span class="navbar-brand right" v-if="paid">
             <a class="icons margin-right" href="#" title='Save read me locally' v-on:click="saveLocally" tabindex="-1">
-              <i class="fas fa-shopping-cart"></i>
+              <i class="fas fa-download"></i>
+            </a>
+            <a class="icons margin-right" title='Print Markdown Editor' v-on:click="print" tabindex="-1">
+              <i class="fas fa-print"></i>
             </a>
             <a class="icons margin-right" title='Support my work on patreon!' target="blank" href="https://www.robertgabriel.ninja/donate"
               tabindex="-1">
               <i class="fas fa-donate"></i>
             </a>
-            <a class="icons" title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
+            <a class="icons margin-right" title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
               <i class="fas fa-question-circle"></i>
             </a>
+            <a class="icons " title='Settings'
+            tabindex="-1">
+            <i class="fas fa-cog"></i>
           </span>
 
         </div>
@@ -52,7 +51,7 @@
     </div>
   </div>
 
-
+  <iframe id="printArea"></iframe>
   <script src="./scripts/vendor/jquery.js" type="text/javascript"></script>
   <script src="./scripts/vendor/highlight.js" type="text/javascript"></script>
   <script src="./scripts/vendor/go.js" type="text/javascript"></script>

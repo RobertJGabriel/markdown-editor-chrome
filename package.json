@@ -58,6 +58,7 @@
   "dependencies": {
     "gulp-replace": "^1.0.0",
     "hash-files": "^1.1.1",
-    "lodash.clonedeep": "^4.5.0"
+    "lodash.clonedeep": "^4.5.0",
+    "vue-print-nb": "^1.0.3"
   }
 }

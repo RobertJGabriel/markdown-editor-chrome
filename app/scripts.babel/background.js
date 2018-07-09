@@ -3,8 +3,16 @@ var TRIAL_PERIOD_DAYS = 2;
 var statusDiv;
 var access_token;
 
-function init() {
 
+
+chrome.browserAction.onClicked.addListener(function(activeTab){
+  chrome.tabs.create({ url: chrome.extension.getURL('popup.html') });
+});
+
+
+
+
+function init() {
   getLicense();
 }
 
