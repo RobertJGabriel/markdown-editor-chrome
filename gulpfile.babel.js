@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import glob from 'glob';
 import hash from 'hash-files';
 import jsesc from 'jsesc';
+import concat from 'gulp-concat';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 import gulpLoadPlugins from 'gulp-load-plugins';
@@ -89,7 +90,7 @@ gulp.task('chromeManifest', () => {
   return gulp.src('app/manifest.json')
     .pipe($.chromeManifest({
       buildnumber: true,
- 
+
     }))
     .pipe($.if('*.css', $.cleanCss({
       compatibility: '*'
@@ -110,7 +111,18 @@ gulp.task('babel', () => {
 
 
 gulp.task('thirdparty', () => {
-  return gulp.src('app/scripts.babel/vendor/*.js')
+  return gulp.src(
+      [
+        'app/scripts.babel/vendor/jquery.js',
+        'app/scripts.babel/vendor/highlight.js',
+        'app/scripts.babel/vendor/go.js',
+        'app/scripts.babel/vendor/vue.js',
+        'app/scripts.babel/vendor/vue-resouce.js',
+        'app/scripts.babel/vendor/marked.js',
+        'app/scripts.babel/vendor/loadish.js',
+        'app/scripts.babel/vendor/fontawesome.js'
+      ])
+    .pipe(concat('vendor.js'))
     .pipe(gulp.dest('app/scripts/vendor/'));
 });
 
@@ -237,7 +249,7 @@ gulp.task('package', () => {
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras','cache'],
+    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras', 'cache'],
     'size', cb);
 });
 
