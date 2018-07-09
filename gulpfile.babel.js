@@ -162,80 +162,6 @@ gulp.task('wiredep', () => {
 
 
 
-gulp.task('clean', function () {
-  del.sync(['!./dist/CNAME', './dist/*'], {
-    force: true
-  })
-})
-
-var stringify = value => {
-  return jsesc(value, {
-    wrap: true,
-    compact: false,
-    indentLevel: 3
-  })
-}
-
-var shortHash = files => {
-  return hash
-    .sync({
-      files: files
-    })
-    .slice(0, 8)
-}
-
-var assets = ['dist/**/*.*']
-
-gulp.task('cache', () => {
-  var assets = [
-    ...glob.sync('dist/assets/css/**/*.*'),
-    ...glob.sync('dist/*.html'),
-    ...glob.sync('dist/**/*.js'),
-    ...glob.sync('dist/assets/img/**/me.png'),
-    ...glob.sync('dist/assets/img/**/*.svg'),
-    ...glob.sync('dist/assets/js/**/*.*')
-  ]
-  var assetsHash = shortHash(assets)
-  var assetCacheList = [
-    '/',
-    ...assets
-    // Remove all `images/icon-*` files except for the one used in
-    // the HTML.
-    .filter(
-      path =>
-      !path.includes('images/icon-') || path.includes('icon-228x228.png')
-    )
-    .map(path => path.replace(/^dist\//, '/'))
-  ]
-
-  gulp
-    .src('./core/sw.js')
-    .pipe(replace('%HASH%', stringify(assetsHash)))
-    .pipe(replace('%CACHE_LIST%', stringify(assetCacheList)))
-    .pipe(
-      rename(path => {
-        path.basename = assetsHash
-      })
-    )
-    .pipe(gulp.dest('dist/'))
-
-  gulp
-    .src('dist/**/*.html')
-    .pipe(
-      replace(
-        /(<\/body>)/g,
-        `<script>
-				  if ('serviceWorker' in navigator) {
-					  navigator.serviceWorker.register('/${assetsHash}.js');
-				  }
-			  </script>$1`
-      )
-    )
-    .pipe(gulp.dest('dist/'))
-
-  return del(['dist/service-worker.js'])
-})
-
 
 
 
@@ -250,7 +176,7 @@ gulp.task('package', () => {
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras', 'cache'],
+    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras'],
     'size', cb);
 });
 

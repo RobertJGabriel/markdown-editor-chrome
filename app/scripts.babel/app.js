@@ -10,6 +10,7 @@ var markdownString =
   'parseInt("Infinity", 10) // -> NaN \n\n' +
   '}\n' +
   '```' +
+  ' \n\n ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")\n\n' +
   '\n\n ### Support my work? \n\n 1. [My Donate Page](https://www.robertgabriel.ninja/donate) \n\n 2. [Patreon](https://www.patreon.com/robertjgabriel) ' +
   '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 1.99 cent \n\n 3. Download your work to the desktop';
 
@@ -52,7 +53,7 @@ var vm = new Vue({
     }
   },
   methods: {
-    
+
     update: _.debounce(function (e) {
       this.editor = e.target.value;
     }, 200),
