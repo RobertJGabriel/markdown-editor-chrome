@@ -120,7 +120,8 @@ gulp.task('thirdparty', () => {
         'app/scripts.babel/vendor/vue-resouce.js',
         'app/scripts.babel/vendor/marked.js',
         'app/scripts.babel/vendor/loadish.js',
-        'app/scripts.babel/vendor/fontawesome.js'
+        'app/scripts.babel/vendor/fontawesome.js',
+        'app/scripts.babel/vendor/tln.js'
       ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('app/scripts/vendor/'));

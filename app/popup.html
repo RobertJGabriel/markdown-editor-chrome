@@ -2,12 +2,13 @@
 <html>
 
 <head>
-  <title>Markdown Live Preview</title>
+  <title>Markdown Editor Chrome</title>
   <meta charset="utf-8">
   <link href="./styles/vendor/bootstrap.min.css" rel="stylesheet">
   <link href="./styles/vendor/material.min.css" rel="stylesheet">
   <link href="./styles/styles.css" rel="stylesheet">
   <link href="./styles/vendor/github.min.css" rel="stylesheet">
+  <link href="./styles/vendor/tln.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,16 +26,16 @@
             <a class="icons margin-right" title='Print Markdown Editor' v-on:click="print" tabindex="-1">
               <i class="fas fa-print"></i>
             </a>
-            <a class="icons margin-right" title='Support my work on patreon!' target="blank" href="https://www.robertgabriel.ninja/donate"
-              tabindex="-1">
-              <i class="fas fa-donate"></i>
+      
+            <a class="icons margin-right"  title='Display List' v-on:click="lineNumbers" tabindex="-1">
+              <i class="far fa-list-alt"></i>
             </a>
-            <a class="icons margin-right" title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
+
+            <a class="icons " title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp"
+              tabindex="-1">
               <i class="fas fa-question-circle"></i>
             </a>
-            <a class="icons " title='Settings'
-            tabindex="-1">
-            <i class="fas fa-cog"></i>
+      
           </span>
 
         </div>
@@ -49,7 +50,11 @@
         </div>
       </div>
     </div>
+
+  
+
   </div>
+
 
   <iframe id="printArea" style="display:none"></iframe>
   <script src="./scripts/vendor/vendor.js" type="text/javascript"></script>
