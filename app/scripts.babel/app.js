@@ -1,9 +1,3 @@
-(function () {
-  'use strict';
-  //the rest of the function
-}());
-
-
 var markdownString =
   '# Markdown Editor \n \n' +
   ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' +
@@ -24,26 +18,24 @@ var vm = new Vue({
   el: '#app',
   data: {
     paid: true,
-    input: markdownString,
+    editor: markdownString,
     license: null,
-    title: '',
+    title: 'Markdown Editor',
     enableLines: false
   },
   watch: {
-    input: function () {
-      /* function to detect if localstorage is supported */
+    editor: function () {
       if (this.paid) {
-        return this.saveData(this.input);
+        return this.save(this.editor);
       } else {
-        return this.input;
+        return this.editor;
       }
     }
   },
 
   mounted: function () {
     this.loadData();
-
-    var code = this.input;
+    var code = this.editor;
     marked.setOptions({
       highlight: function (code) {
         return hljs.highlightAuto(code).value;
@@ -53,31 +45,27 @@ var vm = new Vue({
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input, {
-        gfm: true,
-        tables: true,
-        breaks: false,
-        pedantic: false,
+      return marked(this.editor, {
         sanitize: true,
-        smartLists: true,
-        langPrefix: 'hljsjavascript hljs',
-        xhtml: true
+        langPrefix: 'hljs '
       });
     }
   },
   methods: {
+    
     update: _.debounce(function (e) {
-      this.input = e.target.value;
+      this.editor = e.target.value;
     }, 200),
+
     lineNumbers: function lineNumbers() {
 
-      var active = document.getElementById('comment').className.indexOf('tln-active'); // This checks if its already running.
+      var active = document.getElementById('editor').className.indexOf('tln-active'); // This checks if its already running.
 
       if (active != -1 && this.enableLines === true) { // Is active
         this.enableLines = false;
         localStorage.removeItem('lines');
 
-        var element = document.getElementById('comment');
+        var element = document.getElementById('editor');
         element.classList.remove('tln-active');
 
         var elements = document.getElementsByClassName('tln-wrapper');
@@ -89,7 +77,7 @@ var vm = new Vue({
 
         this.enableLines = true;
         localStorage.setItem('lines', 'true');
-        append_line_numbers('comment');
+        append_line_numbers('editor');
 
       }
     },
@@ -99,20 +87,21 @@ var vm = new Vue({
         this.paid = true;
         this.title = 'Markdown Editor';
       } else {
-        this.paid = false;
-        this.title = 'Your Trial has ended. Please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">Here</a>';
+        this.paid = true;
+        this.title = 'Markdown Editor';
       }
 
       this.license = license.license;
     },
-    saveData: function saveData(input) {
+
+    save: function save(input) {
       if (typeof Storage !== 'undefined') {
         return localStorage.setItem('storedData', input);
       }
     },
     print: function print() {
       var printIframe = document.getElementById('printArea');
-      printIframe.contentWindow.document.body.innerHTML = document.getElementById('previewer').innerHTML;
+      printIframe.contentWindow.document.body.innerHTML = document.getElementById('preview').innerHTML;
       printIframe.contentWindow.focus(); // focus on contentWindow is needed on some ie versions
       printIframe.contentWindow.print();
       return false;
@@ -121,7 +110,7 @@ var vm = new Vue({
       // Check if local storage is enabled
       if (localStorage.getItem('storedData') !== null) {
         // Load the data if needed
-        this.input = localStorage.getItem('storedData');
+        this.editor = localStorage.getItem('storedData');
       }
 
       if (localStorage.getItem('lines') !== null) {
@@ -131,13 +120,13 @@ var vm = new Vue({
 
     },
     changeHandler: function () {
-      return marked(this.input);
+      return marked(this.editor);
     },
     saveLocally: function () {
       //  Escape HTML
       var link = document.createElement('a');
       link.download = 'README.md';
-      link.href = 'data:text/plain,' + this.input;
+      link.href = 'data:text/plain,' + this.editor;
       link.click(); // trigger click/download
     }
   }
