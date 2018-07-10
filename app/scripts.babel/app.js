@@ -75,7 +75,6 @@ var vm = new Vue({
         }
 
       } else {
-
         this.enableLines = true;
         localStorage.setItem('lines', 'true');
         append_line_numbers('editor');
@@ -88,8 +87,8 @@ var vm = new Vue({
         this.paid = true;
         this.title = 'Markdown Editor';
       } else {
-        this.paid = true;
-        this.title = 'Markdown Editor';
+        this.paid = false;
+        this.title = 'Your Free Trial has ended. To enable features please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
       }
 
       this.license = license.license;
