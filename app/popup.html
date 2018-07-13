@@ -28,6 +28,12 @@
             <a class="icons margin-right" title='Display List' v-on:click="lineNumbers" tabindex="-1">
               <i class="far fa-list-alt"></i>
             </a>
+            <a class="icons margin-right" title='Export HTML' target="blank" v-on:click="exportHTML" tabindex="-1">
+              <i class="fas fa-code"></i>
+            </a>
+            <a class="icons margin-right" title='Markdown cheatsheet' target="blank" v-on:click="cheatSheet" tabindex="-1">
+              <i class="fas fa-hands-helping"></i>
+            </a>
             <a class="icons margin-right" title='Write a list' target="blank" href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk/reviews"
               tabindex="-1">
               <i class="far fa-comment"></i>
@@ -42,18 +48,37 @@
     </div>
 
     <div class="row editor">
+
+      <!-- Editor -->
       <div class="col-sm-6 spacing-right">
         <textarea class="form-control text-editor" rows="5" id="editor" @keyup="changeHandler()" :value="editor" @input="update"></textarea>
       </div>
-      <div class="col-sm-6">
+
+      <!-- Cheat Sheet -->
+      <div class="col-sm-6"  v-if="showCheatSheet">
+        <div class="preview" id="cheatsheet" v-html="compiledCheatSheet">
+        </div>
+      </div>
+
+      <!-- Show markdown  -->
+      <div class="col-sm-6" v-if="!showHTML">
         <div class="preview" id="preview" v-html="compiledMarkdown">
         </div>
       </div>
+
+      <!-- Show Html -->
+      <div class="col-sm-6" v-if="showHTML">
+        <div class="preview" id="html">
+          {{ compiledMarkdown }}
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 
   <iframe id="printArea" class="hide"></iframe>
-  <script src="https://codefund.io/scripts/80593ff1-eea3-4006-bab1-a06fbc6956dc/embed.js" type="text/javascript"></script>
   <script src="./scripts/vendor/vendor.js" type="text/javascript"></script>
   <script src="./scripts/app.js" type="text/javascript"></script>
 

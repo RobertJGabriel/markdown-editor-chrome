@@ -1,20 +1,3 @@
-var markdownString =
-  '# Markdown Editor \n \n' +
-  ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' +
-  '#### Features \n \n' +
-  '- Tables \n' +
-  '- Fenced code blocks \n' +
-  '- Even More \n\n' +
-  '```javascript \n\n' +
-  'function javascriptIsWild(){ \n \n' +
-  'parseInt("Infinity", 10) // -> NaN \n\n' +
-  '}\n' +
-  '```' +
-  ' \n\n ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")\n\n' +
-  '\n\n ### Support my work? \n\n 1. [My Donate Page](https://www.robertgabriel.ninja/donate) \n\n 2. [Patreon](https://www.patreon.com/robertjgabriel) ' +
-  '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 1.99 cent \n\n 3. Download your work to the desktop';
-
-
 var vm = new Vue({
   el: '#app',
   data: {
@@ -22,7 +5,10 @@ var vm = new Vue({
     editor: markdownString,
     license: null,
     title: 'Markdown Editor',
-    enableLines: false
+    cheatSheetString: cheatSheetExample,
+    enableLines: false,
+    showHTML: false,
+    showCheatSheet: false
   },
   watch: {
     editor: function () {
@@ -47,13 +33,34 @@ var vm = new Vue({
   computed: {
     compiledMarkdown: function () {
       return marked(this.editor, {
-        sanitize: true,
+        langPrefix: 'hljs '
+      });
+    },
+
+    compiledCheatSheet: function () {
+      return marked(this.cheatSheetString, {
         langPrefix: 'hljs '
       });
     }
   },
   methods: {
 
+
+    cheatSheet: function cheatSheet() {
+      if (this.showCheatSheet) {
+        this.showCheatSheet = false;
+      } else {
+        this.showCheatSheet = true;
+      }
+    },
+
+    exportHTML: function exportHTML() {
+      if (this.showHTML) {
+        this.showHTML = false;
+      } else {
+        this.showHTML = true;
+      }
+    },
     update: _.debounce(function (e) {
       this.editor = e.target.value;
     }, 200),

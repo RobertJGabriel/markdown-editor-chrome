@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "8.2.0",
+  "version": "8.2.2",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -21,7 +21,7 @@
     "identity",
     "storage"
   ],
-
+  "offline_enabled": true,
   "content_security_policy":  "script-src 'self' 'unsafe-eval' https://codefund.io; object-src 'self'",
   "oauth2": {
     "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",

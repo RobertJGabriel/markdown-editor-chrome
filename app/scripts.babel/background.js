@@ -1,5 +1,5 @@
 var CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
-var TRIAL_PERIOD_DAYS = 2;
+var TRIAL_PERIOD_DAYS = 7;
 var statusDiv;
 var access_token;
 
@@ -8,8 +8,6 @@ var access_token;
 chrome.browserAction.onClicked.addListener(function(activeTab){
   chrome.tabs.create({ url: chrome.extension.getURL('popup.html') });
 });
-
-
 
 
 function init() {
