@@ -45,10 +45,10 @@ var vm = new Vue({
   },
   methods: {
     cheatSheet: function cheatSheet() {
-      this.showCheatSheet =  this.showCheatSheet?  false:true;
+      this.showCheatSheet = this.showCheatSheet ? false : true;
     },
     exportHTML: function exportHTML() {
-      this.showHTML =  this.showHTML?  false: true;
+      this.showHTML = this.showHTML ? false : true;
     },
     update: _.debounce(function (e) {
       this.editor = e.target.value;
