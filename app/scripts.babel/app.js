@@ -44,22 +44,11 @@ var vm = new Vue({
     }
   },
   methods: {
-
-
     cheatSheet: function cheatSheet() {
-      if (this.showCheatSheet) {
-        this.showCheatSheet = false;
-      } else {
-        this.showCheatSheet = true;
-      }
+      this.showCheatSheet =  this.showCheatSheet?  false:true;
     },
-
     exportHTML: function exportHTML() {
-      if (this.showHTML) {
-        this.showHTML = false;
-      } else {
-        this.showHTML = true;
-      }
+      this.showHTML =  this.showHTML?  false: true;
     },
     update: _.debounce(function (e) {
       this.editor = e.target.value;
