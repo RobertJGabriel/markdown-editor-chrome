@@ -32,7 +32,7 @@
               <i class="fas fa-code"></i>
             </a>
             <a class="icons margin-right" title='Markdown cheatsheet' target="blank" v-on:click="cheatSheet" tabindex="-1">
-              <i class="fas fa-hands-helping"></i>
+              <i class="fas fa-book"></i>
             </a>
             <a class="icons " title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
               <i class="fas fa-question-circle"></i>
@@ -57,13 +57,13 @@
       </div>
 
       <!-- Show markdown  -->
-      <div class="col-sm-6" v-if="!showHTML">
+      <div class="col-sm-6" v-if="!showHTML && !showCheatSheet">
         <div class="preview" id="preview" v-html="compiledMarkdown">
         </div>
       </div>
 
       <!-- Show Html -->
-      <div class="col-sm-6" v-if="showHTML">
+      <div class="col-sm-6" v-if="showHTML && !showCheatSheet">
         <div class="preview" id="html">
           {{ compiledMarkdown }}
         </div>
