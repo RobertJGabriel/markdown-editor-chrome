@@ -38,7 +38,6 @@ var vm = new Vue({
         langPrefix: 'hljs '
       });
     },
-
     compiledCheatSheet: function () {
       return marked(this.cheatSheetString, {
         langPrefix: 'hljs '
@@ -112,6 +111,7 @@ var vm = new Vue({
     },
 
     print: function print() {
+      this.showHTML = false;
       var printIframe = document.getElementById('printArea');
       printIframe.contentWindow.document.body.innerHTML = document.getElementById('preview').innerHTML;
       printIframe.contentWindow.focus(); // focus on contentWindow is needed on some ie versions
