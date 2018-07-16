@@ -1,17 +1,16 @@
 import gulp from 'gulp';
-import glob from 'glob';
-import hash from 'hash-files';
-import jsesc from 'jsesc';
 import concat from 'gulp-concat';
-import rename from 'gulp-rename';
-import replace from 'gulp-replace';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import sass from 'gulp-sass';
 import runSequence from 'run-sequence';
+import webpackStream from 'webpack-stream';
+import webpack from 'webpack';
 import {
   stream as wiredep
 } from 'wiredep';
+
+
 
 const $ = gulpLoadPlugins();
 
@@ -19,7 +18,7 @@ gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
     'app/scripts/**/*.js',
-    'app/styles/**/*.min.css',
+    'app/scripts/**/*.min.css',
     'app/_locales/**',
     '!app/scripts.babel',
     '!app/*.json',
@@ -38,9 +37,15 @@ function lint(files, options) {
   };
 }
 
-gulp.task('lint', lint('app/scripts.babel/*.js', {
+gulp.task('lint', lint('app/scripts.babel/**/*.js', {
   env: {
     es6: true
+  },
+  rules:{
+    "quotes": 0
+  },
+  parserOptions: {
+    sourceType: 'module'
   }
 }));
 
@@ -69,9 +74,6 @@ gulp.task('html', () => {
     }))
     .pipe($.sourcemaps.init())
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cleanCss({
-      compatibility: '*'
-    })))
     .pipe($.sourcemaps.write())
     .pipe($.if('*.html', $.htmlmin({
       removeComments: true,
@@ -80,11 +82,7 @@ gulp.task('html', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('sass', () => {
-  return gulp.src('app/styles/sass/styles.sass')
-    .pipe($.sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/styles/'));
-});
+
 
 gulp.task('chromeManifest', () => {
   return gulp.src('app/manifest.json')
@@ -92,9 +90,6 @@ gulp.task('chromeManifest', () => {
       buildnumber: true,
 
     }))
-    .pipe($.if('*.css', $.cleanCss({
-      compatibility: '*'
-    })))
     .pipe($.if('*.js', $.sourcemaps.init()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.js', $.sourcemaps.write('.')))
@@ -102,31 +97,16 @@ gulp.task('chromeManifest', () => {
 });
 
 gulp.task('babel', () => {
-  return gulp.src('app/scripts.babel/*.js')
-    .pipe($.babel({
-      presets: ['es2015']
-    }))
-    .pipe(gulp.dest('app/scripts'));
+  return gulp.src('app/scripts.babel')
+    .pipe(webpackStream(require('./webpack.config.js'), webpack)
+      .on('error', function (err) {
+        console.log(err);
+        this.emit('end');
+      }))
+    .pipe(gulp.dest('app/scripts/'))
 });
 
 
-gulp.task('thirdparty', () => {
-  return gulp.src(
-      [
-        'app/scripts.babel/vendor/jquery.js',
-        'app/scripts.babel/vendor/highlight.js',
-        'app/scripts.babel/vendor/go.js',
-        'app/scripts.babel/vendor/vue.js',
-        'app/scripts.babel/vendor/vue-resouce.js',
-        'app/scripts.babel/vendor/marked.js',
-        'app/scripts.babel/vendor/loadish.js',
-        'app/scripts.babel/vendor/fontawesome.js',
-        'app/scripts.babel/vendor/tln.js',
-        'app/scripts.babel/strings.js'
-      ])
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('app/scripts/vendor/'));
-});
 
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -137,12 +117,13 @@ gulp.task('watch', ['lint', 'babel'], () => {
   gulp.watch([
     'app/*.html',
     'app/scripts/**/*.js',
+    'app/scripts/**/*.vue',
     'app/images/**/*',
     'app/styles/**/*',
     'app/_locales/**/*.json'
   ]).on('change', $.livereload.reload);
 
-  gulp.watch('app/scripts.babel/*.js', ['lint', 'babel']);
+  gulp.watch(['app/scripts.babel/**/*.js', 'app/scripts.babel/**/*.vue'], ['lint', 'babel']);
   gulp.watch('bower.json', ['wiredep']);
 });
 
@@ -161,13 +142,6 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-
-
-
-
-
-
-
 gulp.task('package', () => {
   const manifest = require('./dist/manifest.json');
   return gulp.src('dist/**')
@@ -177,7 +151,7 @@ gulp.task('package', () => {
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', 'thirdparty', ['html', 'images', 'sass', 'extras'],
+    'lint', 'babel', 'chromeManifest', ['html', 'images',  'extras'],
     'size', cb);
 });
 
