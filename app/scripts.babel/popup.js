@@ -97,9 +97,9 @@ var vm = new Vue({
         this.paid = true;
         this.title = 'Markdown Editor';
       } else {
-        this.paid = true;
+        this.paid = false;
         this.title = 'Your Free Trial has ended. To enable features please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
-        this.title = 'Markdown Editor';
+    
       }
       this.license = license.license;
     },
