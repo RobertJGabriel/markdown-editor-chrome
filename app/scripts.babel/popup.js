@@ -49,8 +49,25 @@ var vm = new Vue({
     cheatSheet: function cheatSheet() {
       this.showCheatSheet = this.showCheatSheet ? false : true;
     },
+    copy: function copy() {
+      navigator.clipboard.writeText(this.editor).then(text => {
+        alert('Copying to clipboard was successful!');
+      }).catch(err => {
+        alert('Could not copy markdown: ', err);
+      });
+    },
+    paste: function paste() {
+      navigator.clipboard.readText()
+        .then(text => {
+          console.log('Pasted content: ', text);
+          this.editor = text;
+        })
+        .catch(err => {
+          console.error('Failed to read clipboard contents: ', err);
+        });
+    },
     exportHTML: function exportHTML() {
-      this.cheatSheet();
+      this.showCheatSheet = false;
       this.showHTML = this.showHTML ? false : true;
     },
     update: function update(e) {
@@ -101,7 +118,7 @@ var vm = new Vue({
       printIframe.contentWindow.print();
       return false;
     },
-    
+
     loadData: function loadData() {
       // Check if local storage is enabled
       if (localStorage.getItem('storedData') !== null) {
