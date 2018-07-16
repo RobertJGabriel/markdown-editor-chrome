@@ -41,7 +41,8 @@
   width: 100%;
   display: block;
   text-align: center;
-  color: #ffffff
+  color: #ffffff;
+  padding-left: 10px;
 }
 
 .tln-line::before {

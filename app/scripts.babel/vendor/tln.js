@@ -1,5 +1,5 @@
 window.update_line_numbers = function (ta, el) {
-  var lines = ta.value.split("\n").length;
+  var lines = ta.value.split('\n').length;
   var child_count = el.children.length;
   var difference = lines - child_count;
 

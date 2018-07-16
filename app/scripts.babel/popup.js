@@ -3,7 +3,6 @@ import Strings from './strings.js';
 import marked from 'marked';
 import hljs from 'highlightjs';
 
-
 Vue.config.productionTip = false;
 
 var vm = new Vue({
@@ -18,7 +17,6 @@ var vm = new Vue({
     showCheatSheet: false,
     license: null,
   },
-
   watch: {
     editor: function () {
       return this.paid ? this.save(this.editor) : this.editor;
@@ -52,6 +50,7 @@ var vm = new Vue({
       this.showCheatSheet = this.showCheatSheet ? false : true;
     },
     exportHTML: function exportHTML() {
+      this.cheatSheet();
       this.showHTML = this.showHTML ? false : true;
     },
     update: function update(e) {
