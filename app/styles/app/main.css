@@ -88,6 +88,8 @@ textarea {
 
 .navbar-header {
   width: 100%;
+  padding: 0 !important;
+
 }
 
 .form-control:focus,
@@ -126,6 +128,7 @@ textarea {
 .navbar-brand {
   height: 50px !important;
   line-height: 25px !important;
+  padding: 15px 15px !important;
 }
 
 pre {
