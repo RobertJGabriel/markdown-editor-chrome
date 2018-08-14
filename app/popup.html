@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Markdown Editor Chrome</title>
+  <title>Markdown Editor by Robert James Gabriel</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
   <link href="./scripts/bundle.min.css" rel="stylesheet">
-
 </head>
 
 <body>
   <div id="app" class="container">
-
-
     <div class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <span class="navbar-brand" v-html="title"></span>
+          <span class="navbar-brand">Markdown Editor</span>
+
+
+
           <span class="navbar-brand right " v-if="paid">
             <a class="icons margin-right" href="#" title='Save read me locally' v-on:click="saveLocally" tabindex="-1">
               <i class="fas fa-download"></i>
@@ -41,8 +41,12 @@
             <a class="icons " title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
               <i class="fas fa-question-circle"></i>
             </a>
+          </span>
+          <span class="navbar-brand right " v-html="title" v-if="!paid">
 
           </span>
+          
+
         </div>
       </div>
     </div>

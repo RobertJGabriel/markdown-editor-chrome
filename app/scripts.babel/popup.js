@@ -9,7 +9,7 @@ var vm = new Vue({
   el: '#app',
   data: {
     paid: true,
-    title: 'Markdown Editor',
+    title: '',
     editor: Strings.markdownString(),
     cheatSheetString: Strings.cheatSheetExample(),
     enableLines: false,
@@ -95,10 +95,9 @@ var vm = new Vue({
     updateLicense: function updateLicense(license) {
       if ((license.license == 'FULL') || (license.license == 'TRIAL')) {
         this.paid = true;
-        this.title = 'Markdown Editor';
       } else {
         this.paid = false;
-        this.title = 'Your Free Trial has ended. To enable features please upgrade <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
+        this.title = 'Your Free Trial has ended. Upgrade for only $1.99 <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
     
       }
       this.license = license.license;
