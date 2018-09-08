@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #fafafa !important;
+  background-color: #fafafa;
 }
 
 ul {
@@ -81,12 +81,18 @@ textarea {
 }
 
 .logo {
-  font-size:25px !important;
+  font-size: 25px !important;
 }
 
 .icons:hover,
 .icons:active {
   color: #FFFFFF !important;
+}
+
+.icons:hover > svg ,
+.icons:active > svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
 }
 
 .spacing-right {

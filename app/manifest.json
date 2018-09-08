@@ -22,7 +22,7 @@
     "storage"
   ],
   "offline_enabled": true,
-  "content_security_policy":  "script-src 'self' 'unsafe-eval' https://codefund.io; object-src 'self'",
+  "content_security_policy":  "script-src 'self' 'unsafe-eval'  object-src 'self'",
   "oauth2": {
     "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",
     "scopes": [
