@@ -1,10 +1,12 @@
-var CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
-var TRIAL_PERIOD_DAYS = 7;
-var statusDiv;
-var access_token;
+const CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
+const TRIAL_PERIOD_DAYS = 7;
+let statusDiv;
+let access_token;
 
-chrome.browserAction.onClicked.addListener(function(activeTab){
-  chrome.tabs.create({ url: chrome.extension.getURL('popup.html') });
+chrome.browserAction.onClicked.addListener(activeTab => {
+  chrome.tabs.create({
+    url: chrome.extension.getURL('popup.html')
+  });
 });
 
 
@@ -40,12 +42,12 @@ function onLicenseFetched(error, status, response) {
  *****************************************************************************/
 
 function parseLicense(license) {
-  var licenseStatus;
-  var licenseStatusText;
+  let licenseStatus;
+  let licenseStatusText;
   if (license.result && license.accessLevel == 'FULL') {
     save('FULL');
   } else if (license.result && license.accessLevel == 'FREE_TRIAL') {
-    var daysAgoLicenseIssued = Date.now() - parseInt(license.createdTime, 10);
+    let daysAgoLicenseIssued = Date.now() - parseInt(license.createdTime, 10);
     daysAgoLicenseIssued = daysAgoLicenseIssued / 1000 / 60 / 60 / 24;
     if (daysAgoLicenseIssued <= TRIAL_PERIOD_DAYS) {
       save('TRIAL');
@@ -62,8 +64,8 @@ function parseLicense(license) {
 function save(value) {
   chrome.storage.sync.set({
     license: value
-  }, function () {
-    console.log('Value is set to ' + value);
+  }, () => {
+    console.log(`Value is set to ${value}`);
   });
 }
 
@@ -74,13 +76,13 @@ function save(value) {
 
 // Helper Util for making authenticated XHRs
 function xhrWithAuth(method, url, interactive, callback) {
-  var retry = true;
+  let retry = true;
   getToken();
 
   function getToken() {
     chrome.identity.getAuthToken({
-      interactive: interactive
-    }, function (token) {
+      interactive
+    }, token => {
       if (chrome.runtime.lastError) {
         callback(chrome.runtime.lastError);
         return;
@@ -91,9 +93,9 @@ function xhrWithAuth(method, url, interactive, callback) {
   }
 
   function requestStart() {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open(method, url);
-    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.setRequestHeader('Authorization', `Bearer ${access_token}`);
     xhr.onload = requestComplete;
     xhr.send();
   }

@@ -5,7 +5,7 @@ import hljs from 'highlightjs';
 
 Vue.config.productionTip = false;
 
-var vm = new Vue({
+const vm = new Vue({
   el: '#app',
   data: {
     paid: true,
@@ -18,27 +18,27 @@ var vm = new Vue({
     license: null,
   },
   watch: {
-    editor: function () {
+    editor() {
       return this.paid ? this.save(this.editor) : this.editor;
     }
   },
-  mounted: function () {
+  mounted() {
     this.loadData();
-    var code = this.editor;
+    const code = this.editor;
     marked.setOptions({
-      highlight: function (code) {
+      highlight(code) {
         return hljs.highlightAuto(code).value;
       }
     });
     hljs.initHighlighting();
   },
   computed: {
-    compiledMarkdown: function () {
+    compiledMarkdown() {
       return marked(this.editor, {
         langPrefix: 'hljs '
       });
     },
-    compiledCheatSheet: function () {
+    compiledCheatSheet() {
       return marked(this.cheatSheetString, {
         langPrefix: 'hljs '
       });
@@ -73,15 +73,15 @@ var vm = new Vue({
       this.editor = e.target.value;
     },
     lineNumbers: function lineNumbers() {
-      var active = document.getElementById('editor').className.indexOf('tln-active'); // This checks if its already running.
+      const active = document.getElementById('editor').className.indexOf('tln-active'); // This checks if its already running.
       if (active != -1 && this.enableLines === true) { // Is active
         this.enableLines = false;
         localStorage.removeItem('lines');
 
-        var element = document.getElementById('editor');
+        const element = document.getElementById('editor');
         element.classList.remove('tln-active');
 
-        var elements = document.getElementsByClassName('tln-wrapper');
+        const elements = document.getElementsByClassName('tln-wrapper');
         while (elements.length > 0) {
           elements[0].parentNode.removeChild(elements[0]);
         }
@@ -98,7 +98,7 @@ var vm = new Vue({
       } else {
         this.paid = false;
         this.title = 'Your Free Trial has ended. Upgrade for only $1.99 <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
-    
+
       }
       this.license = license.license;
     },
@@ -111,7 +111,7 @@ var vm = new Vue({
 
     print: function print() {
       this.showHTML = false;
-      var printIframe = document.getElementById('printArea');
+      const printIframe = document.getElementById('printArea');
       printIframe.contentWindow.document.body.innerHTML = document.getElementById('preview').innerHTML;
       printIframe.contentWindow.focus(); // focus on contentWindow is needed on some ie versions
       printIframe.contentWindow.print();
@@ -131,14 +131,14 @@ var vm = new Vue({
       }
 
     },
-    changeHandler: function () {
+    changeHandler() {
       return marked(this.editor);
     },
-    saveLocally: function () {
+    saveLocally() {
       //  Escape HTML
-      var link = document.createElement('a');
+      const link = document.createElement('a');
       link.download = 'README.md';
-      link.href = 'data:text/plain,' + this.editor;
+      link.href = `data:text/plain,${this.editor}`;
       link.click(); // trigger click/download
     }
   }
