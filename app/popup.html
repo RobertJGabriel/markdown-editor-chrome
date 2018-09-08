@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Markdown Editor by Robert James Gabriel</title>
+  <title>Markdown Editor for Chrome</title>
   <meta charset="utf-8">
+  <link rel="manifest" href="/pwa.json" />
   <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
   <link href="./scripts/bundle.min.css" rel="stylesheet">
 </head>
@@ -10,44 +12,40 @@
 <body>
   <div id="app" class="container">
     <div class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <span class="navbar-brand">Markdown Editor</span>
 
+      <div class="navbar-header">
+        <div class="row">
+          <div class="col-sm-6 spacing-right">
+            <span class="navbar-brand logo"><i class="fab fa-markdown"></i></span>
+          </div>
+          <div class="col-sm-6 spacing-right">
+            <span class="navbar-brand right " v-if="paid">
+              <a class="icons margin-right" href="#" title='Save read me locally' v-on:click="saveLocally" tabindex="-1">
+                <i class="fas fa-download"></i>
+              </a>
+              <a class="icons margin-right" title='Print Markdown Editor' v-on:click="print" tabindex="-1">
+                <i class="fas fa-print"></i>
+              </a>
+              <a class="icons margin-right" title='Display list numbers' v-on:click="lineNumbers" tabindex="-1">
+                <i class="far fa-list-alt"></i>
+              </a>
+              <a class="icons margin-right" title='Export to  HTML' target="blank" v-on:click="exportHTML" tabindex="-1">
+                <i class="fas fa-code"></i>
+              </a>
+              <a class="icons margin-right" title='Markdown cheatsheet' target="blank" v-on:click="cheatSheet" tabindex="-1">
+                <i class="fas fa-book"></i>
+              </a>
+              <a class="icons " title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp"
+                tabindex="-1">
+                <i class="fas fa-question-circle"></i>
+              </a>
+            </span>
+            <span class="navbar-brand right " v-html="title" v-if="!paid">
 
-
-          <span class="navbar-brand right " v-if="paid">
-            <a class="icons margin-right" href="#" title='Save read me locally' v-on:click="saveLocally" tabindex="-1">
-              <i class="fas fa-download"></i>
-            </a>
-            <a class="icons margin-right" title='Print Markdown Editor' v-on:click="print" tabindex="-1">
-              <i class="fas fa-print"></i>
-            </a>
-            <a class="icons margin-right" title='Display list numbers' v-on:click="lineNumbers" tabindex="-1">
-              <i class="far fa-list-alt"></i>
-            </a>
-            <a class="icons margin-right" title='Export to  HTML' target="blank" v-on:click="exportHTML" tabindex="-1">
-              <i class="fas fa-code"></i>
-            </a>
-            <a class="icons margin-right" title='Paste' target="blank" v-on:click="paste" tabindex="-1">
-              <i class="fas fa-paste"></i>
-            </a>
-            <a class="icons margin-right" title='Copy Editor to Clipboard' target="blank" v-on:click="copy" tabindex="-1">
-              <i class="fas fa-copy"></i>
-            </a>
-            <a class="icons margin-right" title='Markdown cheatsheet' target="blank" v-on:click="cheatSheet" tabindex="-1">
-              <i class="fas fa-book"></i>
-            </a>
-            <a class="icons " title='Need help' target="blank" href="https://www.robertgabriel.ninja/contact?from=markdownapp" tabindex="-1">
-              <i class="fas fa-question-circle"></i>
-            </a>
-          </span>
-          <span class="navbar-brand right " v-html="title" v-if="!paid">
-
-          </span>
-          
-
+            </span>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -82,9 +80,13 @@
   </div>
 
   <iframe id="printArea" class="hide"></iframe>
-
   <script src="./scripts/vendor.js" type="text/javascript"></script>
   <script src="./scripts/popup.js" type="text/javascript"></script>
+  <script type="3b8a50791fbcf2ef3f287ee1-text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 
 </html>

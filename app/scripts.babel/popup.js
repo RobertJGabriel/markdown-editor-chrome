@@ -3,10 +3,24 @@ import Strings from './strings.js';
 import marked from 'marked';
 import hljs from 'highlightjs';
 
-Vue.config.productionTip = false;
+//import externalLink from './components/external-link.vue';
+//import realtedLink from './components/list-link-related.vue';
+
+
+//Vue.component('vue-list-text', listText);
+//Vue.component('vue-list-link', listLink);
+//Vue.component('vue-external-link', externalLink);
+//Vue.component('vue-link-related', realtedLink);
+
+
 
 const vm = new Vue({
   el: '#app',
+ // components: {
+  //  listLink,
+  //  listText,
+  //  externalLink
+  //},
   data: {
     paid: true,
     title: '',
@@ -48,23 +62,6 @@ const vm = new Vue({
     cheatSheet: function cheatSheet() {
       this.showCheatSheet = this.showCheatSheet ? false : true;
     },
-    copy: function copy() {
-      navigator.clipboard.writeText(this.editor).then(text => {
-        alert('Copying to clipboard was successful!');
-      }).catch(err => {
-        alert('Could not copy markdown: ', err);
-      });
-    },
-    paste: function paste() {
-      navigator.clipboard.readText()
-        .then(text => {
-          console.log('Pasted content: ', text);
-          this.editor = text;
-        })
-        .catch(err => {
-          console.error('Failed to read clipboard contents: ', err);
-        });
-    },
     exportHTML: function exportHTML() {
       this.showCheatSheet = false;
       this.showHTML = this.showHTML ? false : true;
@@ -96,7 +93,7 @@ const vm = new Vue({
       if ((license.license == 'FULL') || (license.license == 'TRIAL')) {
         this.paid = true;
       } else {
-        this.paid = false;
+        this.paid = true;
         this.title = 'Your Free Trial has ended. Upgrade for only $1.99 <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
 
       }
@@ -144,4 +141,4 @@ const vm = new Vue({
   }
 });
 
-chrome.storage.sync.get(['license'], vm.updateLicense.bind(this));
+//chrome.storage.sync.get(['license'], vm.updateLicense.bind(this));

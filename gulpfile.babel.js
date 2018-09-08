@@ -17,11 +17,12 @@ const $ = gulpLoadPlugins();
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
+    'app/pwa.json',
     'app/scripts/**/*.js',
     'app/scripts/**/*.min.css',
     'app/_locales/**',
     '!app/scripts.babel',
-    '!app/*.json',
+    '!app/manifest.json',
     '!app/*.html'
   ], {
     base: 'app',
