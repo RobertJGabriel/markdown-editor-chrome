@@ -130,12 +130,13 @@ textarea {
 
 .text-editor {
   padding-left: 30px;
+  padding-top: 30px !important;
   padding-bottom: 15px;
 }
 
 .navbar {
-  border-bottom: solid 1px #ca2100 !important;
-  background-color: #db4c3f !important;
+  border-bottom: solid 1px black !important;
+  background-color: black !important;
   margin-bottom: 0;
   position: fixed;
   width: 100%;

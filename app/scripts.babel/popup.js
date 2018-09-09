@@ -3,24 +3,8 @@ import Strings from './strings.js';
 import marked from 'marked';
 import hljs from 'highlightjs';
 
-//import externalLink from './components/external-link.vue';
-//import realtedLink from './components/list-link-related.vue';
-
-
-//Vue.component('vue-list-text', listText);
-//Vue.component('vue-list-link', listLink);
-//Vue.component('vue-external-link', externalLink);
-//Vue.component('vue-link-related', realtedLink);
-
-
-
 const vm = new Vue({
   el: '#app',
- // components: {
-  //  listLink,
-  //  listText,
-  //  externalLink
-  //},
   data: {
     paid: true,
     title: '',
@@ -141,4 +125,4 @@ const vm = new Vue({
   }
 });
 
-//chrome.storage.sync.get(['license'], vm.updateLicense.bind(this));
+chrome.storage.sync.get(['license'], vm.updateLicense.bind(this));

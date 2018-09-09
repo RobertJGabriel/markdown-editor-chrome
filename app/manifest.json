@@ -1,6 +1,7 @@
 {
   "name": "__MSG_appName__",
-  "version": "1.0.0",
+  "short_name": "Markdown Editor",
+  "version": "10.0.1",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -22,7 +23,7 @@
     "storage"
   ],
   "offline_enabled": true,
-  "content_security_policy":  "script-src 'self' 'unsafe-eval'  object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "oauth2": {
     "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",
     "scopes": [

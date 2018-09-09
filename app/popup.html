@@ -5,7 +5,7 @@
   <title>Markdown Editor for Chrome</title>
   <meta charset="utf-8">
   <link rel="manifest" href="/pwa.json" />
-  <meta name="theme-color" content="#317EFB"/>
+  <meta name="theme-color" content="#317EFB" />
   <meta name="viewport" content="width=device-width,maximum-scale=1">
   <link href="./scripts/bundle.min.css" rel="stylesheet">
 </head>
@@ -27,9 +27,7 @@
               <a class="icons margin-right" title='Print Markdown Editor' v-on:click="print" tabindex="-1">
                 <i class="fas fa-print"></i>
               </a>
-              <a class="icons margin-right" title='Display list numbers' v-on:click="lineNumbers" tabindex="-1">
-                <i class="far fa-list-alt"></i>
-              </a>
+
               <a class="icons margin-right" title='Export to  HTML' target="blank" v-on:click="exportHTML" tabindex="-1">
                 <i class="fas fa-code"></i>
               </a>
@@ -42,7 +40,6 @@
               </a>
             </span>
             <span class="navbar-brand right " v-html="title" v-if="!paid">
-
             </span>
           </div>
         </div>
