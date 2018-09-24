@@ -44,9 +44,17 @@ const vm = new Vue({
   },
   methods: {
     cheatSheet: function cheatSheet() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       this.showCheatSheet = this.showCheatSheet ? false : true;
     },
     exportHTML: function exportHTML() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       this.showCheatSheet = false;
       this.showHTML = this.showHTML ? false : true;
     },
@@ -54,6 +62,10 @@ const vm = new Vue({
       this.editor = e.target.value;
     },
     lineNumbers: function lineNumbers() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       const active = document.getElementById('editor').className.indexOf('tln-active'); // This checks if its already running.
       if (active != -1 && this.enableLines === true) { // Is active
         this.enableLines = false;
@@ -77,20 +89,27 @@ const vm = new Vue({
       if ((license.license == 'FULL') || (license.license == 'TRIAL')) {
         this.paid = true;
       } else {
-        this.paid = true;
-        this.title = 'Your Free Trial has ended. Upgrade for only $1.99 <a href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk" target="_blank">here.</a>';
-
+        this.paid = false;
+       
       }
       this.license = license.license;
     },
 
     save: function save(input) {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       if (typeof Storage !== 'undefined') {
         return localStorage.setItem('storedData', input);
       }
     },
 
     print: function print() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       this.showHTML = false;
       const printIframe = document.getElementById('printArea');
       printIframe.contentWindow.document.body.innerHTML = document.getElementById('preview').innerHTML;
@@ -100,6 +119,10 @@ const vm = new Vue({
     },
 
     loadData: function loadData() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       // Check if local storage is enabled
       if (localStorage.getItem('storedData') !== null) {
         // Load the data if needed
@@ -116,6 +139,10 @@ const vm = new Vue({
       return marked(this.editor);
     },
     saveLocally() {
+      if (!this.paid) {
+        alert('Your trial has ended. Upgrade for only $2.99.')
+        return false;
+      }
       //  Escape HTML
       const link = document.createElement('a');
       link.download = 'README.md';

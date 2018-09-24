@@ -20,7 +20,7 @@
             <span class="navbar-brand logo"><i class="fab fa-markdown"></i></span>
           </div>
           <div class="col-sm-6 spacing-right">
-            <span class="navbar-brand right " v-if="paid">
+            <span class="navbar-brand right ">
               <a class="icons margin-right" href="#" title='Save read me locally' v-on:click="saveLocally" tabindex="-1">
                 <i class="fas fa-download"></i>
               </a>
@@ -39,8 +39,7 @@
                 <i class="fas fa-question-circle"></i>
               </a>
             </span>
-            <span class="navbar-brand right " v-html="title" v-if="!paid">
-            </span>
+
           </div>
         </div>
 
@@ -75,16 +74,17 @@
       </div>
 
     </div>
+    <div class="foot" v-if="paid == false">
+      Your trial has ended. Upgrade for only $2.99 <a target="_blank" href="https://chrome.google.com/webstore/detail/dkpldbigkfcgpamifjimiejipmodkigk">here</a>.
+
+    </div>
   </div>
 
+
   <iframe id="printArea" class="hide"></iframe>
+
   <script src="./scripts/vendor.js" type="text/javascript"></script>
   <script src="./scripts/popup.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js');
-    }
-  </script>
 </body>
 
 </html>
