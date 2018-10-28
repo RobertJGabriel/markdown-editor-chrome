@@ -1,0 +1,40 @@
+//Button and hyperlink errors
+a
+  &:not([href])::after
+    content: 'Do you mean for this to be a link or a <button>? It does not link to anything!' !important
+  &[href='']::after, &[href$='#']::after, &[href^='javascript']::after
+    content: 'Do you mean for this to be a <button>? It is a link that does not go anywhere!' !important
+
+.button:not(a):not(button):not(input):not([tabindex])::after, .btn:not(a):not(button):not(input):not([tabindex])::after
+  content: 'You are not using a standard focusable element for your 'button'. Can keyboard users focus on it?' !important
+
+a
+  &[role='button']
+    &:not([href*='/']):not([href*='.']):not([href*='?'])::after, &[href='']::after, &[href$='#']::after, &[href^='javascript']::after
+      content: 'Either use a proper href fallback or just use a button element.' !important
+  &[href]
+    &.button[class*='disabled']::after, &.disabled::after, &[class*='button'][class*='disabled']::after
+      content: 'You cannot disable a hyperlink. Use a button element with disabled attribute or remove the href' !important
+
+[class*='toggle']:not([aria-pressed])
+  content: 'If it is toggleable, you should supply an aria-pressed attribute.' !important
+
+form button:not([type])::after
+  content: 'Is this a submit button, a reset button or just a button? Use type='submit', type='reset' or type='button'.' !important
+
+a:empty:not([aria-label]):not([aria-labelledby])::after
+  content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important
+
+button
+  &:empty:not([aria-label]):not([aria-labelledby])::after, &:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after
+    content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important
+
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after
+  content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important
+
+figcaption::after
+  content: '<figcaption>s must belong to parent <figure>s.' !important
+
+figure figcaption::after
+  content: '' !important
+  display: none !important

@@ -1,0 +1,40 @@
+a
+  &:not([href]), &[href=''], &[href$='#'], &[href^='javascript']
+    overflow: visible !important
+
+.button:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset']), .btn:not(button):not([role='button']):not([type='button']):not([type='submit']):not([type='reset'])
+  overflow: visible !important
+
+a
+  &[class*='button']:not([role='button'])
+    overflow: visible !important
+  &[role='button']
+    &:not([href*='/']):not([href*='.']):not([href*='?']), &[href=''], &[href$='#'], &[href^='javascript']
+      overflow: visible !important
+
+.button:not(button):not([role='button']):not(input), .btn:not(button):not([role='button']):not(input)
+  overflow: visible !important
+
+a
+  &[class*='button']:not([role='button']), &.button[class*='disabled'], &.btn.disabled, &[class*='button'][class*='disabled']
+    overflow: visible !important
+
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]), .button:not(a):not(button):not(input), .btn:not(a):not(button):not(input), figcaption, form:not([action]), fieldset > *:first-child:not(legend), button.disabled:not([disabled]):not([readonly]), acronym, applet, basefont, center, dir, font, frame, frameset, isindex, listing, menu, multicol, plaintext, s, strike, u, xmp, bgsound, blink, comment, embed, marquee, nobr, noembed, wbr, *:empty:not(script), section > section:first-child
+  overflow: visible !important
+
+a
+  &[role='button']
+    &:not([href*='/']):not([href*='.']):not([href*='?'])::after, &[href='']::after, &[href$='#']::after, &[href^='javascript']::after
+      @include defaultStyle(rgba(255, 82, 82, 0.6))
+
+  &[href]
+    &.button[class*='disabled']::after, &.disabled::after, &[class*='button'][class*='disabled']::after
+      @include defaultStyle(rgba(255, 82, 82, 0.6))
+
+
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, .button:not(a):not(button):not(input)::after, .btn:not(a):not(button):not(input)::after, figcaption::after, form:not([action])::after, fieldset > *:first-child:not(legend)::after, button.disabled:not([disabled]):not([readonly])::after, acronym::after, applet::after, basefont::after, center::after, dir::after, font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, plaintext::after, s::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, embed::after, marquee::after, nobr::after, noembed::after, wbr::after, *:empty:not(script)::after, section > section:first-child::after
+  @include defaultStyle(rgba(255, 82, 82, 0.6))
+
+
+a.disabled[href]:not([tabindex="-1"])::after, button.disabled:not([disabled])::after, [data-toggle="dropdown"]:not([aria-haspopup])::after
+  @include defaultStyle(rgba(255, 82, 82, 0.6))

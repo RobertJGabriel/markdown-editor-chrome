@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import concat from 'gulp-concat';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import sass from 'gulp-sass';
@@ -17,9 +16,8 @@ const $ = gulpLoadPlugins();
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    'app/pwa.json',
     'app/scripts/**/*.js',
-    'app/scripts/**/*.min.css',
+    'app/scripts/**/*.css',
     'app/_locales/**',
     '!app/scripts.babel',
     '!app/manifest.json',
@@ -38,11 +36,19 @@ function lint(files, options) {
   };
 }
 
+
+gulp.task('sass', () => {
+  return gulp.src('app/styles/app/style.sass')
+    .pipe($.sass().on('error', sass.logError))
+    .pipe(gulp.dest('dist/styles/'));
+});
+
+
 gulp.task('lint', lint('app/scripts.babel/**/*.js', {
   env: {
     es6: true
   },
-  rules:{
+  rules: {
     "quotes": 0
   },
   parserOptions: {
@@ -152,7 +158,7 @@ gulp.task('package', () => {
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', ['html', 'images',  'extras'],
+    'lint', 'babel', 'chromeManifest', ['sass', 'html', 'images', 'extras'],
     'size', cb);
 });
 

@@ -1,0 +1,12 @@
+/**
+ ** List errors
+ *----------------------------------------------------------------------
+
+ol > *:not(li)::after, ul > *:not(li)::after
+  content: 'Only <li> can be a direct child of <ul> or <ol>.' !important
+
+dl > *:not(dt):not(dd)::after
+  content: 'This element does not belong directly inside a definition list.' !important
+
+dt + *:not(dd)::after
+  content: 'Definitions must follow definition titles.' !important
