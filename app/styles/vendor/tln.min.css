@@ -1,0 +1,53 @@
+.tln-active,
+.tln-wrapper {
+  height: 100%;
+  word-break: break-all;
+  display: inline-block;
+  background-color: #202124;
+  line-height: 23px;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
+
+
+
+.tln-active,
+.tln-line,
+.tln-wrapper {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  list-style: none
+}
+
+.tln-active {
+  width: calc(100% - 48px);
+  background-color: #fff;
+
+
+}
+
+.tln-wrapper {
+  width: 48px;
+  overflow: hidden;
+  counter-reset: line;
+  padding-top: 10px;
+}
+
+.tln-line {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+.tln-line::before {
+  counter-increment: line;
+  content: counter(line);
+  font-size: 16px;
+  user-select: none
+}

@@ -3,6 +3,12 @@ const TRIAL_PERIOD_DAYS = 7;
 let statusDiv;
 let access_token;
 
+chrome.browserAction.onClicked.addListener(activeTab => {
+  chrome.tabs.create({
+    url: chrome.extension.getURL('popup.html')
+  });
+});
+
 
 function init() {
   getLicense();
@@ -56,7 +62,7 @@ function parseLicense(license) {
 
 
 function save(value) {
-  chrome.storage.local.set({
+  chrome.storage.sync.set({
     license: value
   }, () => {
     console.log(`Value is set to ${value}`);

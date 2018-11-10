@@ -1,7 +1,7 @@
 {
   "name": "__MSG_appName__",
-  "short_name": "Accibility Check",
-  "version": "0.5.0",
+  "short_name": "Markdown Editor",
+  "version": "10.2.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -9,8 +9,7 @@
     "128": "images/icon-128.png"
   },
   "browser_action": {
-    "default_icon": "images/icon-128.png",
-    "default_popup": "popup.html"
+    "default_icon": "images/icon-128.png"
   },
   "default_locale": "en",
   "background": {
@@ -21,18 +20,10 @@
   },
   "permissions": [
     "identity",
-    "storage",
-    "tabs",
-    "http://*/*",
-    "https://*/*"
+    "storage"
   ],
-  "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*", "file:///*/*"],
-    "js": ["scripts/content.js"],
-    "all_frames": false
-  }],
+  "offline_enabled": true,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "web_accessible_resources": ["/styles/style.css"],
   "oauth2": {
     "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",
     "scopes": [
