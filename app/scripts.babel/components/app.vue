@@ -31,10 +31,8 @@
       <md-list-item>
 
         <md-icon>monetization_on</md-icon>
-        <div class="md-list-item">
-          <div class="md-list-item-text">
-            <span>{{license}}</span>
-          </div>
+        <div class="md-list-item-text">
+          <span>{{license}}</span>
         </div>
       </md-list-item>
 
@@ -68,31 +66,28 @@
       enable: function (newSetting, oldSetting) {
         // Dont change the settings if its the same or no past 
         if (newSetting === oldSetting || oldSetting === null) return false;
-
         this.save(newSetting);
-        this.reload();
       }
     },
     methods: {
       save: function (type) {
         this.enable = Boolean(type);
-        chrome.storage.local.set({
-          'enabled': Boolean(type)
-        });
+        chrome.storage.local.set({'enabled': Boolean(type)});
 
         chrome.storage.local.get('enabled', items => {
           this.enable = items.enabled;
+          this.reload();
         });
-
+        
         return this.enable;
       },
       updateLicense: function (license) {
         this.paid = ((license.license == 'FULL') || (license.license == 'TRIAL')) ? true : false;
-        this.license = license.license ? 'Paid' : 'Trial over';
+        this.license = license.license? 'Paid':'Trial over';
         return this.paid;
       },
       reload: function () {
-
+          
         chrome.tabs.query({
           active: true,
           lastFocusedWindow: true
@@ -100,12 +95,10 @@
           // and use that tab to fill in out title and url
           const currentTab = tabs[0];
           const codeScript = 'window.location.reload();';
-        chrome.tabs.executeScript(currentTab.id, {
-                code: codeScript
-            })
-  
+          
+          return true;
         });
-
+         
       }
     }
   }
