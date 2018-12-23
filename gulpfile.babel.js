@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import concat from 'gulp-concat';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import sass from 'gulp-sass';
@@ -10,14 +9,12 @@ import {
   stream as wiredep
 } from 'wiredep';
 
-
-
 const $ = gulpLoadPlugins();
 
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    'app/pwa.json',
+    'app/fonts/**/*.*',
     'app/scripts/**/*.js',
     'app/scripts/**/*.min.css',
     'app/_locales/**',
@@ -30,6 +27,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
+
 function lint(files, options) {
   return () => {
     return gulp.src(files)
@@ -38,11 +36,22 @@ function lint(files, options) {
   };
 }
 
+
+gulp.task('sass', () => {
+  return gulp.src([
+      'app/styles/sass/fonts/*.sass',
+      'app/styles/sass/app.sass'
+    ])
+    .pipe($.sass().on('error', sass.logError))
+    .pipe(gulp.dest('dist/styles/'));
+});
+
+
 gulp.task('lint', lint('app/scripts.babel/**/*.js', {
   env: {
     es6: true
   },
-  rules:{
+  rules: {
     "quotes": 0
   },
   parserOptions: {
@@ -88,9 +97,11 @@ gulp.task('html', () => {
 gulp.task('chromeManifest', () => {
   return gulp.src('app/manifest.json')
     .pipe($.chromeManifest({
-      buildnumber: true,
-
+      buildnumber: true
     }))
+    .pipe($.if('*.css', $.cleanCss({
+      compatibility: '*'
+    })))
     .pipe($.if('*.js', $.sourcemaps.init()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.js', $.sourcemaps.write('.')))
@@ -146,16 +157,16 @@ gulp.task('wiredep', () => {
 gulp.task('package', () => {
   const manifest = require('./dist/manifest.json');
   return gulp.src('dist/**')
-    .pipe($.zip('chrome teamwork-' + manifest.version + '.zip'))
+    .pipe($.zip('chrome markdown-editor-' + manifest.version + '.zip'))
     .pipe(gulp.dest('package'));
 });
 
 gulp.task('build', cb => {
   runSequence(
-    'lint', 'babel', 'chromeManifest', ['html', 'images',  'extras'],
+    'lint', 'clean', ['sass', 'html', 'images', 'extras'], 'babel', 'chromeManifest',
     'size', cb);
 });
 
-gulp.task('default', ['clean'], cb => {
+gulp.task('default', cb => {
   runSequence('build', cb);
 });

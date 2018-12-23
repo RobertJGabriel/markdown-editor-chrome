@@ -1,19 +1,17 @@
 const CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
-const TRIAL_PERIOD_DAYS = 5;
+const TRIAL_PERIOD_DAYS = 7;
+let statusDiv;
 let access_token;
-let license;
-let contextMenuID;
 
 chrome.browserAction.onClicked.addListener(activeTab => {
   chrome.tabs.create({
-    url: chrome.extension.getURL('index.html')
+    url: chrome.extension.getURL('popup.html')
   });
 });
 
 
 function init() {
   getLicense();
-  contextMenuUpdate(true);
 }
 
 /*****************************************************************************
@@ -21,22 +19,17 @@ function init() {
  *****************************************************************************/
 
 function getLicense() {
-  xhrWithAuth('GET', CWS_LICENSE_API_URL + 'ahmapmilbkfamljbpgphfndeemhnajme', true, onLicenseFetched);
+  xhrWithAuth('GET', CWS_LICENSE_API_URL + chrome.runtime.id, true, onLicenseFetched);
 }
 
 function onLicenseFetched(error, status, response) {
   response = JSON.parse(response);
-  console.log(status);
-  console.table(response);
-  console.table(error);
+
   if (status === 200) {
     parseLicense(response);
   } else {
-    chrome.storage.sync.set({
-      license: 'NONE'
-    }, () => {
-      console.log(`Value is set too ${value}`);
-    });
+    save('NONE');
+
   }
 }
 
@@ -45,20 +38,15 @@ function onLicenseFetched(error, status, response) {
  *  - if license.accessLevel == 'FULL', they've paid for the app
  *  - if license.accessLevel == 'FREE_TRIAL' they haven't paid
  *    - If they've used the app for less than TRIAL_PERIOD_DAYS days, free trial
- *    - Otherwise, the free trial has expired
+ *    - Otherwise, the free trial has expired 
  *****************************************************************************/
 
 function parseLicense(license) {
   let licenseStatus;
   let licenseStatusText;
-  license = license.accessLevel;
-
-  console.log(license);
-  console.table(license);
-
-  if (license === 'FULL') {
+  if (license.result && license.accessLevel == 'FULL') {
     save('FULL');
-  } else if (license === 'FREE_TRIAL') {
+  } else if (license.result && license.accessLevel == 'FREE_TRIAL') {
     let daysAgoLicenseIssued = Date.now() - parseInt(license.createdTime, 10);
     daysAgoLicenseIssued = daysAgoLicenseIssued / 1000 / 60 / 60 / 24;
     if (daysAgoLicenseIssued <= TRIAL_PERIOD_DAYS) {
@@ -69,6 +57,7 @@ function parseLicense(license) {
   } else {
     save('NONE');
   }
+
 }
 
 
@@ -123,62 +112,7 @@ function xhrWithAuth(method, url, interactive, callback) {
     }
   }
 }
-/**
- * @param  {} contextInfo
- * @param  {} tab
- */
-function readText(contextInfo, tab) {
 
-  const keysArray = ['license'];
-
-  chrome.storage.sync.get(keysArray, setting => {
-    console.table(setting);
-    console.log(setting.license);
-    if ((setting.license === 'FULL') || (setting.license === 'TRIAL')) {
-      chrome.tts.speak(contextInfo.selectionText, {
-        requiredEventTypes: ['end'],
-        onEvent: function (event) {
-          event.type === 'end' ? contextMenuUpdate(true) : contextMenuUpdate(false)
-        }
-      });
-
-    } else {
-      chrome.tts.speak('Upgrade to use this feature');
-      contextMenuUpdate(true);
-    }
-  });
-}
-/**
- */
-function stopReading() {
-  chrome.tts.stop();
-  contextMenuUpdate(true);
-}
-/**
- * @param  {} selected
- */
-function contextMenuUpdate(selected) {
-  if (selected) {
-    chrome.contextMenus.update(contextMenuID, {
-      title: 'Start Reading',
-      contexts: ['selection'],
-      onclick: readText,
-    });
-  } else {
-    chrome.contextMenus.update(contextMenuID, {
-      title: "Stop Reading",
-      contexts: ['selection'],
-      onclick: stopReading
-    });
-  }
-}
-
-
-contextMenuID = chrome.contextMenus.create({
-  'title': 'Start Reading',
-  'contexts': ['selection'],
-  'onclick': readText
-});
 
 
 init();
