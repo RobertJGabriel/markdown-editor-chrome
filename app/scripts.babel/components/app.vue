@@ -8,16 +8,19 @@
 
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button">
-              <md-icon>more_vert</md-icon>
+              <md-icon>print</md-icon>
             </md-button>
             <md-button class="md-icon-button">
-              <md-icon>more_vert</md-icon>
+              <md-icon>save</md-icon>
             </md-button>
             <md-button class="md-icon-button">
-              <md-icon>more_vert</md-icon>
+              <md-icon>code</md-icon>
             </md-button>
             <md-button class="md-icon-button">
-              <md-icon>more_vert</md-icon>
+              <md-icon>book</md-icon>
+            </md-button>
+            <md-button class="md-icon-button">
+              <md-icon>help</md-icon>
             </md-button>
           </div>
         </div>
@@ -29,10 +32,10 @@
         <div class="md-layout">
           <div class="md-layout-item">
             <md-field>
-            <md-textarea></md-textarea>
+              <md-textarea></md-textarea>
             </md-field>
 
-            </div>
+          </div>
           <div class="md-layout-item preview" id="preview">e</div>
         </div>
       </md-app-content>
@@ -41,18 +44,18 @@
 </template>
 
 <style scoped>
-  .md-app {
+  .md-app {}
 
-  }
-  .preview{ 
+  .preview {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .md-layout{
-    height:  -webkit-fill-available;
+
+  .md-layout {
+    height: -webkit-fill-available;
   }
 
-  textarea{
+  textarea {
     height: 100vh;
   }
 </style>
