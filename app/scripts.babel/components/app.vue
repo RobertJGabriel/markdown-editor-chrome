@@ -1,8 +1,10 @@
 <template>
   <div class="page-container">
-    <md-app md-waterfall md-mode="flexible">
-      <md-app-toolbar class="md-large md-primary">
+    <md-app md-waterfall md-mode="overlap">
+      <md-app-toolbar class="md-primary md-large">
         <div class="md-toolbar-row">
+
+          <span class="md-title">Markdown Editor</span>
 
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button">
@@ -19,60 +21,20 @@
             </md-button>
           </div>
         </div>
-
-        <div class="md-toolbar-row">
-          <span class="md-display-1">Markdown Editor</span>
-        </div>
       </md-app-toolbar>
 
 
 
       <md-app-content>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam,
-          similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo,
-          neque.</p>
+        <div class="md-layout">
+          <div class="md-layout-item">
+            <md-field>
+            <md-textarea></md-textarea>
+            </md-field>
+
+            </div>
+          <div class="md-layout-item preview" id="preview">e</div>
+        </div>
       </md-app-content>
     </md-app>
   </div>
@@ -80,24 +42,26 @@
 
 <style scoped>
   .md-app {
-    max-height: 400px;
-    border: 1px solid rgba(#000, .12);
-  }
 
-  .md-app-toolbar {
-    height: 196px;
   }
-
-  // Demo purposes only
-  .md-drawer {
-    width: 230px;
-    max-width: calc(100vw - 125px);
+  .preview{ 
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .md-layout{
+    height:  -webkit-fill-available;
+  }
+  .md-has-textarea{
+    height:  -webkit-fill-available;
+  }
+  textarea{
+    height: 100vh;
   }
 </style>
 
 <script>
   export default {
-    name: 'Flexible',
+    name: 'Overlap',
     data: () => ({
       menuVisible: false
     })
