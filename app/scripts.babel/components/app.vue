@@ -51,9 +51,7 @@
   .md-layout{
     height:  -webkit-fill-available;
   }
-  .md-has-textarea{
-    height:  -webkit-fill-available;
-  }
+
   textarea{
     height: 100vh;
   }
