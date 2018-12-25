@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import App from './components/app.vue';
-
 import 'vue-material/dist/vue-material.min.css';
 import 'vue-material/dist/theme/default.css';
 import 'material-icons/iconfont/material-icons.css';

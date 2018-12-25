@@ -13,6 +13,7 @@ module.exports = {
     'bundle.min.css': [
       '../node_modules/vue-material/dist/vue-material.min.css',
       '../node_modules/vue-material/dist/theme/default.css',
+      '../node_modules/highlightjs/styles/github.css',
     ],
   },
   output: {
