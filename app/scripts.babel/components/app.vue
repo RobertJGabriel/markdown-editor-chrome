@@ -28,13 +28,14 @@
         <div class="md-layout">
           <div class="md-layout-item">
             <md-field>
-              <md-textarea v-model="editor"  style="height:-webkit-fill-available" v-on:keyup="changeHandler()" ></md-textarea>
-
+              <md-textarea v-model="editor" style="height:-webkit-fill-available" v-on:keyup="changeHandler()"></md-textarea>x
             </md-field>
 
           </div>
-          <div class="md-layout-item  md-scrollbar preview" v-html="compiledMarkdown" >
-
+          <div class="md-layout-item  md-scrollbar preview" id="preview"  v-if="!showHTML" v-html="compiledMarkdown">
+          </div>
+          <div class="md-layout-item  md-scrollbar preview" v-if="showHTML">
+            {{ compiledMarkdown }}
           </div>
         </div>
       </md-app-content>
@@ -90,7 +91,7 @@
         title: '',
         editor: Strings.markdownString(),
         cheatSheetString: Strings.cheatSheetExample(),
-        enableLines: false,
+
         showHTML: false,
         showCheatSheet: false,
         license: null,
@@ -111,10 +112,9 @@
 
       this.loadData();
 
-      //  chrome.storage.sync.get(['license'], this.updateLicense.bind(this));
+      chrome.storage.sync.get(['license'], this.updateLicense.bind(this));
 
       const code = this.editor;
-
       marked.setOptions({
         highlight(code) {
           return hljs.highlightAuto(code).value;
@@ -122,7 +122,6 @@
       });
 
       hljs.initHighlighting();
-
     },
     computed: {
       compiledMarkdown() {
@@ -130,9 +129,7 @@
           langPrefix: 'hljs '
         });
       },
-
     },
-
     methods: {
       exportHTML: function exportHTML() {
         if (!this.paid) {
@@ -142,7 +139,7 @@
         this.showHTML = this.showHTML ? false : true;
       },
       announcement: function announcement() {
-this.showSnackbar = true;
+        this.showSnackbar = true;
       },
       save: function save(input) {
         if (!this.paid) {
@@ -177,15 +174,8 @@ this.showSnackbar = true;
           // Load the data if needed
           this.editor = localStorage.getItem('storedData');
         }
-
-        if (localStorage.getItem('lines') !== null) {
-          this.enableLines = true;
-          this.lineNumbers();
-        }
-
       },
       changeHandler() {
-        console.log(marked(this.editor));
         return marked(this.editor);
       },
       saveLocally() {
