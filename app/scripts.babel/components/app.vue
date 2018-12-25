@@ -14,8 +14,8 @@
             <md-button class="md-icon-button" title='Export to  HTML' target="blank" v-on:click="exportHTML">
               <md-icon>code</md-icon>
             </md-button>
-            <md-button class="md-icon-button" title='Annoucment' target="blank" v-on:click="announcement">
-              <md-icon>announcement</md-icon>
+            <md-button class="md-icon-button" title='Annoucment' target="blank" v-on:click="help">
+              <md-icon>help_outline</md-icon>
             </md-button>
 
           </div>
@@ -32,7 +32,7 @@
             </md-field>
 
           </div>
-          <div class="md-layout-item  md-scrollbar preview" id="preview"  v-if="!showHTML" v-html="compiledMarkdown">
+          <div class="md-layout-item  md-scrollbar preview" id="preview" v-if="!showHTML" v-html="compiledMarkdown">
           </div>
           <div class="md-layout-item  md-scrollbar preview" v-if="showHTML">
             {{ compiledMarkdown }}
@@ -112,7 +112,7 @@
 
       this.loadData();
 
-      chrome.storage.sync.get(['license'], this.updateLicense.bind(this));
+      //      chrome.storage.sync.get(['license'], this.updateLicense.bind(this));
 
       const code = this.editor;
       marked.setOptions({
@@ -138,8 +138,8 @@
         }
         this.showHTML = this.showHTML ? false : true;
       },
-      announcement: function announcement() {
-        this.showSnackbar = true;
+      help: function help() {
+        window.location.href = 'https://www.robertgabriel.ninja/support';
       },
       save: function save(input) {
         if (!this.paid) {
