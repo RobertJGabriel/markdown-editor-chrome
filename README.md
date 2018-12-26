@@ -1,5 +1,5 @@
-# Helperbird Chrome [![Build Status](https://travis-ci.org/RobertJGabriel/markdown-editor-github.svg?branch=master)](https://travis-ci.org/RobertJGabriel/markdown-editor-github) 
-> This plugin allows you to toggle on and off the OpenDyslexic font on any website. It does one job and does it well.
+# Markdown Editor for Chrome [![Build Status](https://travis-ci.org/RobertJGabriel/markdown-editor-github.svg?branch=master)](https://travis-ci.org/RobertJGabriel/markdown-editor-github) 
+> Create and view markdown files from any were. Simple and easy. A Github Flavored Markdown Editor.
 
 ![alt text]( app/images/screenshot/readme.png  "Readme Logo")
 
