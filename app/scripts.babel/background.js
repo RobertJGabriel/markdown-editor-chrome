@@ -123,62 +123,6 @@ function xhrWithAuth(method, url, interactive, callback) {
     }
   }
 }
-/**
- * @param  {} contextInfo
- * @param  {} tab
- */
-function readText(contextInfo, tab) {
-
-  const keysArray = ['license'];
-
-  chrome.storage.sync.get(keysArray, setting => {
-    console.table(setting);
-    console.log(setting.license);
-    if ((setting.license === 'FULL') || (setting.license === 'TRIAL')) {
-      chrome.tts.speak(contextInfo.selectionText, {
-        requiredEventTypes: ['end'],
-        onEvent: function (event) {
-          event.type === 'end' ? contextMenuUpdate(true) : contextMenuUpdate(false)
-        }
-      });
-
-    } else {
-      chrome.tts.speak('Upgrade to use this feature');
-      contextMenuUpdate(true);
-    }
-  });
-}
-/**
- */
-function stopReading() {
-  chrome.tts.stop();
-  contextMenuUpdate(true);
-}
-/**
- * @param  {} selected
- */
-function contextMenuUpdate(selected) {
-  if (selected) {
-    chrome.contextMenus.update(contextMenuID, {
-      title: 'Start Reading',
-      contexts: ['selection'],
-      onclick: readText,
-    });
-  } else {
-    chrome.contextMenus.update(contextMenuID, {
-      title: "Stop Reading",
-      contexts: ['selection'],
-      onclick: stopReading
-    });
-  }
-}
-
-
-contextMenuID = chrome.contextMenus.create({
-  'title': 'Start Reading',
-  'contexts': ['selection'],
-  'onclick': readText
-});
 
 
 init();
