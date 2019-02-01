@@ -9,7 +9,6 @@ module.exports = {
     'background.js': './scripts.babel/background.js', // remove unused
     'chromereload.js': './scripts.babel/chromereload.js',
     'popup.js': './scripts.babel/popup.js',
-    'content.js': './scripts.babel/content.js',
     'bundle.min.css': [
       '../node_modules/vue-material/dist/vue-material.min.css',
       '../node_modules/vue-material/dist/theme/default.css',

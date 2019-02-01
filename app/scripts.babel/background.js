@@ -1,19 +1,12 @@
 const CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
-const TRIAL_PERIOD_DAYS = 5;
+const TRIAL_PERIOD_DAYS = 7;
 let access_token;
 let license;
 let contextMenuID;
 
-chrome.browserAction.onClicked.addListener(activeTab => {
-  chrome.tabs.create({
-    url: chrome.extension.getURL('index.html')
-  });
-});
-
 
 function init() {
   getLicense();
-  contextMenuUpdate(true);
 }
 
 /*****************************************************************************
@@ -21,23 +14,27 @@ function init() {
  *****************************************************************************/
 
 function getLicense() {
-  xhrWithAuth('GET', CWS_LICENSE_API_URL + 'ahmapmilbkfamljbpgphfndeemhnajme', true, onLicenseFetched);
+  xhrWithAuth('GET', CWS_LICENSE_API_URL + 'dkpldbigkfcgpamifjimiejipmodkigk', true, onLicenseFetched);
 }
 
 function onLicenseFetched(error, status, response) {
-  response = JSON.parse(response);
-  console.log(status);
-  console.table(response);
-  console.table(error);
-  if (status === 200) {
-    parseLicense(response);
-  } else {
-    chrome.storage.sync.set({
-      license: 'NONE'
-    }, () => {
-      console.log(`Value is set too ${value}`);
-    });
+
+
+  try {
+    response = JSON.parse(response);
+    if (status === 200) {
+      console.log(status);
+      console.table(response);
+      parseLicense(response);
+    }
+  } catch (e) {
+    console.log('error');
+    save('EXPIRED');
   }
+
+
+
+
 }
 
 /*****************************************************************************
@@ -49,26 +46,38 @@ function onLicenseFetched(error, status, response) {
  *****************************************************************************/
 
 function parseLicense(license) {
+
   let licenseStatus;
   let licenseStatusText;
-  license = license.accessLevel;
-
-  console.log(license);
+  let licenseClone = license.accessLevel;
   console.table(license);
+  console.log(license.accessLevel);
+  console.table(licenseClone);
 
-  if (license === 'FULL') {
+  if (licenseClone === 'FULL') {
+    console.log("Fully paid & properly licensed.");
     save('FULL');
-  } else if (license === 'FREE_TRIAL') {
+  } else if (licenseClone === 'FREE_TRIAL') {
     let daysAgoLicenseIssued = Date.now() - parseInt(license.createdTime, 10);
     daysAgoLicenseIssued = daysAgoLicenseIssued / 1000 / 60 / 60 / 24;
+    console.log('License Issued');
+    console.log(daysAgoLicenseIssued);
+
     if (daysAgoLicenseIssued <= TRIAL_PERIOD_DAYS) {
+      console.log("Free trial, still within trial period");
       save('TRIAL');
     } else {
+      console.log("Free trial, trial period expired.");
       save('EXPIRED');
     }
-  } else {
-    save('NONE');
   }
+
+
+  if (licenseClone !== 'FREE_TRIAL' && licenseClone !== 'FULL') {
+    console.log("No license ever issued.");
+    save('EXPIRED');
+  }
+
 }
 
 
@@ -112,7 +121,7 @@ function xhrWithAuth(method, url, interactive, callback) {
   }
 
   function requestComplete() {
-    if (this.status == 401 && retry) {
+    if (this.status === 401 && retry) {
       retry = false;
       chrome.identity.removeCachedAuthToken({
           token: access_token
@@ -124,5 +133,10 @@ function xhrWithAuth(method, url, interactive, callback) {
   }
 }
 
-
 init();
+
+chrome.browserAction.onClicked.addListener(activeTab => {
+  chrome.tabs.create({
+    url: chrome.extension.getURL('index.html')
+  });
+});
