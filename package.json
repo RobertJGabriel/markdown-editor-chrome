@@ -52,17 +52,7 @@
     "gulp-useref": "^3.0.8",
     "gulp-zip": "^3.2.0",
     "main-bower-files": "^2.11.1",
-    "purify-css": "^1.2.5",
-    "purifycss-webpack": "^0.7.0",
-    "run-sequence": "^1.1.5",
-    "style-loader": "^0.21.0",
-    "vue-loader": "^12.2.2",
-    "vue-template-compiler": "^2.5.16",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.4.5",
-    "wiredep": "^4.0.0",
-    "xo": "^0.18.2",
-    "vue": "^2.5.16"
+    "purify-css": "^1.2.5"
   },
   "eslintConfig": {
     "env": {
@@ -85,6 +75,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.1.0",
     "@fortawesome/vue-fontawesome": "^0.1.0",
+    "axios": "^0.18.0",
     "font-awesome": "^4.7.0",
     "gulp-concat": "^2.6.1",
     "gulp-replace": "^1.0.0",

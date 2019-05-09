@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './components/app.vue';
 import 'vue-material/dist/vue-material.min.css';
-import 'vue-material/dist/theme/default.css';
+import 'vue-material/dist/theme/default-dark.css';
 import 'material-icons/iconfont/material-icons.css';
 
 Vue.config.productionTip = false;

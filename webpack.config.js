@@ -11,7 +11,7 @@ module.exports = {
     'popup.js': './scripts.babel/popup.js',
     'bundle.min.css': [
       '../node_modules/vue-material/dist/vue-material.min.css',
-      '../node_modules/vue-material/dist/theme/default.css',
+      '../node_modules/vue-material/dist/theme/default-dark.css',
       '../node_modules/highlightjs/styles/github.css',
     ],
   },

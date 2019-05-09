@@ -1,137 +1,138 @@
-const CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
+const AXIOS = require('axios');
 const TRIAL_PERIOD_DAYS = 7;
-let access_token;
-let license;
-let contextMenuID;
+const CWS_LICENSE_API_URL = "https://www.googleapis.com/chromewebstore/v1.1/userlicenses/";
+const LOCAL = false;
+const CHROME_ID = 'dkpldbigkfcgpamifjimiejipmodkigk';
+let version = 0;
+let pastVersion = 0;
 
 
-function init() {
-  getLicense();
-}
+
 
 /*****************************************************************************
  * Call to license server to request the license
  *****************************************************************************/
 
+function init() {
+  getLicense();
+}
+
 function getLicense() {
-  xhrWithAuth('GET', CWS_LICENSE_API_URL + 'dkpldbigkfcgpamifjimiejipmodkigk', true, onLicenseFetched);
-}
 
-function onLicenseFetched(error, status, response) {
+  chrome.identity.getAuthToken({
+    interactive: true
+  }, function (token) {
 
+    const CONFIG = {
+      headers: {
+        'Authorization': "Bearer " + token
+      }
+    };
 
-  try {
-    response = JSON.parse(response);
-    if (status === 200) {
-      console.log(status);
-      console.table(response);
-      parseLicense(response);
-    }
-  } catch (e) {
-    console.log('error');
-    save('EXPIRED');
-  }
+    AXIOS.get(
+        CWS_LICENSE_API_URL + CHROME_ID,
+        CONFIG
+      )
+      .then(response => {
+        console.table(response);
+        // response.result == TRUE = User has license. FALSE = User does not have license.
+        if (response.status === 200 && response.data.result === true) {
+          pariseLicense(response.data, response.data.accessLevel);
+        }
 
+        if (response.data.result === false) {
+          save(false, `FULL`);
+        }
 
-
-
-}
-
-/*****************************************************************************
- * Parse the license and determine if the user should get a free trial
- *  - if license.accessLevel == 'FULL', they've paid for the app
- *  - if license.accessLevel == 'FREE_TRIAL' they haven't paid
- *    - If they've used the app for less than TRIAL_PERIOD_DAYS days, free trial
- *    - Otherwise, the free trial has expired
- *****************************************************************************/
-
-function parseLicense(license) {
-
-  let licenseStatus;
-  let licenseStatusText;
-  let licenseClone = license.accessLevel;
-  console.table(license);
-  console.log(license.accessLevel);
-  console.table(licenseClone);
-
-  if (licenseClone === 'FULL') {
-    console.log("Fully paid & properly licensed.");
-    save('FULL');
-  } else if (licenseClone === 'FREE_TRIAL') {
-    let daysAgoLicenseIssued = Date.now() - parseInt(license.createdTime, 10);
-    daysAgoLicenseIssued = daysAgoLicenseIssued / 1000 / 60 / 60 / 24;
-    console.log('License Issued');
-    console.log(daysAgoLicenseIssued);
-
-    if (daysAgoLicenseIssued <= TRIAL_PERIOD_DAYS) {
-      console.log("Free trial, still within trial period");
-      save('TRIAL');
-    } else {
-      console.log("Free trial, trial period expired.");
-      save('EXPIRED');
-    }
-  }
-
-
-  if (licenseClone !== 'FREE_TRIAL' && licenseClone !== 'FULL') {
-    console.log("No license ever issued.");
-    save('EXPIRED');
-  }
-
-}
-
-
-function save(value) {
-  chrome.storage.sync.set({
-    license: value
-  }, () => {
-    console.log(`Value is set to ${value}`);
+      })
+      .then(response => {
+        console.table(response);
+        // Remove token
+        chrome.identity.removeCachedAuthToken({
+          token: token
+        });
+      })
+      .catch(error => {
+        console.table(error);
+        save(false, `FULL`);
+      });
   });
 }
 
 
-/*****************************************************************************
- * Helper method for making authenticated requests
- *****************************************************************************/
-
-// Helper Util for making authenticated XHRs
-function xhrWithAuth(method, url, interactive, callback) {
-  let retry = true;
-  getToken();
-
-  function getToken() {
-    chrome.identity.getAuthToken({
-      interactive
-    }, token => {
-      if (chrome.runtime.lastError) {
-        callback(chrome.runtime.lastError);
-        return;
-      }
-      access_token = token;
-      requestStart();
-    });
-  }
-
-  function requestStart() {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader('Authorization', `Bearer ${access_token}`);
-    xhr.onload = requestComplete;
-    xhr.send();
-  }
-
-  function requestComplete() {
-    if (this.status === 401 && retry) {
-      retry = false;
-      chrome.identity.removeCachedAuthToken({
-          token: access_token
-        },
-        getToken);
-    } else {
-      callback(null, this.status, this.response);
-    }
+/**
+ * @param  {} fullDetails
+ * @param  {} accessLevel
+ */
+function pariseLicense(fullDetails, accessLevel) {
+  switch (accessLevel) {
+    case 'FULL':
+      console.log('Fully paid & properly licensed.');
+      save(true, 'FULL');
+      break;
+    case 'FREE_TRIAL':
+      calculateTrial(fullDetails.createdTime, 'FREE_TRIAL');
+      break;
+    default:
+      save(false, `FULL`);
   }
 }
+
+
+/**
+ * @param  {} fullDetails
+ * @param  {} accessLevel
+ */
+function calculateTrial(createdTime = 7, accessLevel) {
+
+  let LICENSE_ISSUED_DAYS_AGO = Date.now() - parseInt(createdTime, 10);
+  LICENSE_ISSUED_DAYS_AGO = LICENSE_ISSUED_DAYS_AGO / 1000 / 60 / 60 / 24;
+  console.log('License issued');
+  console.log(LICENSE_ISSUED_DAYS_AGO);
+
+  if (LICENSE_ISSUED_DAYS_AGO <= TRIAL_PERIOD_DAYS) {
+
+    console.log('Free trial, still within trial period');
+    save(true, 'FULL', Math.round(LICENSE_ISSUED_DAYS_AGO));
+  } else {
+    save(false, 'FULL');
+  }
+}
+
+
+/**
+ * @param  {} value
+ * @param  {} message
+ */
+function save(value, message, trialDays = -1) {
+  chrome.storage.sync.set({
+      license: value
+    },
+    () => {
+      console.log(`Value is set to ${value}`)
+    }
+  );
+
+  chrome.storage.sync.set({
+      message: message
+    },
+    () => {
+      console.log(`Value is set to ${message}`)
+    }
+  );
+
+
+  chrome.storage.sync.set({
+      trial: (7 - trialDays)
+    },
+    () => {
+      console.log(`Value is set to ${trialDays}`)
+    }
+  );
+}
+
+
+
 
 init();
 
