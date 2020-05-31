@@ -1,34 +1,29 @@
 {
-  "name": "__MSG_appName__",
-  "short_name": "Markdown Editor",
-  "version": "13.0.0",
-  "manifest_version": 2,
-  "description": "__MSG_appDescription__",
-  "icons": {
-    "16": "images/logo/16.png",
-    "128": "images/logo/128.png"
-  },
-  "browser_action": {
-    "default_icon": "images/logo/128.png"
-  },
-  "default_locale": "en",
-  "background": {
-    "scripts": [
-      "scripts/background.js"
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDescription__",
+    "short_name": "Markdown Editor",
+    "homepage_url": "https://www.robertgabriel.ninja",
+    "version": "14.1.2",
+    "manifest_version": 2,
+    "default_locale": "en",
+    "icons": {
+        "16": "images/logo/16.png",
+        "32": "images/logo/32.png",
+        "48": "images/logo/48.png",
+        "128": "images/logo/128.png"
+    },
+    "browser_action": {
+        "default_icon": "images/logo/128.png"
+      },
+    "background": {
+        "scripts": ["scripts/background.js"],
+        "persistent": true
+      },
+    "offline_enabled": true,
+    "permissions": [
+        "identity.email",
+        "identity",
+        "storage"
     ],
-    "persistent": true
-  },
-  "permissions": [
-    "identity",
-    "storage"
-  ],
-  "offline_enabled": true,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "oauth2": {
-    "client_id": "1057922472309-h646oehhlp6tfgcivo00uuvtapfbcai8.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/plus.login",
-      "https://www.googleapis.com/auth/chromewebstore.readonly"
-    ]
-  }
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

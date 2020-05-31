@@ -1,19 +1,18 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-process.traceDeprecation = true;
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 
 module.exports = {
+  mode: 'development',
   context: __dirname + '/app/',
   entry: {
     'background.js': './scripts.babel/background.js', // remove unused
     'chromereload.js': './scripts.babel/chromereload.js',
     'popup.js': './scripts.babel/popup.js',
-    'bundle.min.css': [
-      '../node_modules/vue-material/dist/vue-material.min.css',
-      '../node_modules/vue-material/dist/theme/default-dark.css',
-      '../node_modules/highlightjs/styles/github.css',
-    ],
+    'core/license.js': './scripts.babel/core/license.js',
+    'core/save.js': './scripts.babel/core/save.js', // remove unused
+    'core/settings.js': './scripts.babel/core/settings.js', // remove unused
   },
   output: {
     path: path.resolve(__dirname, '/dist/help'),
@@ -21,17 +20,23 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue': 'vue/dist/vue.esm.js'
-    }
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+    extensions: ['.ts', '.js', '.vue', '.json']
+
   },
   module: {
     rules: [{
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {},
+          esModule: true // example of setting to false
+        }
+      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-      }, {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       },
       {
         test: /\.css$/,
@@ -52,6 +57,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("bundle.min.css")
+    new ExtractTextPlugin("bundle.min.css"),
+    new VueLoaderPlugin(),
   ]
 };
