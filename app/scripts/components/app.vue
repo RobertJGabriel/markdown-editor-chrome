@@ -171,7 +171,7 @@
 
 				editor: Strings.markdownString(),
 				showHTML: false,
-
+				awaitingSearch: false,
 				messagesFound: ''
 			};
 		},
@@ -183,7 +183,17 @@
 				});
 			}
 		},
-
+		watch: {
+			editor() {
+				if (!this.awaitingSearch) {
+					setTimeout(() => {
+						this.awaitingSearch = false;
+						return this.save(this.editor);
+					}, 2000); // 1 sec delay
+				}
+				this.awaitingSearch = true;
+			}
+		},
 		async mounted() {
 			const code = this.editor;
 			marked.setOptions({
@@ -227,10 +237,7 @@
 			help: function help() {
 				window.location.href = 'https://www.coffeeandfun.com/#support';
 			},
-			save: function save(input) {
-				this.snackbar('Saved');
-				return localStorage.setItem('storedData', input);
-			},
+
 			print: function print() {
 				this.showHTML = false;
 				const printIframe = document.getElementById('printArea');
@@ -242,7 +249,6 @@
 			},
 
 			changeHandler() {
-				this.save(this.editor);
 				return marked(this.editor);
 			},
 			saveLocally() {
@@ -265,6 +271,7 @@
 			},
 
 			save: function (token, type) {
+				this.snackbar('Saved');
 				let setting = {};
 				setting[token] = type;
 				chrome.storage.sync.set(setting);
