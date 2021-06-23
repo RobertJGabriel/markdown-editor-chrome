@@ -19,6 +19,6 @@
 		"scripts": ["scripts/background.js"]
 	},
 	"offline_enabled": true,
-	"permissions": ["storage"],
+
 	"content_security_policy": "script-src 'self'; object-src 'self';"
 }

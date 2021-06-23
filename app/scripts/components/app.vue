@@ -270,12 +270,9 @@
 				}
 			},
 
-			save: function (token, type) {
+			save: function (input) {
 				this.snackbar('Saved');
-				let setting = {};
-				setting[token] = type;
-				chrome.storage.sync.set(setting);
-				return setting;
+				return localStorage.setItem('storedData', input);
 			},
 			snackbar: function (message, type = 'success') {
 				if (
