@@ -65,10 +65,8 @@ module.exports = {
 			patterns: [
 				{
 					context: __dirname + '/app/',
-					from:
-						process.env.browser === 'firefox'
-							? '../config/firefox-manifest.json'
-							: '../config/chrome-manifest.json',
+					from: `../config/${process.env.browser}-manifest.json`,
+
 					to: 'manifest.json'
 				},
 

@@ -183,11 +183,7 @@
 				});
 			}
 		},
-		watch: {
-			editor() {
-				return this.save(this.editor);
-			}
-		},
+
 		async mounted() {
 			const code = this.editor;
 			marked.setOptions({
@@ -232,10 +228,8 @@
 				window.location.href = 'https://www.coffeeandfun.com/#support';
 			},
 			save: function save(input) {
-				if (typeof Storage !== 'undefined') {
-					this.snackbar('Saved');
-					return localStorage.setItem('storedData', input);
-				}
+				this.snackbar('Saved');
+				return localStorage.setItem('storedData', input);
 			},
 			print: function print() {
 				this.showHTML = false;
@@ -248,6 +242,7 @@
 			},
 
 			changeHandler() {
+				this.save(this.editor);
 				return marked(this.editor);
 			},
 			saveLocally() {
