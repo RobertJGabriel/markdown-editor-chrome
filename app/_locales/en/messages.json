@@ -1,98 +1,98 @@
 {
-  "appName": {
-    "message": "Markdown Editor for Chrome"
-  },
-  "appTitle": {
-    "message": "Markdown Editor"
-  },
-  "appDescription": {
-    "message": "Create and view markdown files from any were. Simple and easy. A Github Flavored Markdown Editor."
-  },
-  "canceled": {
-    "message": "Your subscription is canceled."
-  },
-  "title_message_fallback": {
-    "message": "We couldn't find a subscription "
-  },
-  "title_enjoy_until": {
-    "message": "Enjoy your trial until "
-  },
-  "incomplete_expired": {
-    "message": "We couldn`t complete the payment. Please contact support."
-  },
-  "unpaid": {
-    "message": "Your subscription is unpaid. Please contact support."
-  },
-  "past_due": {
-    "message": "Your subscription is past due. Please contact support."
-  },
-  "title_message_none": {
-    "message": "We couldn't find a subscription."
-  },
-  "sign_in": {
-    "message": "Please sign into your Browser."
-  },
-  "cleaning":{
-    "message": "Cleaning.... "
-  },
+	"appName": {
+		"message": "Markdown Editor for Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Create and view markdown files from any were. Simple and easy. A Github Flavored Markdown Editor."
+	},
+	"canceled": {
+		"message": "Your subscription is canceled."
+	},
+	"title_message_fallback": {
+		"message": "We couldn't find a subscription "
+	},
+	"title_enjoy_until": {
+		"message": "Enjoy your trial until "
+	},
+	"incomplete_expired": {
+		"message": "We couldn`t complete the payment. Please contact support."
+	},
+	"unpaid": {
+		"message": "Your subscription is unpaid. Please contact support."
+	},
+	"past_due": {
+		"message": "Your subscription is past due. Please contact support."
+	},
+	"title_message_none": {
+		"message": "We couldn't find a subscription."
+	},
+	"sign_in": {
+		"message": "Please sign into your Browser."
+	},
+	"cleaning": {
+		"message": "Cleaning.... "
+	},
 
-  "incomplete": {
-    "message": "We couldn`t complete the payment. Please contact support."
-  },
+	"incomplete": {
+		"message": "We couldn`t complete the payment. Please contact support."
+	},
 
-  "upgradeToRemove": {
-    "message": "Upgrade now!"
-  },
-  "email": {
-    "message": "Signed in as"
-  },
-  "extras_settings": {
-    "message": "Extras"
-  },
-  "settings_settings": {
-    "message": "Settings"
-  },
-  "settings_upgrade": {
-    "message": "upgrade"
-  },
-  "settings_upgrade_button": {
-    "message": "Upgrade for 12.00"
-  },
-  "title_message_full": {
-    "message": "Enjoy"
-  },
-  "payment":{
-    "message" :"payment"
-   },
+	"upgradeToRemove": {
+		"message": "Upgrade now!"
+	},
+	"email": {
+		"message": "Signed in as"
+	},
+	"extras_settings": {
+		"message": "Extras"
+	},
+	"settings_settings": {
+		"message": "Settings"
+	},
+	"settings_upgrade": {
+		"message": "upgrade"
+	},
+	"settings_upgrade_button": {
+		"message": "Upgrade for 12.00"
+	},
+	"title_message_full": {
+		"message": "Enjoy"
+	},
+	"payment": {
+		"message": "payment"
+	},
 
-   "open":{
-    "message" :"open"
-   },
-  "money":{
-   "message" :"Upgrade for 12.00"
-  },
-  "trialOver": {
-    "message": "Your trial is over."
-  },
-  "sign_in_message": {
+	"open": {
+		"message": "open"
+	},
+	"money": {
+		"message": "Upgrade for 12.00"
+	},
+	"trialOver": {
+		"message": "Your trial is over."
+	},
+	"sign_in_message": {
 		"message": "Sign in"
 	},
-  "button_upgrade": {
+	"button_upgrade": {
 		"message": "Upgrade"
 	},
-  "removed": {
-    "message": "Removed sites"
-  },
-  "options_sync": {
-    "message": "Syncing subscription...."
-  },
-  "title_help_sync": {
-    "message": "Sync"
-  },
-  "button_sync": {
-    "message": "Sync"
-  },
-  "title_help_sync_tooltip": {
-    "message": "License"
-  }
+	"removed": {
+		"message": "Removed sites"
+	},
+	"options_sync": {
+		"message": "Syncing subscription...."
+	},
+	"title_help_sync": {
+		"message": "Sync"
+	},
+	"button_sync": {
+		"message": "Sync"
+	},
+	"title_help_sync_tooltip": {
+		"message": "License"
+	}
 }

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#preview > h1 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	padding: 1rem;
+}
+
+#preview > h2 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 1rem;
+}
+
+#preview > h3 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	padding: 1rem;
+}
+
+#preview > h4 {
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	padding: 1rem;
+}
+
+#preview > h5 {
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	padding: 1rem;
+}
+
+#preview > h6 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	padding: 1rem;
+}
+
+#preview > p,
+b {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 1rem;
+}
+
+#preview > li,
+ul,
+ol {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 0rem 1rem;
+}
+
+#preview > img,
+pre {
+	padding: 1rem;
+}
