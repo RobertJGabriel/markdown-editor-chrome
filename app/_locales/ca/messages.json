@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor per a Chrome"
+	},
+	"appTitle": {
+		"message": "Editor Markdown"
+	},
+	"appDescription": {
+		"message": "Creeu i visualitzeu fitxers de marcatge des de qualsevol lloc. Senzill i fàcil. Un editor de Markdown amb sabor a Github."
+	},
+	"canceled": {
+		"message": "La vostra subscripció s'ha cancel·lat."
+	},
+	"title_message_fallback": {
+		"message": "No hem trobat cap subscripció"
+	},
+	"title_enjoy_until": {
+		"message": "Gaudeix de la prova fins a"
+	},
+	"incomplete_expired": {
+		"message": "No hem pogut completar el pagament. Poseu-vos en contacte amb el servei d'assistència."
+	},
+	"unpaid": {
+		"message": "La vostra subscripció no es paga. Poseu-vos en contacte amb el servei d'assistència."
+	},
+	"past_due": {
+		"message": "La vostra subscripció ha caducat. Poseu-vos en contacte amb el servei d'assistència."
+	},
+	"title_message_none": {
+		"message": "No hem trobat cap subscripció."
+	},
+	"sign_in": {
+		"message": "Inicieu la sessió al navegador."
+	},
+	"cleaning": {
+		"message": "Neteja ...."
+	},
+	"incomplete": {
+		"message": "No hem pogut completar el pagament. Poseu-vos en contacte amb el servei d'assistència."
+	},
+	"upgradeToRemove": {
+		"message": "Actualitza ara!"
+	},
+	"email": {
+		"message": "Heu iniciat la sessió com a"
+	},
+	"extras_settings": {
+		"message": "Extres"
+	},
+	"settings_settings": {
+		"message": "Configuració"
+	},
+	"settings_upgrade": {
+		"message": "actualització"
+	},
+	"settings_upgrade_button": {
+		"message": "Actualització per a les 12.00"
+	},
+	"title_message_full": {
+		"message": "Gaudeix"
+	},
+	"payment": {
+		"message": "pagament"
+	},
+	"open": {
+		"message": "obert"
+	},
+	"money": {
+		"message": "Actualització per a les 12.00"
+	},
+	"trialOver": {
+		"message": "La prova s'ha acabat."
+	},
+	"sign_in_message": {
+		"message": "Inicieu la sessió"
+	},
+	"button_upgrade": {
+		"message": "Actualització"
+	},
+	"removed": {
+		"message": "Llocs eliminats"
+	},
+	"options_sync": {
+		"message": "S'està sincronitzant la subscripció ...."
+	},
+	"title_help_sync": {
+		"message": "Sincronitzar"
+	},
+	"button_sync": {
+		"message": "Sincronitzar"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Llicència"
+	}
+}

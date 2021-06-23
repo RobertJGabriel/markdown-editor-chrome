@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome'i märgendiredaktor"
+	},
+	"appTitle": {
+		"message": "Märksõnade redaktor"
+	},
+	"appDescription": {
+		"message": "Looge ja vaadake märgistusfaile kõigist neist. Lihtne ja lihtne. Githubi maitsestatud märgistuste redaktor."
+	},
+	"canceled": {
+		"message": "Teie tellimus on tühistatud."
+	},
+	"title_message_fallback": {
+		"message": "Me ei leidnud tellimust"
+	},
+	"title_enjoy_until": {
+		"message": "Nautige prooviperioodi kuni"
+	},
+	"incomplete_expired": {
+		"message": "Me ei saanud makset lõpule viia. Palun võtke ühendust toega."
+	},
+	"unpaid": {
+		"message": "Teie tellimus on tasumata. Palun võtke ühendust toega."
+	},
+	"past_due": {
+		"message": "Teie tellimus on tähtaja ületanud. Palun võtke ühendust toega."
+	},
+	"title_message_none": {
+		"message": "Me ei leidnud tellimust."
+	},
+	"sign_in": {
+		"message": "Logige sisse oma brauserisse."
+	},
+	"cleaning": {
+		"message": "Koristamine ...."
+	},
+	"incomplete": {
+		"message": "Me ei saanud makset lõpule viia. Palun võtke ühendust toega."
+	},
+	"upgradeToRemove": {
+		"message": "Uuenda nüüd!"
+	},
+	"email": {
+		"message": "Sisse logitud kui"
+	},
+	"extras_settings": {
+		"message": "Lisad"
+	},
+	"settings_settings": {
+		"message": "Seaded"
+	},
+	"settings_upgrade": {
+		"message": "täiendama"
+	},
+	"settings_upgrade_button": {
+		"message": "Uuendage kell 12.00"
+	},
+	"title_message_full": {
+		"message": "Nautige"
+	},
+	"payment": {
+		"message": "makse"
+	},
+	"open": {
+		"message": "avatud"
+	},
+	"money": {
+		"message": "Uuendage kell 12.00"
+	},
+	"trialOver": {
+		"message": "Teie kohtuprotsess on läbi."
+	},
+	"sign_in_message": {
+		"message": "Logi sisse"
+	},
+	"button_upgrade": {
+		"message": "Uuenda"
+	},
+	"removed": {
+		"message": "Eemaldatud saidid"
+	},
+	"options_sync": {
+		"message": "Tellimuse sünkroonimine ...."
+	},
+	"title_help_sync": {
+		"message": "Sünkroonimine"
+	},
+	"button_sync": {
+		"message": "Sünkroonimine"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Litsents"
+	}
+}

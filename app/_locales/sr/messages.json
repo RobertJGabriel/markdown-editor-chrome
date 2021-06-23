@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Маркдовн Едитор за Цхроме"
+	},
+	"appTitle": {
+		"message": "Маркдовн Едитор"
+	},
+	"appDescription": {
+		"message": "Створите и прегледајте датотеке са ознакама са било ког. Једноставно и лако. Уређивач Маркдовн-а са укусом Гитхуб-а."
+	},
+	"canceled": {
+		"message": "Ваша претплата је отказана."
+	},
+	"title_message_fallback": {
+		"message": "Нисмо могли да нађемо претплату"
+	},
+	"title_enjoy_until": {
+		"message": "Уживајте у свом суђењу до"
+	},
+	"incomplete_expired": {
+		"message": "Нисмо могли извршити уплату. Молимо контактирајте подршку."
+	},
+	"unpaid": {
+		"message": "Ваша претплата је неплаћена. Молимо контактирајте подршку."
+	},
+	"past_due": {
+		"message": "Ваша претплата је истекла. Молимо контактирајте подршку."
+	},
+	"title_message_none": {
+		"message": "Нисмо могли да нађемо претплату."
+	},
+	"sign_in": {
+		"message": "Пријавите се у свој прегледач."
+	},
+	"cleaning": {
+		"message": "Чишћење ...."
+	},
+	"incomplete": {
+		"message": "Нисмо могли извршити уплату. Молимо контактирајте подршку."
+	},
+	"upgradeToRemove": {
+		"message": "Надоградите сада!"
+	},
+	"email": {
+		"message": "Пријављени као"
+	},
+	"extras_settings": {
+		"message": "Додаци"
+	},
+	"settings_settings": {
+		"message": "Подешавања"
+	},
+	"settings_upgrade": {
+		"message": "надоградити"
+	},
+	"settings_upgrade_button": {
+		"message": "Надоградите за 12.00"
+	},
+	"title_message_full": {
+		"message": "Уживати"
+	},
+	"payment": {
+		"message": "плаћање"
+	},
+	"open": {
+		"message": "отворен"
+	},
+	"money": {
+		"message": "Надоградите за 12.00"
+	},
+	"trialOver": {
+		"message": "Ваше суђење је завршено."
+	},
+	"sign_in_message": {
+		"message": "Пријавите се"
+	},
+	"button_upgrade": {
+		"message": "Надоградите"
+	},
+	"removed": {
+		"message": "Уклоњене локације"
+	},
+	"options_sync": {
+		"message": "Синхронизација претплате ...."
+	},
+	"title_help_sync": {
+		"message": "Синхронизовати"
+	},
+	"button_sync": {
+		"message": "Синхронизовати"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Лиценца"
+	}
+}

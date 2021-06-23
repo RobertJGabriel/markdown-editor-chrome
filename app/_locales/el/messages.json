@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Επεξεργαστής Markdown για Chrome"
+	},
+	"appTitle": {
+		"message": "Επεξεργαστής Markdown"
+	},
+	"appDescription": {
+		"message": "Δημιουργήστε και δείτε αρχεία markdown από οποιοδήποτε από αυτά ήταν. Απλό και εύκολο. Ένας Github Flavored Markdown Editor."
+	},
+	"canceled": {
+		"message": "Η συνδρομή σας ακυρώθηκε."
+	},
+	"title_message_fallback": {
+		"message": "Δεν ήταν δυνατή η εύρεση συνδρομής"
+	},
+	"title_enjoy_until": {
+		"message": "Απολαύστε τη δοκιμή σας μέχρι"
+	},
+	"incomplete_expired": {
+		"message": "Δεν ήταν δυνατή η ολοκλήρωση της πληρωμής. Επικοινωνήστε με την υποστήριξη."
+	},
+	"unpaid": {
+		"message": "Η συνδρομή σας δεν είναι πληρωμένη. Επικοινωνήστε με την υποστήριξη."
+	},
+	"past_due": {
+		"message": "Η συνδρομή σας έχει λήξει. Επικοινωνήστε με την υποστήριξη."
+	},
+	"title_message_none": {
+		"message": "Δεν ήταν δυνατή η εύρεση συνδρομής."
+	},
+	"sign_in": {
+		"message": "Συνδεθείτε στο πρόγραμμα περιήγησής σας."
+	},
+	"cleaning": {
+		"message": "Καθάρισμα...."
+	},
+	"incomplete": {
+		"message": "Δεν ήταν δυνατή η ολοκλήρωση της πληρωμής. Επικοινωνήστε με την υποστήριξη."
+	},
+	"upgradeToRemove": {
+		"message": "Αναβάθμισε τώρα!"
+	},
+	"email": {
+		"message": "Συνδέθηκε ως"
+	},
+	"extras_settings": {
+		"message": "Πρόσθετα"
+	},
+	"settings_settings": {
+		"message": "Ρυθμίσεις"
+	},
+	"settings_upgrade": {
+		"message": "αναβαθμίζω"
+	},
+	"settings_upgrade_button": {
+		"message": "Αναβάθμιση για 12:00"
+	},
+	"title_message_full": {
+		"message": "Απολαμβάνω"
+	},
+	"payment": {
+		"message": "πληρωμή"
+	},
+	"open": {
+		"message": "Άνοιξε"
+	},
+	"money": {
+		"message": "Αναβάθμιση για 12:00"
+	},
+	"trialOver": {
+		"message": "Η δοκιμή σας τελείωσε."
+	},
+	"sign_in_message": {
+		"message": "Συνδεθείτε"
+	},
+	"button_upgrade": {
+		"message": "Αναβαθμίζω"
+	},
+	"removed": {
+		"message": "Καταργήθηκαν ιστότοποι"
+	},
+	"options_sync": {
+		"message": "Συγχρονισμός συνδρομής ...."
+	},
+	"title_help_sync": {
+		"message": "Συγχρονισμός"
+	},
+	"button_sync": {
+		"message": "Συγχρονισμός"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Αδεια"
+	}
+}

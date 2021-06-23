@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor a Chrome-hoz"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Bármelyikből létrehozhat és megtekinthet jelölési fájlokat. Egyszerű és könnyű. Github ízű Markdown szerkesztő."
+	},
+	"canceled": {
+		"message": "Előfizetésed lemondva."
+	},
+	"title_message_fallback": {
+		"message": "Nem találtunk előfizetést"
+	},
+	"title_enjoy_until": {
+		"message": "Élvezze a próbát, amíg"
+	},
+	"incomplete_expired": {
+		"message": "Nem tudtuk befejezni a fizetést. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal."
+	},
+	"unpaid": {
+		"message": "Előfizetésed nincs fizetve. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal."
+	},
+	"past_due": {
+		"message": "Előfizetése lejárt. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal."
+	},
+	"title_message_none": {
+		"message": "Nem találtunk előfizetést."
+	},
+	"sign_in": {
+		"message": "Kérjük, jelentkezzen be a böngészőjébe."
+	},
+	"cleaning": {
+		"message": "Tisztítás...."
+	},
+	"incomplete": {
+		"message": "Nem tudtuk befejezni a fizetést. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal."
+	},
+	"upgradeToRemove": {
+		"message": "Frissíts most!"
+	},
+	"email": {
+		"message": "Bejelentkezve mint"
+	},
+	"extras_settings": {
+		"message": "Extrák"
+	},
+	"settings_settings": {
+		"message": "Beállítások"
+	},
+	"settings_upgrade": {
+		"message": "frissítés"
+	},
+	"settings_upgrade_button": {
+		"message": "Frissítés 12.00-ra"
+	},
+	"title_message_full": {
+		"message": "Élvezd"
+	},
+	"payment": {
+		"message": "fizetés"
+	},
+	"open": {
+		"message": "nyisd ki"
+	},
+	"money": {
+		"message": "Frissítés 12.00-ra"
+	},
+	"trialOver": {
+		"message": "A tárgyalásodnak vége."
+	},
+	"sign_in_message": {
+		"message": "Bejelentkezés"
+	},
+	"button_upgrade": {
+		"message": "Frissítés"
+	},
+	"removed": {
+		"message": "Eltávolított webhelyek"
+	},
+	"options_sync": {
+		"message": "Előfizetés szinkronizálása ...."
+	},
+	"title_help_sync": {
+		"message": "Szinkronizál"
+	},
+	"button_sync": {
+		"message": "Szinkronizál"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Engedély"
+	}
+}

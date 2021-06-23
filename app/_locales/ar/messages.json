@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "محرر Markdown لمتصفح Chrome"
+	},
+	"appTitle": {
+		"message": "محرر Markdown"
+	},
+	"appDescription": {
+		"message": "إنشاء وعرض ملفات markdown من أي كانت. بسيطة وسهلة. محرر Markdown بنكهة جيثب."
+	},
+	"canceled": {
+		"message": "تم إلغاء اشتراكك."
+	},
+	"title_message_fallback": {
+		"message": "لم نتمكن من العثور على اشتراك"
+	},
+	"title_enjoy_until": {
+		"message": "استمتع بتجربتك حتى"
+	},
+	"incomplete_expired": {
+		"message": "لم نتمكن من إتمام الدفع. يرجى الاتصال بالدعم."
+	},
+	"unpaid": {
+		"message": "اشتراكك غير مدفوع. يرجى الاتصال بالدعم."
+	},
+	"past_due": {
+		"message": "اشتراكك فات موعد استحقاقه. يرجى الاتصال بالدعم."
+	},
+	"title_message_none": {
+		"message": "لم نتمكن من العثور على اشتراك."
+	},
+	"sign_in": {
+		"message": "الرجاء تسجيل الدخول إلى المستعرض الخاص بك."
+	},
+	"cleaning": {
+		"message": "تنظيف...."
+	},
+	"incomplete": {
+		"message": "لم نتمكن من إتمام الدفع. يرجى الاتصال بالدعم."
+	},
+	"upgradeToRemove": {
+		"message": "تحديث الآن!"
+	},
+	"email": {
+		"message": "وقعت في مثل"
+	},
+	"extras_settings": {
+		"message": "إضافات"
+	},
+	"settings_settings": {
+		"message": "إعدادات"
+	},
+	"settings_upgrade": {
+		"message": "رفع مستوى"
+	},
+	"settings_upgrade_button": {
+		"message": "الترقية إلى 12.00"
+	},
+	"title_message_full": {
+		"message": "يتمتع"
+	},
+	"payment": {
+		"message": "دفع"
+	},
+	"open": {
+		"message": "افتح"
+	},
+	"money": {
+		"message": "الترقية إلى 12.00"
+	},
+	"trialOver": {
+		"message": "انتهت الفترة التجريبية الخاصة بك."
+	},
+	"sign_in_message": {
+		"message": "تسجيل الدخول"
+	},
+	"button_upgrade": {
+		"message": "رفع مستوى"
+	},
+	"removed": {
+		"message": "المواقع التي تمت إزالتها"
+	},
+	"options_sync": {
+		"message": "مزامنة الاشتراك ...."
+	},
+	"title_help_sync": {
+		"message": "مزامنة"
+	},
+	"button_sync": {
+		"message": "مزامنة"
+	},
+	"title_help_sync_tooltip": {
+		"message": "رخصة"
+	}
+}

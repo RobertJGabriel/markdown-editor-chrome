@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor برای Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "پرونده های علامت گذاری را از هر کجا ایجاد و مشاهده کنید. ساده و آسان یک ویرایشگر علامت گذاری شده با طعم Github."
+	},
+	"canceled": {
+		"message": "اشتراک شما لغو شده است."
+	},
+	"title_message_fallback": {
+		"message": "ما اشتراکی پیدا نکردیم"
+	},
+	"title_enjoy_until": {
+		"message": "از محاکمه خود لذت ببرید تا"
+	},
+	"incomplete_expired": {
+		"message": "ما نمی توانیم پرداخت را کامل کنیم. لطفا با پشتیبانی تماس بگیرید"
+	},
+	"unpaid": {
+		"message": "اشتراک شما پرداخت نشده است. لطفا با پشتیبانی تماس بگیرید"
+	},
+	"past_due": {
+		"message": "اشتراک شما به سررسید است. لطفا با پشتیبانی تماس بگیرید"
+	},
+	"title_message_none": {
+		"message": "ما اشتراکی پیدا نکردیم"
+	},
+	"sign_in": {
+		"message": "لطفاً به مرورگر خود وارد شوید."
+	},
+	"cleaning": {
+		"message": "تمیز کردن...."
+	},
+	"incomplete": {
+		"message": "ما نمی توانیم پرداخت را کامل کنیم. لطفا با پشتیبانی تماس بگیرید"
+	},
+	"upgradeToRemove": {
+		"message": "اکنون ارتقا دهید!"
+	},
+	"email": {
+		"message": "به عنوان وارد شوید"
+	},
+	"extras_settings": {
+		"message": "موارد اضافی"
+	},
+	"settings_settings": {
+		"message": "تنظیمات"
+	},
+	"settings_upgrade": {
+		"message": "ارتقا دهید"
+	},
+	"settings_upgrade_button": {
+		"message": "برای ساعت 12.00 به روزرسانی کنید"
+	},
+	"title_message_full": {
+		"message": "لذت بردن"
+	},
+	"payment": {
+		"message": "پرداخت"
+	},
+	"open": {
+		"message": "باز کن"
+	},
+	"money": {
+		"message": "برای ساعت 12.00 به روزرسانی کنید"
+	},
+	"trialOver": {
+		"message": "دادگاه شما تمام شد"
+	},
+	"sign_in_message": {
+		"message": "ورود"
+	},
+	"button_upgrade": {
+		"message": "ارتقا دهید"
+	},
+	"removed": {
+		"message": "سایتهای حذف شده"
+	},
+	"options_sync": {
+		"message": "همگام سازی اشتراک ...."
+	},
+	"title_help_sync": {
+		"message": "همگام سازی"
+	},
+	"button_sync": {
+		"message": "همگام سازی"
+	},
+	"title_help_sync_tooltip": {
+		"message": "مجوز"
+	}
+}

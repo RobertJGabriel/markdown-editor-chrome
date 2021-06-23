@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome కోసం మార్క్‌డౌన్ ఎడిటర్"
+	},
+	"appTitle": {
+		"message": "మార్క్‌డౌన్ ఎడిటర్"
+	},
+	"appDescription": {
+		"message": "ఏదైనా నుండి మార్క్‌డౌన్ ఫైల్‌లను సృష్టించండి మరియు వీక్షించండి. సాధారణ మరియు సులభం. గితుబ్ ఫ్లేవర్డ్ మార్క్డౌన్ ఎడిటర్."
+	},
+	"canceled": {
+		"message": "మీ సభ్యత్వం రద్దు చేయబడింది."
+	},
+	"title_message_fallback": {
+		"message": "మేము సభ్యత్వాన్ని కనుగొనలేకపోయాము"
+	},
+	"title_enjoy_until": {
+		"message": "వరకు మీ విచారణను ఆస్వాదించండి"
+	},
+	"incomplete_expired": {
+		"message": "మేము చెల్లింపును పూర్తి చేయలేము. దయచేసి మద్దతును సంప్రదించండి."
+	},
+	"unpaid": {
+		"message": "మీ సభ్యత్వం చెల్లించబడలేదు. దయచేసి మద్దతును సంప్రదించండి."
+	},
+	"past_due": {
+		"message": "మీ సభ్యత్వం గడువు ముగిసింది. దయచేసి మద్దతును సంప్రదించండి."
+	},
+	"title_message_none": {
+		"message": "మేము సభ్యత్వాన్ని కనుగొనలేకపోయాము."
+	},
+	"sign_in": {
+		"message": "దయచేసి మీ బ్రౌజర్‌లోకి సైన్ ఇన్ చేయండి."
+	},
+	"cleaning": {
+		"message": "శుభ్రపరచడం...."
+	},
+	"incomplete": {
+		"message": "మేము చెల్లింపును పూర్తి చేయలేము. దయచేసి మద్దతును సంప్రదించండి."
+	},
+	"upgradeToRemove": {
+		"message": "ఇప్పుడే అప్‌గ్రేడ్ చేయండి!"
+	},
+	"email": {
+		"message": "లో సంతకం చేయబడింది"
+	},
+	"extras_settings": {
+		"message": "అదనపు"
+	},
+	"settings_settings": {
+		"message": "సెట్టింగులు"
+	},
+	"settings_upgrade": {
+		"message": "అప్‌గ్రేడ్"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 కు అప్‌గ్రేడ్ చేయండి"
+	},
+	"title_message_full": {
+		"message": "ఆనందించండి"
+	},
+	"payment": {
+		"message": "చెల్లింపు"
+	},
+	"open": {
+		"message": "తెరిచి ఉంది"
+	},
+	"money": {
+		"message": "12.00 కు అప్‌గ్రేడ్ చేయండి"
+	},
+	"trialOver": {
+		"message": "మీ విచారణ ముగిసింది."
+	},
+	"sign_in_message": {
+		"message": "సైన్ ఇన్ చేయండి"
+	},
+	"button_upgrade": {
+		"message": "అప్‌గ్రేడ్ చేయండి"
+	},
+	"removed": {
+		"message": "తొలగించబడిన సైట్లు"
+	},
+	"options_sync": {
+		"message": "సభ్యత్వాన్ని సమకాలీకరిస్తోంది ...."
+	},
+	"title_help_sync": {
+		"message": "సమకాలీకరించు"
+	},
+	"button_sync": {
+		"message": "సమకాలీకరించు"
+	},
+	"title_help_sync_tooltip": {
+		"message": "లైసెన్స్"
+	}
+}

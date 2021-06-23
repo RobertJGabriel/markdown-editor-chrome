@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor para sa Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Lumikha at tingnan ang mga file ng markdown mula sa alinman. Simple at madali. Isang Github Flavored Markdown Editor."
+	},
+	"canceled": {
+		"message": "Nakansela ang iyong subscription."
+	},
+	"title_message_fallback": {
+		"message": "Hindi kami nakakita ng isang subscription"
+	},
+	"title_enjoy_until": {
+		"message": "Masiyahan sa iyong pagsubok hanggang"
+	},
+	"incomplete_expired": {
+		"message": "Hindi namin nakumpleto ang pagbabayad. Mangyaring makipag-ugnay sa suporta."
+	},
+	"unpaid": {
+		"message": "Hindi nabayaran ang iyong subscription. Mangyaring makipag-ugnay sa suporta."
+	},
+	"past_due": {
+		"message": "Natapos na ang iyong subscription. Mangyaring makipag-ugnay sa suporta."
+	},
+	"title_message_none": {
+		"message": "Hindi kami nakakita ng isang subscription."
+	},
+	"sign_in": {
+		"message": "Mangyaring mag-sign in sa iyong Browser."
+	},
+	"cleaning": {
+		"message": "Naglilinis ...."
+	},
+	"incomplete": {
+		"message": "Hindi namin nakumpleto ang pagbabayad. Mangyaring makipag-ugnay sa suporta."
+	},
+	"upgradeToRemove": {
+		"message": "Mag-upgrade na ngayon!"
+	},
+	"email": {
+		"message": "Nag-sign in bilang"
+	},
+	"extras_settings": {
+		"message": "Mga extra"
+	},
+	"settings_settings": {
+		"message": "Mga setting"
+	},
+	"settings_upgrade": {
+		"message": "mag-upgrade"
+	},
+	"settings_upgrade_button": {
+		"message": "Mag-upgrade sa 12.00"
+	},
+	"title_message_full": {
+		"message": "Tangkilikin"
+	},
+	"payment": {
+		"message": "bayad"
+	},
+	"open": {
+		"message": "buksan"
+	},
+	"money": {
+		"message": "Mag-upgrade sa 12.00"
+	},
+	"trialOver": {
+		"message": "Tapos na ang trial mo."
+	},
+	"sign_in_message": {
+		"message": "Mag-sign in"
+	},
+	"button_upgrade": {
+		"message": "Mag-upgrade"
+	},
+	"removed": {
+		"message": "Inalis ang mga site"
+	},
+	"options_sync": {
+		"message": "Nagsi-sync ng subscription ...."
+	},
+	"title_help_sync": {
+		"message": "Pag-sync"
+	},
+	"button_sync": {
+		"message": "Pag-sync"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Lisensya"
+	}
+}

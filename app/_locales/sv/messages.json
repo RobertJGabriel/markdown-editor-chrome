@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor för Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Skapa och visa markdown-filer från alla var. Enkelt och enkelt. En Github-smaksatt Markdown Editor."
+	},
+	"canceled": {
+		"message": "Din prenumeration sägs upp."
+	},
+	"title_message_fallback": {
+		"message": "Vi kunde inte hitta en prenumeration"
+	},
+	"title_enjoy_until": {
+		"message": "Njut av din provperiod till"
+	},
+	"incomplete_expired": {
+		"message": "Vi kunde inte slutföra betalningen. Kontakta support."
+	},
+	"unpaid": {
+		"message": "Din prenumeration är obetald. Kontakta support."
+	},
+	"past_due": {
+		"message": "Din prenumeration är förfallen. Kontakta support."
+	},
+	"title_message_none": {
+		"message": "Vi kunde inte hitta en prenumeration."
+	},
+	"sign_in": {
+		"message": "Logga in på din webbläsare."
+	},
+	"cleaning": {
+		"message": "Rengöring...."
+	},
+	"incomplete": {
+		"message": "Vi kunde inte slutföra betalningen. Kontakta support."
+	},
+	"upgradeToRemove": {
+		"message": "Uppgradera nu!"
+	},
+	"email": {
+		"message": "Inloggad som"
+	},
+	"extras_settings": {
+		"message": "Extra"
+	},
+	"settings_settings": {
+		"message": "inställningar"
+	},
+	"settings_upgrade": {
+		"message": "uppgradera"
+	},
+	"settings_upgrade_button": {
+		"message": "Uppgradera för 12.00"
+	},
+	"title_message_full": {
+		"message": "Njut av"
+	},
+	"payment": {
+		"message": "betalning"
+	},
+	"open": {
+		"message": "öppna"
+	},
+	"money": {
+		"message": "Uppgradera för 12.00"
+	},
+	"trialOver": {
+		"message": "Din rättegång är över."
+	},
+	"sign_in_message": {
+		"message": "Logga in"
+	},
+	"button_upgrade": {
+		"message": "Uppgradera"
+	},
+	"removed": {
+		"message": "Borttagna webbplatser"
+	},
+	"options_sync": {
+		"message": "Synkroniserar prenumeration ...."
+	},
+	"title_help_sync": {
+		"message": "Synkronisera"
+	},
+	"button_sync": {
+		"message": "Synkronisera"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licens"
+	}
+}

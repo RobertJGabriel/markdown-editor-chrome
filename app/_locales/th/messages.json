@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor สำหรับ Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "สร้างและดูไฟล์ markdown จากอะไรก็ตาม ง่ายและสะดวก ตัวแก้ไข Markdown รส Github"
+	},
+	"canceled": {
+		"message": "การสมัครของคุณถูกยกเลิก"
+	},
+	"title_message_fallback": {
+		"message": "เราไม่พบการสมัครรับข้อมูล"
+	},
+	"title_enjoy_until": {
+		"message": "เพลิดเพลินกับการทดลองใช้ของคุณจนถึง"
+	},
+	"incomplete_expired": {
+		"message": "เราไม่สามารถชำระเงินให้เสร็จสิ้นได้ โปรดติดต่อฝ่ายสนับสนุน"
+	},
+	"unpaid": {
+		"message": "การสมัครของคุณยังไม่ได้ชำระเงิน โปรดติดต่อฝ่ายสนับสนุน"
+	},
+	"past_due": {
+		"message": "การสมัครของคุณเลยกำหนด โปรดติดต่อฝ่ายสนับสนุน"
+	},
+	"title_message_none": {
+		"message": "เราไม่พบการสมัครรับข้อมูล"
+	},
+	"sign_in": {
+		"message": "โปรดลงชื่อเข้าใช้เบราว์เซอร์ของคุณ"
+	},
+	"cleaning": {
+		"message": "ทำความสะอาด...."
+	},
+	"incomplete": {
+		"message": "เราไม่สามารถชำระเงินให้เสร็จสิ้นได้ โปรดติดต่อฝ่ายสนับสนุน"
+	},
+	"upgradeToRemove": {
+		"message": "อัพเกรดเดี๋ยวนี้!"
+	},
+	"email": {
+		"message": "ลงชื่อเข้าใช้เป็น"
+	},
+	"extras_settings": {
+		"message": "ความพิเศษ"
+	},
+	"settings_settings": {
+		"message": "การตั้งค่า"
+	},
+	"settings_upgrade": {
+		"message": "อัพเกรด"
+	},
+	"settings_upgrade_button": {
+		"message": "อัปเกรดเป็น 12.00"
+	},
+	"title_message_full": {
+		"message": "สนุก"
+	},
+	"payment": {
+		"message": "การชำระเงิน"
+	},
+	"open": {
+		"message": "เปิด"
+	},
+	"money": {
+		"message": "อัปเกรดเป็น 12.00"
+	},
+	"trialOver": {
+		"message": "การทดลองใช้ของคุณสิ้นสุดแล้ว"
+	},
+	"sign_in_message": {
+		"message": "เข้าสู่ระบบ"
+	},
+	"button_upgrade": {
+		"message": "อัพเกรด"
+	},
+	"removed": {
+		"message": "ไซต์ที่ถูกลบ"
+	},
+	"options_sync": {
+		"message": "กำลังซิงค์การสมัคร...."
+	},
+	"title_help_sync": {
+		"message": "ซิงค์"
+	},
+	"button_sync": {
+		"message": "ซิงค์"
+	},
+	"title_help_sync_tooltip": {
+		"message": "ใบอนุญาต"
+	}
+}

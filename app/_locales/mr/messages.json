@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome साठी मार्कडाउन संपादक"
+	},
+	"appTitle": {
+		"message": "मार्कडाउन संपादक"
+	},
+	"appDescription": {
+		"message": "कोणत्याहीकडून मार्कडाउन फायली तयार करा आणि पहा. सोपे आणि सोपे. एक गीथब फ्लेवर्ड मार्कडाउन संपादक."
+	},
+	"canceled": {
+		"message": "आपली सदस्यता रद्द केली आहे."
+	},
+	"title_message_fallback": {
+		"message": "आम्हाला सदस्यता सापडली नाही"
+	},
+	"title_enjoy_until": {
+		"message": "पर्यंत आपल्या चाचणीचा आनंद घ्या"
+	},
+	"incomplete_expired": {
+		"message": "आम्ही पेमेंट पूर्ण करू शकलो नाही. कृपया समर्थनाशी संपर्क साधा."
+	},
+	"unpaid": {
+		"message": "आपली सदस्यता विनाशुल्क दिलेली आहे. कृपया समर्थनाशी संपर्क साधा."
+	},
+	"past_due": {
+		"message": "आपली सदस्यता थकीत आहे. कृपया समर्थनाशी संपर्क साधा."
+	},
+	"title_message_none": {
+		"message": "आम्हाला सदस्यता सापडली नाही."
+	},
+	"sign_in": {
+		"message": "कृपया आपल्या ब्राउझरमध्ये साइन इन करा."
+	},
+	"cleaning": {
+		"message": "स्वच्छता...."
+	},
+	"incomplete": {
+		"message": "आम्ही पेमेंट पूर्ण करू शकलो नाही. कृपया समर्थनाशी संपर्क साधा."
+	},
+	"upgradeToRemove": {
+		"message": "आता श्रेणीसुधारित करा!"
+	},
+	"email": {
+		"message": "म्हणून साइन इन केले"
+	},
+	"extras_settings": {
+		"message": "अतिरिक्त"
+	},
+	"settings_settings": {
+		"message": "सेटिंग्ज"
+	},
+	"settings_upgrade": {
+		"message": "श्रेणीसुधारित करा"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 साठी श्रेणीसुधारित करा"
+	},
+	"title_message_full": {
+		"message": "आनंद घ्या"
+	},
+	"payment": {
+		"message": "देय"
+	},
+	"open": {
+		"message": "उघडा"
+	},
+	"money": {
+		"message": "12.00 साठी श्रेणीसुधारित करा"
+	},
+	"trialOver": {
+		"message": "आपली चाचणी संपली आहे."
+	},
+	"sign_in_message": {
+		"message": "साइन इन करा"
+	},
+	"button_upgrade": {
+		"message": "श्रेणीसुधारित करा"
+	},
+	"removed": {
+		"message": "काढलेल्या साइट"
+	},
+	"options_sync": {
+		"message": "सदस्यता समक्रमित करीत आहे ...."
+	},
+	"title_help_sync": {
+		"message": "समक्रमित करा"
+	},
+	"button_sync": {
+		"message": "समक्रमित करा"
+	},
+	"title_help_sync_tooltip": {
+		"message": "परवाना"
+	}
+}

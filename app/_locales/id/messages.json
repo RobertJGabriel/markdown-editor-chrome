@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Editor Penurunan Harga untuk Chrome"
+	},
+	"appTitle": {
+		"message": "Editor Penurunan Harga Mark"
+	},
+	"appDescription": {
+		"message": "Buat dan lihat file penurunan harga dari mana saja. Sederhana dan mudah. Editor Penurunan Harga Rasa Github."
+	},
+	"canceled": {
+		"message": "Langganan Anda dibatalkan."
+	},
+	"title_message_fallback": {
+		"message": "Kami tidak dapat menemukan langganan"
+	},
+	"title_enjoy_until": {
+		"message": "Nikmati uji coba Anda sampai"
+	},
+	"incomplete_expired": {
+		"message": "Kami tidak dapat menyelesaikan pembayaran. Silakan hubungi dukungan."
+	},
+	"unpaid": {
+		"message": "Langganan Anda belum dibayar. Silakan hubungi dukungan."
+	},
+	"past_due": {
+		"message": "Langganan Anda sudah lewat jatuh tempo. Silakan hubungi dukungan."
+	},
+	"title_message_none": {
+		"message": "Kami tidak dapat menemukan langganan."
+	},
+	"sign_in": {
+		"message": "Silakan masuk ke Browser Anda."
+	},
+	"cleaning": {
+		"message": "Pembersihan...."
+	},
+	"incomplete": {
+		"message": "Kami tidak dapat menyelesaikan pembayaran. Silakan hubungi dukungan."
+	},
+	"upgradeToRemove": {
+		"message": "Tingkatkan sekarang!"
+	},
+	"email": {
+		"message": "Masuk sebagai"
+	},
+	"extras_settings": {
+		"message": "Ekstra"
+	},
+	"settings_settings": {
+		"message": "Pengaturan"
+	},
+	"settings_upgrade": {
+		"message": "meningkatkan"
+	},
+	"settings_upgrade_button": {
+		"message": "Tingkatkan untuk 12.00"
+	},
+	"title_message_full": {
+		"message": "Nikmati"
+	},
+	"payment": {
+		"message": "pembayaran"
+	},
+	"open": {
+		"message": "Buka"
+	},
+	"money": {
+		"message": "Tingkatkan untuk 12.00"
+	},
+	"trialOver": {
+		"message": "Uji coba Anda telah berakhir."
+	},
+	"sign_in_message": {
+		"message": "Masuk"
+	},
+	"button_upgrade": {
+		"message": "Meningkatkan"
+	},
+	"removed": {
+		"message": "Situs yang dihapus"
+	},
+	"options_sync": {
+		"message": "Menyinkronkan langganan...."
+	},
+	"title_help_sync": {
+		"message": "Sinkronkan"
+	},
+	"button_sync": {
+		"message": "Sinkronkan"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Lisensi"
+	}
+}

@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor untuk Chrome"
+	},
+	"appTitle": {
+		"message": "Penyunting Markdown"
+	},
+	"appDescription": {
+		"message": "Buat dan lihat fail penurunan dari mana-mana. Ringkas dan senang. Penyunting Markdown Rasa Github."
+	},
+	"canceled": {
+		"message": "Langganan anda dibatalkan."
+	},
+	"title_message_fallback": {
+		"message": "Kami tidak menemui langganan"
+	},
+	"title_enjoy_until": {
+		"message": "Nikmati percubaan anda sehingga"
+	},
+	"incomplete_expired": {
+		"message": "Kami tidak dapat menyelesaikan pembayaran. Sila hubungi sokongan."
+	},
+	"unpaid": {
+		"message": "Langganan anda belum dibayar. Sila hubungi sokongan."
+	},
+	"past_due": {
+		"message": "Langganan anda belum selesai. Sila hubungi sokongan."
+	},
+	"title_message_none": {
+		"message": "Kami tidak menemui langganan."
+	},
+	"sign_in": {
+		"message": "Sila masuk ke Penyemak Imbas anda."
+	},
+	"cleaning": {
+		"message": "Pembersihan ...."
+	},
+	"incomplete": {
+		"message": "Kami tidak dapat menyelesaikan pembayaran. Sila hubungi sokongan."
+	},
+	"upgradeToRemove": {
+		"message": "Menaiktaraf sekarang!"
+	},
+	"email": {
+		"message": "Dilog masuk sebagai"
+	},
+	"extras_settings": {
+		"message": "Tambahan"
+	},
+	"settings_settings": {
+		"message": "Tetapan"
+	},
+	"settings_upgrade": {
+		"message": "naik taraf"
+	},
+	"settings_upgrade_button": {
+		"message": "Naik taraf untuk jam 12.00"
+	},
+	"title_message_full": {
+		"message": "Nikmati"
+	},
+	"payment": {
+		"message": "pembayaran"
+	},
+	"open": {
+		"message": "buka"
+	},
+	"money": {
+		"message": "Naik taraf untuk jam 12.00"
+	},
+	"trialOver": {
+		"message": "Percubaan anda selesai."
+	},
+	"sign_in_message": {
+		"message": "Log masuk"
+	},
+	"button_upgrade": {
+		"message": "Naik taraf"
+	},
+	"removed": {
+		"message": "Tapak yang dialih keluar"
+	},
+	"options_sync": {
+		"message": "Menyegerakkan langganan ...."
+	},
+	"title_help_sync": {
+		"message": "Segerakkan"
+	},
+	"button_sync": {
+		"message": "Segerakkan"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Lesen"
+	}
+}

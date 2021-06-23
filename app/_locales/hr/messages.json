@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor za Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Stvorite i pregledajte datoteke s oznakama s bilo kojeg mjesta. Jednostavno i lako. Uređivač Markdown s okusom Github."
+	},
+	"canceled": {
+		"message": "Vaša pretplata je otkazana."
+	},
+	"title_message_fallback": {
+		"message": "Nismo mogli pronaći pretplatu"
+	},
+	"title_enjoy_until": {
+		"message": "Uživajte u probi do"
+	},
+	"incomplete_expired": {
+		"message": "Nismo mogli izvršiti uplatu. Molimo kontaktirajte podršku."
+	},
+	"unpaid": {
+		"message": "Vaša pretplata je neplaćena. Molimo kontaktirajte podršku."
+	},
+	"past_due": {
+		"message": "Vaša pretplata kasni. Molimo kontaktirajte podršku."
+	},
+	"title_message_none": {
+		"message": "Nismo mogli pronaći pretplatu."
+	},
+	"sign_in": {
+		"message": "Prijavite se u svoj preglednik."
+	},
+	"cleaning": {
+		"message": "Čišćenje...."
+	},
+	"incomplete": {
+		"message": "Nismo mogli izvršiti uplatu. Molimo kontaktirajte podršku."
+	},
+	"upgradeToRemove": {
+		"message": "Nadograditi sada!"
+	},
+	"email": {
+		"message": "Prijavljen kao"
+	},
+	"extras_settings": {
+		"message": "Dodaci"
+	},
+	"settings_settings": {
+		"message": "Postavke"
+	},
+	"settings_upgrade": {
+		"message": "nadograditi"
+	},
+	"settings_upgrade_button": {
+		"message": "Nadogradite za 12.00"
+	},
+	"title_message_full": {
+		"message": "Uživati"
+	},
+	"payment": {
+		"message": "plaćanje"
+	},
+	"open": {
+		"message": "otvorena"
+	},
+	"money": {
+		"message": "Nadogradite za 12.00"
+	},
+	"trialOver": {
+		"message": "Vaše je suđenje završeno."
+	},
+	"sign_in_message": {
+		"message": "Prijaviti se"
+	},
+	"button_upgrade": {
+		"message": "Nadogradite"
+	},
+	"removed": {
+		"message": "Uklonjene web lokacije"
+	},
+	"options_sync": {
+		"message": "Sinkronizacija pretplate ...."
+	},
+	"title_help_sync": {
+		"message": "Sinkronizacija"
+	},
+	"button_sync": {
+		"message": "Sinkronizacija"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licenca"
+	}
+}

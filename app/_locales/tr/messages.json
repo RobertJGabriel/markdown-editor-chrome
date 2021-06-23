@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome için İşaretleme Düzenleyicisi"
+	},
+	"appTitle": {
+		"message": "İşaretleme Düzenleyicisi"
+	},
+	"appDescription": {
+		"message": "Herhangi birinden markdown dosyaları oluşturun ve görüntüleyin. Basit ve kolay. Github Aromalı Markdown Düzenleyicisi."
+	},
+	"canceled": {
+		"message": "Aboneliğiniz iptal edildi."
+	},
+	"title_message_fallback": {
+		"message": "Abonelik bulamadık"
+	},
+	"title_enjoy_until": {
+		"message": "Şu tarihe kadar denemenizin tadını çıkarın:"
+	},
+	"incomplete_expired": {
+		"message": "Ödemeyi tamamlayamadık. Lütfen destek ile iletişime geçin."
+	},
+	"unpaid": {
+		"message": "Aboneliğiniz ücretsiz. Lütfen destek ile iletişime geçin."
+	},
+	"past_due": {
+		"message": "Aboneliğinizin vadesi geçmiş. Lütfen destek ile iletişime geçin."
+	},
+	"title_message_none": {
+		"message": "Abonelik bulamadık."
+	},
+	"sign_in": {
+		"message": "Lütfen Tarayıcınızda oturum açın."
+	},
+	"cleaning": {
+		"message": "Temizlik...."
+	},
+	"incomplete": {
+		"message": "Ödemeyi tamamlayamadık. Lütfen destek ile iletişime geçin."
+	},
+	"upgradeToRemove": {
+		"message": "Hemen Yükselt!"
+	},
+	"email": {
+		"message": "Olarak giriş yapıldı"
+	},
+	"extras_settings": {
+		"message": "Ekstralar"
+	},
+	"settings_settings": {
+		"message": "Ayarlar"
+	},
+	"settings_upgrade": {
+		"message": "Yükselt"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 için yükseltme"
+	},
+	"title_message_full": {
+		"message": "Zevk almak"
+	},
+	"payment": {
+		"message": "ödeme"
+	},
+	"open": {
+		"message": "açık"
+	},
+	"money": {
+		"message": "12.00 için yükseltme"
+	},
+	"trialOver": {
+		"message": "Denemeniz bitti."
+	},
+	"sign_in_message": {
+		"message": "oturum aç"
+	},
+	"button_upgrade": {
+		"message": "Yükselt"
+	},
+	"removed": {
+		"message": "Kaldırılan siteler"
+	},
+	"options_sync": {
+		"message": "Abonelik senkronize ediliyor..."
+	},
+	"title_help_sync": {
+		"message": "senkronizasyon"
+	},
+	"button_sync": {
+		"message": "senkronizasyon"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Lisans"
+	}
+}

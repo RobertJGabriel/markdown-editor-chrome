@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown-editor voor Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown-editor"
+	},
+	"appDescription": {
+		"message": "Maak en bekijk markdown-bestanden van elke were. Eenvoudig en gemakkelijk. Een op Github gearomatiseerde Markdown-editor."
+	},
+	"canceled": {
+		"message": "Je abonnement is opgezegd."
+	},
+	"title_message_fallback": {
+		"message": "We konden geen abonnement vinden"
+	},
+	"title_enjoy_until": {
+		"message": "Geniet van je proefperiode tot"
+	},
+	"incomplete_expired": {
+		"message": "We konden de betaling niet voltooien. Neem contact op met ondersteuning."
+	},
+	"unpaid": {
+		"message": "Uw abonnement is onbetaald. Neem contact op met ondersteuning."
+	},
+	"past_due": {
+		"message": "Uw abonnement is verlopen. Neem contact op met ondersteuning."
+	},
+	"title_message_none": {
+		"message": "We konden geen abonnement vinden."
+	},
+	"sign_in": {
+		"message": "Meld u aan bij uw browser."
+	},
+	"cleaning": {
+		"message": "Schoonmaken...."
+	},
+	"incomplete": {
+		"message": "We konden de betaling niet voltooien. Neem contact op met ondersteuning."
+	},
+	"upgradeToRemove": {
+		"message": "Waardeer nu op!"
+	},
+	"email": {
+		"message": "Aangemeld als"
+	},
+	"extras_settings": {
+		"message": "Extra's"
+	},
+	"settings_settings": {
+		"message": "Instellingen"
+	},
+	"settings_upgrade": {
+		"message": "upgrade"
+	},
+	"settings_upgrade_button": {
+		"message": "Upgrade voor 12.00"
+	},
+	"title_message_full": {
+		"message": "Genieten"
+	},
+	"payment": {
+		"message": "betaling"
+	},
+	"open": {
+		"message": "Open"
+	},
+	"money": {
+		"message": "Upgrade voor 12.00"
+	},
+	"trialOver": {
+		"message": "Je proces is voorbij."
+	},
+	"sign_in_message": {
+		"message": "Log in"
+	},
+	"button_upgrade": {
+		"message": "Upgrade"
+	},
+	"removed": {
+		"message": "Verwijderde sites"
+	},
+	"options_sync": {
+		"message": "Abonnement synchroniseren...."
+	},
+	"title_help_sync": {
+		"message": "Synchroniseren"
+	},
+	"button_sync": {
+		"message": "Synchroniseren"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licentie"
+	}
+}

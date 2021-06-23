@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome 용 Markdown 편집기"
+	},
+	"appTitle": {
+		"message": "마크 다운 편집기"
+	},
+	"appDescription": {
+		"message": "모든 마크 다운 파일을 만들고 볼 수 있습니다. 간단하고 쉽습니다. Github Flavored Markdown 편집기."
+	},
+	"canceled": {
+		"message": "구독이 취소되었습니다."
+	},
+	"title_message_fallback": {
+		"message": "구독을 찾을 수 없습니다."
+	},
+	"title_enjoy_until": {
+		"message": "평가판을 즐기십시오"
+	},
+	"incomplete_expired": {
+		"message": "결제를 완료하지 못했습니다. 지원팀에 문의하세요."
+	},
+	"unpaid": {
+		"message": "귀하의 구독은 무료입니다. 지원팀에 문의하세요."
+	},
+	"past_due": {
+		"message": "구독이 연체되었습니다. 지원팀에 문의하세요."
+	},
+	"title_message_none": {
+		"message": "구독을 찾을 수 없습니다."
+	},
+	"sign_in": {
+		"message": "브라우저에 로그인하십시오."
+	},
+	"cleaning": {
+		"message": "청소...."
+	},
+	"incomplete": {
+		"message": "결제를 완료하지 못했습니다. 지원팀에 문의하세요."
+	},
+	"upgradeToRemove": {
+		"message": "지금 업그레이드하세요!"
+	},
+	"email": {
+		"message": "다음으로 로그인 됨"
+	},
+	"extras_settings": {
+		"message": "기타"
+	},
+	"settings_settings": {
+		"message": "설정"
+	},
+	"settings_upgrade": {
+		"message": "업그레이드"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00으로 업그레이드"
+	},
+	"title_message_full": {
+		"message": "즐겨"
+	},
+	"payment": {
+		"message": "지불"
+	},
+	"open": {
+		"message": "열다"
+	},
+	"money": {
+		"message": "12.00으로 업그레이드"
+	},
+	"trialOver": {
+		"message": "재판이 끝났습니다."
+	},
+	"sign_in_message": {
+		"message": "로그인"
+	},
+	"button_upgrade": {
+		"message": "업그레이드"
+	},
+	"removed": {
+		"message": "제거 된 사이트"
+	},
+	"options_sync": {
+		"message": "구독 동기화 중 ...."
+	},
+	"title_help_sync": {
+		"message": "동조"
+	},
+	"button_sync": {
+		"message": "동조"
+	},
+	"title_help_sync_tooltip": {
+		"message": "특허"
+	}
+}

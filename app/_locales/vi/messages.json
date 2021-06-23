@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor dành cho Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Tạo và xem các tệp đánh dấu từ bất kỳ. Đơn giản và dễ dàng. Trình chỉnh sửa đánh dấu có hương vị trên Github."
+	},
+	"canceled": {
+		"message": "Đăng ký của bạn đã bị hủy."
+	},
+	"title_message_fallback": {
+		"message": "Chúng tôi không thể tìm thấy một đăng ký"
+	},
+	"title_enjoy_until": {
+		"message": "Tận hưởng bản dùng thử của bạn cho đến khi"
+	},
+	"incomplete_expired": {
+		"message": "Chúng tôi không thể hoàn tất thanh toán. Vui lòng liên hệ với bộ phận hỗ trợ."
+	},
+	"unpaid": {
+		"message": "Đăng ký của bạn là chưa thanh toán. Vui lòng liên hệ với bộ phận hỗ trợ."
+	},
+	"past_due": {
+		"message": "Đăng ký của bạn đã quá hạn. Vui lòng liên hệ với bộ phận hỗ trợ."
+	},
+	"title_message_none": {
+		"message": "Chúng tôi không thể tìm thấy một đăng ký."
+	},
+	"sign_in": {
+		"message": "Vui lòng đăng nhập vào Trình duyệt của bạn."
+	},
+	"cleaning": {
+		"message": "Làm sạch...."
+	},
+	"incomplete": {
+		"message": "Chúng tôi không thể hoàn tất thanh toán. Vui lòng liên hệ với bộ phận hỗ trợ."
+	},
+	"upgradeToRemove": {
+		"message": "Nâng cấp ngay bây giờ!"
+	},
+	"email": {
+		"message": "Đăng ký với tư cách là"
+	},
+	"extras_settings": {
+		"message": "Bổ sung"
+	},
+	"settings_settings": {
+		"message": "Cài đặt"
+	},
+	"settings_upgrade": {
+		"message": "nâng cấp"
+	},
+	"settings_upgrade_button": {
+		"message": "Nâng cấp cho 12.00"
+	},
+	"title_message_full": {
+		"message": "Thưởng thức"
+	},
+	"payment": {
+		"message": "thanh toán"
+	},
+	"open": {
+		"message": "mở"
+	},
+	"money": {
+		"message": "Nâng cấp cho 12.00"
+	},
+	"trialOver": {
+		"message": "Thời gian dùng thử của bạn đã kết thúc."
+	},
+	"sign_in_message": {
+		"message": "Đăng nhập"
+	},
+	"button_upgrade": {
+		"message": "Nâng cấp"
+	},
+	"removed": {
+		"message": "Các trang web đã xóa"
+	},
+	"options_sync": {
+		"message": "Đang đồng bộ hóa đăng ký ...."
+	},
+	"title_help_sync": {
+		"message": "Đồng bộ hóa"
+	},
+	"button_sync": {
+		"message": "Đồng bộ hóa"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Giấy phép"
+	}
+}

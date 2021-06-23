@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Editor de Markdown para Chrome"
+	},
+	"appTitle": {
+		"message": "Editor de rebajas"
+	},
+	"appDescription": {
+		"message": "Cree y vea archivos de rebajas desde cualquier lugar. Simple y fácil. Un editor de rebajas con sabor a Github."
+	},
+	"canceled": {
+		"message": "Su suscripción está cancelada."
+	},
+	"title_message_fallback": {
+		"message": "No pudimos encontrar una suscripción"
+	},
+	"title_enjoy_until": {
+		"message": "Disfrute de su prueba hasta"
+	},
+	"incomplete_expired": {
+		"message": "No pudimos completar el pago. Comuníquese con el soporte."
+	},
+	"unpaid": {
+		"message": "Tu suscripción no está pagada. Comuníquese con el soporte."
+	},
+	"past_due": {
+		"message": "Su suscripción está vencida. Comuníquese con el soporte."
+	},
+	"title_message_none": {
+		"message": "No pudimos encontrar una suscripción."
+	},
+	"sign_in": {
+		"message": "Inicie sesión en su navegador."
+	},
+	"cleaning": {
+		"message": "Limpieza...."
+	},
+	"incomplete": {
+		"message": "No pudimos completar el pago. Comuníquese con el soporte."
+	},
+	"upgradeToRemove": {
+		"message": "¡Actualizar ahora!"
+	},
+	"email": {
+		"message": "Registrado como"
+	},
+	"extras_settings": {
+		"message": "Extras"
+	},
+	"settings_settings": {
+		"message": "Ajustes"
+	},
+	"settings_upgrade": {
+		"message": "potenciar"
+	},
+	"settings_upgrade_button": {
+		"message": "Actualizar por 12.00"
+	},
+	"title_message_full": {
+		"message": "Disfrutar"
+	},
+	"payment": {
+		"message": "pago"
+	},
+	"open": {
+		"message": "abierto"
+	},
+	"money": {
+		"message": "Actualizar por 12.00"
+	},
+	"trialOver": {
+		"message": "Tu prueba ha terminado."
+	},
+	"sign_in_message": {
+		"message": "Registrarse"
+	},
+	"button_upgrade": {
+		"message": "Potenciar"
+	},
+	"removed": {
+		"message": "Sitios eliminados"
+	},
+	"options_sync": {
+		"message": "Sincronizando suscripción ..."
+	},
+	"title_help_sync": {
+		"message": "Sincronizar"
+	},
+	"button_sync": {
+		"message": "Sincronizar"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licencia"
+	}
+}

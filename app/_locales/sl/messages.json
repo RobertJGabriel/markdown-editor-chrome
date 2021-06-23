@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor za Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Ustvarite in si oglejte datoteke z oznako iz katerega koli. Preprosto in enostavno. Urejevalnik Markdown z okusom Github."
+	},
+	"canceled": {
+		"message": "Vaša naročnina je preklicana."
+	},
+	"title_message_fallback": {
+		"message": "Nismo mogli najti naročnine"
+	},
+	"title_enjoy_until": {
+		"message": "Uživajte v preizkusu do"
+	},
+	"incomplete_expired": {
+		"message": "Plačila nismo mogli dokončati. Obrnite se na podporo."
+	},
+	"unpaid": {
+		"message": "Vaša naročnina je neplačana. Obrnite se na podporo."
+	},
+	"past_due": {
+		"message": "Vaša naročnina je zapadla. Obrnite se na podporo."
+	},
+	"title_message_none": {
+		"message": "Naročnine nismo našli."
+	},
+	"sign_in": {
+		"message": "Prosimo, prijavite se v svoj brskalnik."
+	},
+	"cleaning": {
+		"message": "Čiščenje ...."
+	},
+	"incomplete": {
+		"message": "Plačila nismo mogli dokončati. Obrnite se na podporo."
+	},
+	"upgradeToRemove": {
+		"message": "Nadgradi zdaj!"
+	},
+	"email": {
+		"message": "Prijavljen kot"
+	},
+	"extras_settings": {
+		"message": "Dodatki"
+	},
+	"settings_settings": {
+		"message": "Nastavitve"
+	},
+	"settings_upgrade": {
+		"message": "nadgradnja"
+	},
+	"settings_upgrade_button": {
+		"message": "Nadgradite za 12.00"
+	},
+	"title_message_full": {
+		"message": "Uživajte"
+	},
+	"payment": {
+		"message": "plačilo"
+	},
+	"open": {
+		"message": "odprto"
+	},
+	"money": {
+		"message": "Nadgradite za 12.00"
+	},
+	"trialOver": {
+		"message": "Preizkus je končan."
+	},
+	"sign_in_message": {
+		"message": "Vpis"
+	},
+	"button_upgrade": {
+		"message": "Nadgradnja"
+	},
+	"removed": {
+		"message": "Odstranjena spletna mesta"
+	},
+	"options_sync": {
+		"message": "Sinhronizacija naročnine ...."
+	},
+	"title_help_sync": {
+		"message": "Sinhronizacija"
+	},
+	"button_sync": {
+		"message": "Sinhronizacija"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licenca"
+	}
+}

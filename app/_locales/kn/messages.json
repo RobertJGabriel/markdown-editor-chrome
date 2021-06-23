@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome ಗಾಗಿ ಮಾರ್ಕ್‌ಡೌನ್ ಸಂಪಾದಕ"
+	},
+	"appTitle": {
+		"message": "ಮಾರ್ಕ್‌ಡೌನ್ ಸಂಪಾದಕ"
+	},
+	"appDescription": {
+		"message": "ಯಾವುದಾದರೂ ಮಾರ್ಕ್‌ಡೌನ್ ಫೈಲ್‌ಗಳನ್ನು ರಚಿಸಿ ಮತ್ತು ವೀಕ್ಷಿಸಿ. ಸರಳ ಮತ್ತು ಸುಲಭ. ಗಿಥಬ್ ಫ್ಲೇವರ್ಡ್ ಮಾರ್ಕ್‌ಡೌನ್ ಸಂಪಾದಕ."
+	},
+	"canceled": {
+		"message": "ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ."
+	},
+	"title_message_fallback": {
+		"message": "ನಮಗೆ ಚಂದಾದಾರಿಕೆ ಸಿಗಲಿಲ್ಲ"
+	},
+	"title_enjoy_until": {
+		"message": "ತನಕ ನಿಮ್ಮ ಪ್ರಯೋಗವನ್ನು ಆನಂದಿಸಿ"
+	},
+	"incomplete_expired": {
+		"message": "ನಾವು ಪಾವತಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ."
+	},
+	"unpaid": {
+		"message": "ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆಯನ್ನು ಪಾವತಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ."
+	},
+	"past_due": {
+		"message": "ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆ ಹಿಂದಿನ ಕಾರಣವಾಗಿದೆ. ದಯವಿಟ್ಟು ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ."
+	},
+	"title_message_none": {
+		"message": "ನಮಗೆ ಚಂದಾದಾರಿಕೆ ಸಿಗಲಿಲ್ಲ."
+	},
+	"sign_in": {
+		"message": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಬ್ರೌಸರ್‌ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ."
+	},
+	"cleaning": {
+		"message": "ಸ್ವಚ್ aning ಗೊಳಿಸುವಿಕೆ ...."
+	},
+	"incomplete": {
+		"message": "ನಾವು ಪಾವತಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ."
+	},
+	"upgradeToRemove": {
+		"message": "ಇದೀಗ ನವೀಕರಿಸಿ!"
+	},
+	"email": {
+		"message": "ಎಂದು ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"
+	},
+	"extras_settings": {
+		"message": "ಹೆಚ್ಚುವರಿ"
+	},
+	"settings_settings": {
+		"message": "ಸಂಯೋಜನೆಗಳು"
+	},
+	"settings_upgrade": {
+		"message": "ನವೀಕರಿಸಿ"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 ಕ್ಕೆ ನವೀಕರಿಸಿ"
+	},
+	"title_message_full": {
+		"message": "ಆನಂದಿಸಿ"
+	},
+	"payment": {
+		"message": "ಪಾವತಿ"
+	},
+	"open": {
+		"message": "ತೆರೆದಿರುತ್ತದೆ"
+	},
+	"money": {
+		"message": "12.00 ಕ್ಕೆ ನವೀಕರಿಸಿ"
+	},
+	"trialOver": {
+		"message": "ನಿಮ್ಮ ಪ್ರಯೋಗ ಮುಗಿದಿದೆ."
+	},
+	"sign_in_message": {
+		"message": "ಸೈನ್ ಇನ್ ಮಾಡಿ"
+	},
+	"button_upgrade": {
+		"message": "ನವೀಕರಿಸಿ"
+	},
+	"removed": {
+		"message": "ತೆಗೆದುಹಾಕಲಾದ ಸೈಟ್‌ಗಳು"
+	},
+	"options_sync": {
+		"message": "ಚಂದಾದಾರಿಕೆಯನ್ನು ಸಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ ...."
+	},
+	"title_help_sync": {
+		"message": "ಸಿಂಕ್ ಮಾಡಿ"
+	},
+	"button_sync": {
+		"message": "ಸಿಂಕ್ ಮಾಡಿ"
+	},
+	"title_help_sync_tooltip": {
+		"message": "ಪರವಾನಗಿ"
+	}
+}

@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Éditeur de démarques pour Chrome"
+	},
+	"appTitle": {
+		"message": "Éditeur de démarques"
+	},
+	"appDescription": {
+		"message": "Créez et affichez des fichiers de démarques à partir de n'importe quel fichier. Simple et facile. Un éditeur Markdown aromatisé Github."
+	},
+	"canceled": {
+		"message": "Votre abonnement est annulé."
+	},
+	"title_message_fallback": {
+		"message": "Nous n'avons pas pu trouver d'abonnement"
+	},
+	"title_enjoy_until": {
+		"message": "Profitez de votre essai jusqu'au"
+	},
+	"incomplete_expired": {
+		"message": "Nous n'avons pas pu effectuer le paiement. Veuillez contacter l'assistance."
+	},
+	"unpaid": {
+		"message": "Votre abonnement est impayé. Veuillez contacter l'assistance."
+	},
+	"past_due": {
+		"message": "Votre abonnement est en souffrance. Veuillez contacter l'assistance."
+	},
+	"title_message_none": {
+		"message": "Nous n'avons pas trouvé d'abonnement."
+	},
+	"sign_in": {
+		"message": "Veuillez vous connecter à votre navigateur."
+	},
+	"cleaning": {
+		"message": "Nettoyage...."
+	},
+	"incomplete": {
+		"message": "Nous n'avons pas pu effectuer le paiement. Veuillez contacter l'assistance."
+	},
+	"upgradeToRemove": {
+		"message": "Mettre à jour maintenant!"
+	},
+	"email": {
+		"message": "Connecté en tant que"
+	},
+	"extras_settings": {
+		"message": "Suppléments"
+	},
+	"settings_settings": {
+		"message": "Paramètres"
+	},
+	"settings_upgrade": {
+		"message": "améliorer"
+	},
+	"settings_upgrade_button": {
+		"message": "Surclassement pour 12h00"
+	},
+	"title_message_full": {
+		"message": "Prendre plaisir"
+	},
+	"payment": {
+		"message": "Paiement"
+	},
+	"open": {
+		"message": "ouvert"
+	},
+	"money": {
+		"message": "Surclassement pour 12h00"
+	},
+	"trialOver": {
+		"message": "Votre procès est terminé."
+	},
+	"sign_in_message": {
+		"message": "S'identifier"
+	},
+	"button_upgrade": {
+		"message": "Améliorer"
+	},
+	"removed": {
+		"message": "Sites supprimés"
+	},
+	"options_sync": {
+		"message": "Synchronisation de l'abonnement...."
+	},
+	"title_help_sync": {
+		"message": "Synchroniser"
+	},
+	"button_sync": {
+		"message": "Synchroniser"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licence"
+	}
+}

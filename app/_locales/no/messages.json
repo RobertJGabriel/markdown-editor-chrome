@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor for Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Lag og se markdown-filer fra alle var. Enkelt og enkelt. En Github smaksatt Markdown Editor."
+	},
+	"canceled": {
+		"message": "Abonnementet ditt er kansellert."
+	},
+	"title_message_fallback": {
+		"message": "Vi kunne ikke finne et abonnement"
+	},
+	"title_enjoy_until": {
+		"message": "Kos deg med prøveperioden til"
+	},
+	"incomplete_expired": {
+		"message": "Vi kunne ikke fullføre betalingen. Kontakt support."
+	},
+	"unpaid": {
+		"message": "Abonnementet ditt er ubetalt. Kontakt support."
+	},
+	"past_due": {
+		"message": "Abonnementet ditt er forfalt. Kontakt support."
+	},
+	"title_message_none": {
+		"message": "Vi kunne ikke finne et abonnement."
+	},
+	"sign_in": {
+		"message": "Logg deg på nettleseren din."
+	},
+	"cleaning": {
+		"message": "Rengjøring...."
+	},
+	"incomplete": {
+		"message": "Vi kunne ikke fullføre betalingen. Kontakt support."
+	},
+	"upgradeToRemove": {
+		"message": "Oppgrader nå!"
+	},
+	"email": {
+		"message": "Logget på som"
+	},
+	"extras_settings": {
+		"message": "Ekstrautstyr"
+	},
+	"settings_settings": {
+		"message": "Innstillinger"
+	},
+	"settings_upgrade": {
+		"message": "Oppgradering"
+	},
+	"settings_upgrade_button": {
+		"message": "Oppgrader for 12.00"
+	},
+	"title_message_full": {
+		"message": "Nyt"
+	},
+	"payment": {
+		"message": "innbetaling"
+	},
+	"open": {
+		"message": "åpen"
+	},
+	"money": {
+		"message": "Oppgrader for 12.00"
+	},
+	"trialOver": {
+		"message": "Rettssaken din er over."
+	},
+	"sign_in_message": {
+		"message": "Logg inn"
+	},
+	"button_upgrade": {
+		"message": "Oppgradering"
+	},
+	"removed": {
+		"message": "Fjernede nettsteder"
+	},
+	"options_sync": {
+		"message": "Synkroniserer abonnement ...."
+	},
+	"title_help_sync": {
+		"message": "Synkroniser"
+	},
+	"button_sync": {
+		"message": "Synkroniser"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Tillatelse"
+	}
+}

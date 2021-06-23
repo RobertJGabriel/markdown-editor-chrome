@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Atzīmju redaktors pārlūkam Chrome"
+	},
+	"appTitle": {
+		"message": "Atzīmju redaktors"
+	},
+	"appDescription": {
+		"message": "Izveidojiet un skatiet iezīmēšanas failus no jebkuriem failiem. Vienkārši un viegli. Github aromatizēts iezīmēšanas redaktors."
+	},
+	"canceled": {
+		"message": "Jūsu abonements ir atcelts."
+	},
+	"title_message_fallback": {
+		"message": "Mēs nevarējām atrast abonementu"
+	},
+	"title_enjoy_until": {
+		"message": "Izbaudiet savu izmēģinājumu līdz plkst"
+	},
+	"incomplete_expired": {
+		"message": "Mēs nevarējām pabeigt maksājumu. Lūdzu, sazinieties ar atbalsta dienestu."
+	},
+	"unpaid": {
+		"message": "Jūsu abonements nav apmaksāts. Lūdzu, sazinieties ar atbalsta dienestu."
+	},
+	"past_due": {
+		"message": "Jūsu abonements ir nokavēts. Lūdzu, sazinieties ar atbalsta dienestu."
+	},
+	"title_message_none": {
+		"message": "Mēs nevarējām atrast abonementu."
+	},
+	"sign_in": {
+		"message": "Lūdzu, pierakstieties savā pārlūkprogrammā."
+	},
+	"cleaning": {
+		"message": "Tīrīšana ...."
+	},
+	"incomplete": {
+		"message": "Mēs nevarējām pabeigt maksājumu. Lūdzu, sazinieties ar atbalsta dienestu."
+	},
+	"upgradeToRemove": {
+		"message": "Uzlabot tagad!"
+	},
+	"email": {
+		"message": "Pierakstījies kā"
+	},
+	"extras_settings": {
+		"message": "Ekstras"
+	},
+	"settings_settings": {
+		"message": "Iestatījumi"
+	},
+	"settings_upgrade": {
+		"message": "jaunināt"
+	},
+	"settings_upgrade_button": {
+		"message": "Jaunināšana uz 12.00"
+	},
+	"title_message_full": {
+		"message": "Izbaudi"
+	},
+	"payment": {
+		"message": "maksājums"
+	},
+	"open": {
+		"message": "atvērts"
+	},
+	"money": {
+		"message": "Jaunināšana uz 12.00"
+	},
+	"trialOver": {
+		"message": "Jūsu izmēģinājums ir beidzies."
+	},
+	"sign_in_message": {
+		"message": "Ielogoties"
+	},
+	"button_upgrade": {
+		"message": "Jaunināt"
+	},
+	"removed": {
+		"message": "Noņemtās vietnes"
+	},
+	"options_sync": {
+		"message": "Notiek abonēšanas sinhronizēšana ...."
+	},
+	"title_help_sync": {
+		"message": "Sinhronizēt"
+	},
+	"button_sync": {
+		"message": "Sinhronizēt"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licence"
+	}
+}

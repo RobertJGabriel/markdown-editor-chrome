@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Редактор Markdown для Chrome"
+	},
+	"appTitle": {
+		"message": "Редактор Markdown"
+	},
+	"appDescription": {
+		"message": "Створюйте та переглядайте файли розмітки з будь-якого. Просто і легко. Редактор зі знижкою зі смаком Github."
+	},
+	"canceled": {
+		"message": "Ваша передплата скасована."
+	},
+	"title_message_fallback": {
+		"message": "Не вдалося знайти передплату"
+	},
+	"title_enjoy_until": {
+		"message": "Насолоджуйтесь випробуванням до"
+	},
+	"incomplete_expired": {
+		"message": "Ми не могли завершити оплату. Зверніться до служби підтримки."
+	},
+	"unpaid": {
+		"message": "Ваша передплата не оплачується. Зверніться до служби підтримки."
+	},
+	"past_due": {
+		"message": "Ваша передплата прострочена. Зверніться до служби підтримки."
+	},
+	"title_message_none": {
+		"message": "Не вдалося знайти передплату."
+	},
+	"sign_in": {
+		"message": "Увійдіть у свій браузер."
+	},
+	"cleaning": {
+		"message": "Прибирання ...."
+	},
+	"incomplete": {
+		"message": "Ми не могли завершити оплату. Зверніться до служби підтримки."
+	},
+	"upgradeToRemove": {
+		"message": "Оновити зараз!"
+	},
+	"email": {
+		"message": "Ви ввійшли як"
+	},
+	"extras_settings": {
+		"message": "Додаткові послуги"
+	},
+	"settings_settings": {
+		"message": "Налаштування"
+	},
+	"settings_upgrade": {
+		"message": "оновлення"
+	},
+	"settings_upgrade_button": {
+		"message": "Оновлення до 12.00"
+	},
+	"title_message_full": {
+		"message": "Насолоджуйтесь"
+	},
+	"payment": {
+		"message": "оплата"
+	},
+	"open": {
+		"message": "відчинено"
+	},
+	"money": {
+		"message": "Оновлення до 12.00"
+	},
+	"trialOver": {
+		"message": "Ваше пробне завершення."
+	},
+	"sign_in_message": {
+		"message": "Увійти"
+	},
+	"button_upgrade": {
+		"message": "Оновлення"
+	},
+	"removed": {
+		"message": "Вилучені сайти"
+	},
+	"options_sync": {
+		"message": "Синхронізація передплати ...."
+	},
+	"title_help_sync": {
+		"message": "Синхронізація"
+	},
+	"button_sync": {
+		"message": "Синхронізація"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Ліцензія"
+	}
+}

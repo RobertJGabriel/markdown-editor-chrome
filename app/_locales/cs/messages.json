@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor pro Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Vytvářejte a zobrazujte soubory značek z libovolného souboru. Jednoduché a snadné. Editor Markdown s příchutí Github."
+	},
+	"canceled": {
+		"message": "Vaše předplatné bylo zrušeno."
+	},
+	"title_message_fallback": {
+		"message": "Nepodařilo se nám najít předplatné"
+	},
+	"title_enjoy_until": {
+		"message": "Užijte si zkušební verzi až do"
+	},
+	"incomplete_expired": {
+		"message": "Platbu jsme nemohli dokončit. Kontaktujte podporu."
+	},
+	"unpaid": {
+		"message": "Vaše předplatné není zaplaceno. Kontaktujte podporu."
+	},
+	"past_due": {
+		"message": "Vaše předplatné je po splatnosti. Kontaktujte podporu."
+	},
+	"title_message_none": {
+		"message": "Nepodařilo se nám najít předplatné."
+	},
+	"sign_in": {
+		"message": "Přihlaste se prosím do svého prohlížeče."
+	},
+	"cleaning": {
+		"message": "Čištění...."
+	},
+	"incomplete": {
+		"message": "Platbu jsme nemohli dokončit. Kontaktujte podporu."
+	},
+	"upgradeToRemove": {
+		"message": "Vylepšit nyní!"
+	},
+	"email": {
+		"message": "Jste přihlášeni jako"
+	},
+	"extras_settings": {
+		"message": "Doplňky"
+	},
+	"settings_settings": {
+		"message": "Nastavení"
+	},
+	"settings_upgrade": {
+		"message": "vylepšit"
+	},
+	"settings_upgrade_button": {
+		"message": "Upgradujte na 12,00"
+	},
+	"title_message_full": {
+		"message": "Užívat si"
+	},
+	"payment": {
+		"message": "Způsob platby"
+	},
+	"open": {
+		"message": "otevřeno"
+	},
+	"money": {
+		"message": "Upgradujte na 12,00"
+	},
+	"trialOver": {
+		"message": "Vaše zkouška skončila."
+	},
+	"sign_in_message": {
+		"message": "Přihlásit se"
+	},
+	"button_upgrade": {
+		"message": "Vylepšit"
+	},
+	"removed": {
+		"message": "Odebrané weby"
+	},
+	"options_sync": {
+		"message": "Synchronizace předplatného ..."
+	},
+	"title_help_sync": {
+		"message": "Sync"
+	},
+	"button_sync": {
+		"message": "Sync"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licence"
+	}
+}

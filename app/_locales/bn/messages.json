@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Chrome এর জন্য মার্কডাউন সম্পাদক"
+	},
+	"appTitle": {
+		"message": "মার্কডাউন সম্পাদক"
+	},
+	"appDescription": {
+		"message": "যে কোনও থেকে মার্কডাউন ফাইলগুলি তৈরি এবং দেখুন। সহজ এবং সহজ। একজন গিথুব স্বাদযুক্ত মার্কডাউন সম্পাদক।"
+	},
+	"canceled": {
+		"message": "আপনার সাবস্ক্রিপশন বাতিল হয়েছে।"
+	},
+	"title_message_fallback": {
+		"message": "আমরা সাবস্ক্রিপশন খুঁজে পাইনি"
+	},
+	"title_enjoy_until": {
+		"message": "অবধি আপনার বিচার উপভোগ করুন"
+	},
+	"incomplete_expired": {
+		"message": "আমরা পেমেন্টটি শেষ করতে পারিনি। সমর্থন যোগাযোগ করুন।"
+	},
+	"unpaid": {
+		"message": "আপনার সাবস্ক্রিপশনটি শোধ করা হয়নি। সমর্থন যোগাযোগ করুন।"
+	},
+	"past_due": {
+		"message": "আপনার সাবস্ক্রিপশন শেষ হয়ে গেছে। সমর্থন যোগাযোগ করুন।"
+	},
+	"title_message_none": {
+		"message": "আমরা সাবস্ক্রিপশন খুঁজে পাইনি।"
+	},
+	"sign_in": {
+		"message": "আপনার ব্রাউজারে সাইন ইন করুন।"
+	},
+	"cleaning": {
+		"message": "পরিস্কার করা ...."
+	},
+	"incomplete": {
+		"message": "আমরা পেমেন্টটি শেষ করতে পারিনি। সমর্থন যোগাযোগ করুন।"
+	},
+	"upgradeToRemove": {
+		"message": "এখন উন্নতি কর!"
+	},
+	"email": {
+		"message": "হিসাবে সাইন ইন"
+	},
+	"extras_settings": {
+		"message": "অতিরিক্ত"
+	},
+	"settings_settings": {
+		"message": "সেটিংস"
+	},
+	"settings_upgrade": {
+		"message": "আপগ্রেড"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 এর জন্য আপগ্রেড করুন"
+	},
+	"title_message_full": {
+		"message": "উপভোগ করুন"
+	},
+	"payment": {
+		"message": "প্রদান"
+	},
+	"open": {
+		"message": "খোলা"
+	},
+	"money": {
+		"message": "12.00 এর জন্য আপগ্রেড করুন"
+	},
+	"trialOver": {
+		"message": "আপনার বিচার শেষ হয়েছে।"
+	},
+	"sign_in_message": {
+		"message": "সাইন ইন করুন"
+	},
+	"button_upgrade": {
+		"message": "আপগ্রেড"
+	},
+	"removed": {
+		"message": "সরানো সাইটগুলি"
+	},
+	"options_sync": {
+		"message": "সাবস্ক্রিপশন সিঙ্ক করা হচ্ছে ..."
+	},
+	"title_help_sync": {
+		"message": "সুসংগত"
+	},
+	"button_sync": {
+		"message": "সুসংগত"
+	},
+	"title_help_sync_tooltip": {
+		"message": "লাইসেন্স"
+	}
+}

@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "ક્રોમ માટે માર્કડાઉન સંપાદક"
+	},
+	"appTitle": {
+		"message": "માર્કડાઉન એડિટર"
+	},
+	"appDescription": {
+		"message": "કોઈપણમાંથી માર્કડાઉન ફાઇલો બનાવો અને જુઓ. સરળ અને સરળ. એક ગીથબ ફ્લેવર્ડ માર્કડાઉન એડિટર."
+	},
+	"canceled": {
+		"message": "તમારું સબ્સ્ક્રિપ્શન રદ થયેલ છે."
+	},
+	"title_message_fallback": {
+		"message": "અમને સબ્સ્ક્રિપ્શન મળ્યું નથી"
+	},
+	"title_enjoy_until": {
+		"message": "ત્યાં સુધી તમારી અજમાયશનો આનંદ માણો"
+	},
+	"incomplete_expired": {
+		"message": "અમે ચુકવણી પૂર્ણ કરી શક્યા નહીં. કૃપા કરીને સપોર્ટનો સંપર્ક કરો."
+	},
+	"unpaid": {
+		"message": "તમારું સબ્સ્ક્રિપ્શન ચૂકવેલ નથી. કૃપા કરીને સપોર્ટનો સંપર્ક કરો."
+	},
+	"past_due": {
+		"message": "તમારું સબ્સ્ક્રિપ્શન બાકી છે. કૃપા કરીને સપોર્ટનો સંપર્ક કરો."
+	},
+	"title_message_none": {
+		"message": "અમને સબ્સ્ક્રિપ્શન મળ્યું નથી."
+	},
+	"sign_in": {
+		"message": "કૃપા કરીને તમારા બ્રાઉઝરમાં સાઇન ઇન કરો."
+	},
+	"cleaning": {
+		"message": "સફાઈ ...."
+	},
+	"incomplete": {
+		"message": "અમે ચુકવણી પૂર્ણ કરી શક્યા નહીં. કૃપા કરીને સપોર્ટનો સંપર્ક કરો."
+	},
+	"upgradeToRemove": {
+		"message": "હવે અપગ્રેડ કરો!"
+	},
+	"email": {
+		"message": "તરીકે સાઇન ઇન કર્યું"
+	},
+	"extras_settings": {
+		"message": "એક્સ્ટ્રાઝ"
+	},
+	"settings_settings": {
+		"message": "સેટિંગ્સ"
+	},
+	"settings_upgrade": {
+		"message": "સુધારો"
+	},
+	"settings_upgrade_button": {
+		"message": "12.00 માટે અપગ્રેડ કરો"
+	},
+	"title_message_full": {
+		"message": "આનંદ કરો"
+	},
+	"payment": {
+		"message": "ચુકવણી"
+	},
+	"open": {
+		"message": "ખુલ્લા"
+	},
+	"money": {
+		"message": "12.00 માટે અપગ્રેડ કરો"
+	},
+	"trialOver": {
+		"message": "તમારી અજમાયશ પૂરી થઈ."
+	},
+	"sign_in_message": {
+		"message": "સાઇન ઇન કરો"
+	},
+	"button_upgrade": {
+		"message": "અપગ્રેડ કરો"
+	},
+	"removed": {
+		"message": "દૂર કરેલી સાઇટ્સ"
+	},
+	"options_sync": {
+		"message": "સબ્સ્ક્રિપ્શન સિંક કરી રહ્યું છે ...."
+	},
+	"title_help_sync": {
+		"message": "સમન્વયન"
+	},
+	"button_sync": {
+		"message": "સમન્વયન"
+	},
+	"title_help_sync_tooltip": {
+		"message": "લાઇસન્સ"
+	}
+}

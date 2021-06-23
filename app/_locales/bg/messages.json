@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Markdown Editor за Chrome"
+	},
+	"appTitle": {
+		"message": "Markdown Editor"
+	},
+	"appDescription": {
+		"message": "Създавайте и преглеждайте файлове за маркиране от всякакви. Просто и лесно. Редактор с аромат на Github Markdown."
+	},
+	"canceled": {
+		"message": "Абонаментът ви е анулиран."
+	},
+	"title_message_fallback": {
+		"message": "Не можахме да намерим абонамент"
+	},
+	"title_enjoy_until": {
+		"message": "Приятно изпитание до"
+	},
+	"incomplete_expired": {
+		"message": "Не успяхме да завършим плащането. Моля, свържете се с екипа за поддръжка."
+	},
+	"unpaid": {
+		"message": "Абонаментът ви е неплатен. Моля, свържете се с екипа за поддръжка."
+	},
+	"past_due": {
+		"message": "Абонаментът ви е просрочен. Моля, свържете се с екипа за поддръжка."
+	},
+	"title_message_none": {
+		"message": "Не можахме да намерим абонамент."
+	},
+	"sign_in": {
+		"message": "Моля, влезте във вашия браузър."
+	},
+	"cleaning": {
+		"message": "Почистване...."
+	},
+	"incomplete": {
+		"message": "Не успяхме да завършим плащането. Моля, свържете се с екипа за поддръжка."
+	},
+	"upgradeToRemove": {
+		"message": "Надстройте сега!"
+	},
+	"email": {
+		"message": "Влезли като"
+	},
+	"extras_settings": {
+		"message": "Екстри"
+	},
+	"settings_settings": {
+		"message": "Настройки"
+	},
+	"settings_upgrade": {
+		"message": "подобряване на"
+	},
+	"settings_upgrade_button": {
+		"message": "Надстройка за 12.00"
+	},
+	"title_message_full": {
+		"message": "Наслади се"
+	},
+	"payment": {
+		"message": "плащане"
+	},
+	"open": {
+		"message": "отворена"
+	},
+	"money": {
+		"message": "Надстройка за 12.00"
+	},
+	"trialOver": {
+		"message": "Пробният ви период приключи."
+	},
+	"sign_in_message": {
+		"message": "Впиши се"
+	},
+	"button_upgrade": {
+		"message": "Подобряване на"
+	},
+	"removed": {
+		"message": "Премахнати сайтове"
+	},
+	"options_sync": {
+		"message": "Абонаментът се синхронизира ...."
+	},
+	"title_help_sync": {
+		"message": "Синхронизиране"
+	},
+	"button_sync": {
+		"message": "Синхронизиране"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Разрешително"
+	}
+}

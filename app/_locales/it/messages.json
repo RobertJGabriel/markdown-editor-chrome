@@ -1,0 +1,95 @@
+{
+	"appName": {
+		"message": "Editor Markdown per Chrome"
+	},
+	"appTitle": {
+		"message": "Editor Markdowndown"
+	},
+	"appDescription": {
+		"message": "Crea e visualizza file di markdown da qualsiasi era. Semplice e facile. Un editor di markdown al gusto di Github."
+	},
+	"canceled": {
+		"message": "Il tuo abbonamento è stato annullato."
+	},
+	"title_message_fallback": {
+		"message": "Non siamo riusciti a trovare un abbonamento"
+	},
+	"title_enjoy_until": {
+		"message": "Goditi la tua prova fino al"
+	},
+	"incomplete_expired": {
+		"message": "Non siamo riusciti a completare il pagamento. Si prega di contattare l'assistenza."
+	},
+	"unpaid": {
+		"message": "Il tuo abbonamento non è stato pagato. Si prega di contattare l'assistenza."
+	},
+	"past_due": {
+		"message": "Il tuo abbonamento è scaduto. Si prega di contattare l'assistenza."
+	},
+	"title_message_none": {
+		"message": "Non siamo riusciti a trovare un abbonamento."
+	},
+	"sign_in": {
+		"message": "Accedi al tuo browser."
+	},
+	"cleaning": {
+		"message": "Pulizia...."
+	},
+	"incomplete": {
+		"message": "Non siamo riusciti a completare il pagamento. Si prega di contattare l'assistenza."
+	},
+	"upgradeToRemove": {
+		"message": "Aggiorna ora!"
+	},
+	"email": {
+		"message": "Accesso effettuato come"
+	},
+	"extras_settings": {
+		"message": "Extra"
+	},
+	"settings_settings": {
+		"message": "impostazioni"
+	},
+	"settings_upgrade": {
+		"message": "aggiornamento"
+	},
+	"settings_upgrade_button": {
+		"message": "Aggiornamento per 12.00"
+	},
+	"title_message_full": {
+		"message": "Godere"
+	},
+	"payment": {
+		"message": "pagamento"
+	},
+	"open": {
+		"message": "Aperto"
+	},
+	"money": {
+		"message": "Aggiornamento per 12.00"
+	},
+	"trialOver": {
+		"message": "La tua prova è finita."
+	},
+	"sign_in_message": {
+		"message": "registrati"
+	},
+	"button_upgrade": {
+		"message": "Aggiorna"
+	},
+	"removed": {
+		"message": "Siti rimossi"
+	},
+	"options_sync": {
+		"message": "Sincronizzazione abbonamento...."
+	},
+	"title_help_sync": {
+		"message": "Sincronizzazione"
+	},
+	"button_sync": {
+		"message": "Sincronizzazione"
+	},
+	"title_help_sync_tooltip": {
+		"message": "Licenza"
+	}
+}
